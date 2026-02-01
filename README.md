@@ -5,6 +5,10 @@ Hệ thống chatbot y tế thông minh sử dụng **GPT-4o** và **RAG (Retrie
 - Thống kê kho hàng và vẽ biểu đồ (SQLite Database + Visualization)
 - Tìm kiếm web khi cần thiết
 - Giao diện chat hiện đại với Gradio
+## THiết kế hệ thống
+
+<img width="1521" height="591" alt="image" src="https://github.com/user-attachments/assets/b4b146d7-2d2f-4ec2-8f35-27944e1c202c" />
+
 
 ## Tính Năng
 
@@ -314,22 +318,7 @@ Hệ thống sử dụng các API sau:
 - Tạo file `.env` trong thư mục gốc
 - Thêm `OPENAI_API_KEY=sk-your-key`
 
-## License
 
-MIT License
-
-## Contributors
-
-- [Tên của bạn]
-
-## Acknowledgments
-
-- OpenAI cho GPT models
-- Google cho Generative AI
-- Qdrant cho vector database
-- LangChain cho framework
-
----
 
 **Lưu ý:** Đây là hệ thống tư vấn thông tin, không thay thế cho tư vấn y tế chuyên nghiệp. Luôn tham khảo ý kiến bác sĩ trước khi sử dụng thuốc.
 

@@ -1,0 +1,2279 @@
+{
+  "statistics": {
+    "total_questions": 20,
+    "average_f1": 0.3574067967587916,
+    "average_precision": 0.5206060606060606,
+    "average_recall": 0.2837623410384571,
+    "by_entity_type": {
+      "dosages": {
+        "avg_f1": 0.1,
+        "avg_precision": 0.1,
+        "avg_recall": 0.1
+      },
+      "frequencies": {
+        "avg_f1": 1.0,
+        "avg_precision": 1.0,
+        "avg_recall": 1.0
+      },
+      "routes": {
+        "avg_f1": 0.6900000000000001,
+        "avg_precision": 0.8,
+        "avg_recall": 0.6333333333333333
+      },
+      "indications": {
+        "avg_f1": 0.4553571428571429,
+        "avg_precision": 0.55,
+        "avg_recall": 0.4425
+      },
+      "contraindications": {
+        "avg_f1": 0.9,
+        "avg_precision": 0.9,
+        "avg_recall": 0.9
+      },
+      "drug_names": {
+        "avg_f1": 0.30684247477668536,
+        "avg_precision": 0.45553571428571427,
+        "avg_recall": 0.2465333277833278
+      }
+    }
+  },
+  "results": [
+    {
+      "query": "Tôi bị viêm mũi dị ứng, có thuốc uống nào hiệu quả không?",
+      "answer_ground_truth": "Bạn có thể tham khảo một số loại thuốc hỗ trợ điều trị viêm mũi dị ứng như: Hỗn dịch uống Fexihist, Viên nén Ketosan Hasan, và Thuốc bột uống Leukas 4mg. Ngoài ra, bạn cũng có thể sử dụng các thuốc xịt mũi như Hỗn dịch xịt mũi Wizosone DK Pharma, Mome-Air, hoặc Nozeytin-F để giảm triệu chứng ngay lập tức.",
+      "answer_llm_predict": "Có, bạn có thể sử dụng các thuốc như Fexihist, Eucol, Axofen, Oralegic hoặc Zyrtec để điều trị viêm mũi dị ứng.",
+      "entities_gt": {
+        "dosages": [
+          "4mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "xịt mũi",
+          "uống"
+        ],
+        "indications": [
+          "ho",
+          "dị ứng",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "nozeytin-f",
+          "ketosan hasan",
+          "ngo",
+          "leukas",
+          "mome-air",
+          "fexihist",
+          "wizosone dk pharma",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [],
+        "indications": [
+          "ho",
+          "dị ứng",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "zyrtec",
+          "axofen",
+          "oralegic",
+          "eucol",
+          "fexihist"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 1,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 2,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 3,
+          "llm_count": 3,
+          "matched": 3
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.2,
+          "recall": 0.125,
+          "f1": 0.15384615384615385,
+          "gt_count": 8,
+          "llm_count": 5,
+          "matched": 1
+        },
+        "overall": {
+          "precision": 0.5,
+          "recall": 0.2857142857142857,
+          "f1": 0.36363636363636365,
+          "total_gt": 14,
+          "total_llm": 8,
+          "total_matched": 4
+        }
+      },
+      "overall_f1": 0.36363636363636365,
+      "overall_precision": 0.5,
+      "overall_recall": 0.2857142857142857
+    },
+    {
+      "query": "Tôi bị viêm kết mạc, có thuốc nhỏ mắt nào hiệu quả không?",
+      "answer_ground_truth": "Bạn có thể tham khảo một số thuốc nhỏ mắt sau đây: Thuốc nhỏ mắt Polydeson Vidipha, Thuốc nhỏ mắt Eytanac, Thuốc nhỏ mắt Phileo SamChunDang, Thuốc nhỏ mắt Daenase Ophthalmic Solution Alti-Allergics Reyon, Thuốc Mepoly Merap, Thuốc nhỏ mắt Ketofen Drop, Thuốc nhỏ mắt Rohto Antibacterial, Thuốc nhỏ mắt Dexalevo Drop, Thuốc nhỏ mắt Tobcol-Dex, Thuốc nhỏ mắt Vigamox Alcon, Thuốc nhỏ mắt Ofloxacin, và nhiều loại khác. Tuy nhiên, bạn nên tham khảo ý kiến bác sĩ hoặc dược sĩ để chọn loại thuốc phù hợp nhất với tình trạng của mình.",
+      "answer_llm_predict": "Có, bạn có thể sử dụng các thuốc nhỏ mắt như Motarute Daewoo Pharm, Ofloxacin 0,3% Traphaco, hoặc Ketofen Drop 0,5mg/ml CPC1HN để điều trị viêm kết mạc. Tuy nhiên, nên tham khảo ý kiến của bác sĩ trước khi sử dụng bất kỳ loại thuốc nào.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "phù"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "mepoly merap",
+          "rohto antibacterial",
+          "dexalevo drop",
+          "ketofen drop",
+          "ofloxacin",
+          "phileo samchundang",
+          "tobcol-dex",
+          "daenase ophthalmic solution alti-allergics reyon",
+          "vigamox alcon",
+          "thu",
+          "eytanac",
+          "polydeson vidipha",
+          "tuy"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "0,5mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "viêm kết mạc",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "cpc1hn",
+          "ketofen drop",
+          "ofloxacin",
+          "motarute daewoo pharm",
+          "traphaco",
+          "tuy"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.3333333333333333,
+          "recall": 0.5,
+          "f1": 0.4,
+          "gt_count": 2,
+          "llm_count": 3,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.5,
+          "recall": 0.23076923076923078,
+          "f1": 0.3157894736842105,
+          "gt_count": 13,
+          "llm_count": 6,
+          "matched": 3
+        },
+        "overall": {
+          "precision": 0.45454545454545453,
+          "recall": 0.3125,
+          "f1": 0.3703703703703703,
+          "total_gt": 16,
+          "total_llm": 11,
+          "total_matched": 5
+        }
+      },
+      "overall_f1": 0.3703703703703703,
+      "overall_precision": 0.45454545454545453,
+      "overall_recall": 0.3125
+    },
+    {
+      "query": "Tôi bị khô mắt, có thuốc nhỏ mắt nào hiệu quả không?",
+      "answer_ground_truth": "Bạn có thể thử các loại thuốc nhỏ mắt sau: Thuốc nhỏ mắt Tearidone, Thuốc nhỏ mắt Refresh Tears Allergan, Thuốc nhỏ mắt Polkab 0.15%, Thuốc nhỏ mắt Restasis 0.05%, Thuốc nhỏ mắt Refresh Liquigel, Thuốc nhỏ mắt Vitol 12ml, Thuốc nhỏ mắt Hylaform 0,1%, Thuốc nhỏ mắt Systane Ultra, Thuốc nhỏ mắt Syseye, Thuốc nhỏ mắt Telodrop, Thuốc nhỏ mắt Dextear 20mg/ml, Dung dịch nhỏ mắt V.Rohto Dryeye, Thuốc nhỏ mắt Vismed, Thuốc nhỏ mắt Hameron, Thuốc nhỏ mắt Tears Naturale II, Thuốc nhỏ mắt Eyelight Cool, Thuốc nhỏ mắt Eyal-Q, Thuốc nhỏ mắt Diquas, Thuốc nhỏ mắt Eyelight Vita, Thuốc nhỏ mắt Coodrop, Thuốc nhỏ mắt Optive, Thuốc Laci-eye 0.3%, Thuốc nhỏ mắt Optive UD, Thuốc nhỏ mắt Hanvidon, Gel Genteal, Gel nhỏ mắt Liposic Eye Gel, Thuốc nhỏ mắt Hyaluron Eye Drops, Thuốc nhỏ mắt OSLA, Thuốc Afenemi, và Thuốc nhỏ mắt Butidec.",
+      "answer_llm_predict": "Có, bạn có thể sử dụng các loại thuốc nhỏ mắt như Syseye Merap, OSLA Merap, Natri Clorid 0,9% Haipharco hoặc Optive UD Allergan để điều trị khô mắt.",
+      "entities_gt": {
+        "dosages": [
+          "12ml",
+          "20mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "coodrop",
+          "refresh tears allergan",
+          "eyal-q",
+          "syseye",
+          "eyelight vita",
+          "gel genteal",
+          "tearidone",
+          "eyelight cool",
+          "optive ud",
+          "tears naturale ii",
+          "refresh liquigel",
+          "gel",
+          "vitol",
+          "thu",
+          "restasis",
+          "diquas",
+          "butidec",
+          "rohto dryeye",
+          "hameron",
+          "polkab",
+          "osla",
+          "optive",
+          "dextear",
+          "dung",
+          "systane ultra",
+          "liposic eye gel",
+          "hyaluron eye drops",
+          "hylaform",
+          "telodrop",
+          "laci-eye",
+          "afenemi",
+          "hanvidon",
+          "vismed"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "khô mắt"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "optive ud allergan",
+          "osla merap",
+          "haipharco",
+          "syseye merap",
+          "natri clorid"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 2,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 2,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 33,
+          "llm_count": 5,
+          "matched": 0
+        },
+        "overall": {
+          "precision": 0.125,
+          "recall": 0.027777777777777776,
+          "f1": 0.04545454545454545,
+          "total_gt": 36,
+          "total_llm": 8,
+          "total_matched": 1
+        }
+      },
+      "overall_f1": 0.04545454545454545,
+      "overall_precision": 0.125,
+      "overall_recall": 0.027777777777777776
+    },
+    {
+      "query": "Tôi bị hen phế quản, nên uống thuốc nào trong các loại thuốc được gợi ý?",
+      "answer_ground_truth": "Bạn có thể xem xét các thuốc sau: Thuốc Halixol 30mg Egis Pharma, Thuốc Opesinkast 4 OPV, Thuốc Bambuterol 10 A.T An Thiên, Viên nén Montemax 10mg Atco, Dung dịch uống Sallet Hà Nam, Dung dịch khí dung Ventolin Nebules 5mg GSK, Thuốc Smart-Air 10mg Abbott, Dung dịch uống Atisalbu 5ml An Thiên, và Viên nén Kipel 10mg MEGA We care. Tuy nhiên, bạn nên tham khảo ý kiến của bác sĩ trước khi sử dụng bất kỳ loại thuốc nào.",
+      "answer_llm_predict": "Bạn bị hen phế quản, nên uống thuốc Thuốc Givet-10 Davipharm, Thuốc Baburol Agimexpharm hoặc Thuốc Hayex Davipharm. Tuy nhiên, để có liều dùng phù hợp, bạn cần tham khảo ý kiến bác sĩ hoặc chuyên viên y tế.",
+      "entities_gt": {
+        "dosages": [
+          "5ml",
+          "10mg",
+          "5mg",
+          "30mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "uống"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "opesinkast",
+          "nam",
+          "smart-air",
+          "kipel",
+          "atisalbu",
+          "montemax",
+          "opv",
+          "thu",
+          "egis pharma",
+          "ventolin nebules",
+          "sallet",
+          "mega we",
+          "an thi",
+          "bambuterol",
+          "tuy",
+          "dung",
+          "abbott",
+          "halixol",
+          "atco",
+          "gsk"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "uống"
+        ],
+        "indications": [
+          "ho",
+          "hen",
+          "phù"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "baburol agimexpharm",
+          "hayex davipharm",
+          "givet-10 davipharm",
+          "thu",
+          "tuy"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 4,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 3,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.4,
+          "recall": 0.1,
+          "f1": 0.16000000000000003,
+          "gt_count": 20,
+          "llm_count": 5,
+          "matched": 2
+        },
+        "overall": {
+          "precision": 0.3333333333333333,
+          "recall": 0.12,
+          "f1": 0.1764705882352941,
+          "total_gt": 25,
+          "total_llm": 9,
+          "total_matched": 3
+        }
+      },
+      "overall_f1": 0.1764705882352941,
+      "overall_precision": 0.3333333333333333,
+      "overall_recall": 0.12
+    },
+    {
+      "query": "Tôi bị nghẹt mũi, có thuốc nào giúp tôi giảm triệu chứng này không?",
+      "answer_ground_truth": "Bạn có thể sử dụng các thuốc sau để giảm nghẹt mũi: Thuốc viêm xoang Abipha Cap, Thuốc xịt mũi Otrivin 0.1%, Thuốc nhỏ mũi Otrivin 0.1%, Thuốc xịt mũi Thái Dương, Thuốc Xoang Nhất Nhất, Thuốc xịt mũi Thông Xoang Nam Dược, Thuốc nhỏ mũi Xylofar, Thuốc Esha, hoặc Thuốc nhỏ mũi Naphazolin 0.05%. Ngoài ra, bạn cũng có thể thử Ống hít Sao Vàng Danapha hoặc Dung dịch xịt mũi Otrera 0.1%.",
+      "answer_llm_predict": "Có, bạn có thể sử dụng các thuốc như Thuốc xịt mũi Thông Xoang Nam Dược, Thuốc Xoang Nhất Nhất, Thuốc Esha, Thuốc nhỏ mũi Naphazolin 0.05% Danapha, hoặc Thuốc xịt mũi Otrivin 0.1% GSK để giảm triệu chứng nghẹt mũi.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi",
+          "xịt mũi",
+          "hít"
+        ],
+        "indications": [
+          "ho",
+          "viêm xoang",
+          "nghẹt mũi",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "danapha",
+          "otrivin",
+          "sao",
+          "ngo",
+          "xylofar",
+          "abipha cap",
+          "xoang nh",
+          "esha",
+          "xoang nam",
+          "naphazolin",
+          "thu",
+          "otrera"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi",
+          "xịt mũi"
+        ],
+        "indications": [
+          "ho",
+          "nghẹt mũi"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "danapha",
+          "otrivin",
+          "gsk",
+          "esha",
+          "xoang nh",
+          "xoang nam",
+          "naphazolin",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "gt_count": 3,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 4,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.875,
+          "recall": 0.5384615384615384,
+          "f1": 0.6666666666666667,
+          "gt_count": 13,
+          "llm_count": 8,
+          "matched": 7
+        },
+        "overall": {
+          "precision": 0.9166666666666666,
+          "recall": 0.55,
+          "f1": 0.6874999999999999,
+          "total_gt": 20,
+          "total_llm": 12,
+          "total_matched": 11
+        }
+      },
+      "overall_f1": 0.6874999999999999,
+      "overall_precision": 0.9166666666666666,
+      "overall_recall": 0.55
+    },
+    {
+      "query": "Tôi bị viêm xoang, có thuốc uống nào giúp điều trị không?",
+      "answer_ground_truth": "Bạn có thể tham khảo các thuốc sau: Thuốc viêm xoang Abipha Cap điều trị viêm xoang, nghẹt mũi, sổ mũi, viêm mũi dị ứng; Thuốc Fabamox 1000DT Trung Ương 1 điều trị viêm xoang cấp tính; Thuốc bột uống Mitux 200mg DHG Pharma làm loãng chất nhầy đường hô hấp; và Thuốc bột uống Mitux E 100mg DHG Pharma làm loãng chất nhầy. Ngoài ra, bạn cũng có thể sử dụng các thuốc xịt mũi để giảm triệu chứng.",
+      "answer_llm_predict": "Có, bạn có thể sử dụng các thuốc như Thuốc Xoang Nhất Nhất, Thuốc viêm xoang Abipha Cap, Cốm pha hỗn dịch uống Mecefix-B.E 50mg Merap, hoặc Thuốc Glazi 250 Abbott để điều trị viêm xoang. Tuy nhiên, bạn nên tham khảo ý kiến của bác sĩ trước khi sử dụng bất kỳ loại thuốc nào.",
+      "entities_gt": {
+        "dosages": [
+          "200mg",
+          "100mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "xịt mũi",
+          "uống"
+        ],
+        "indications": [
+          "sổ mũi",
+          "nghẹt mũi",
+          "viêm",
+          "dị ứng",
+          "viêm xoang"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "dhg pharma",
+          "fabamox",
+          "dt trung",
+          "ngo",
+          "abipha cap",
+          "mitux",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "50mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "uống"
+        ],
+        "indications": [
+          "ho",
+          "viêm xoang",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "abbott",
+          "mecefix-b",
+          "glazi",
+          "abipha cap",
+          "xoang nh",
+          "merap",
+          "thu",
+          "tuy"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.6666666666666666,
+          "recall": 0.4,
+          "f1": 0.5,
+          "gt_count": 5,
+          "llm_count": 3,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.25,
+          "recall": 0.2857142857142857,
+          "f1": 0.26666666666666666,
+          "gt_count": 7,
+          "llm_count": 8,
+          "matched": 2
+        },
+        "overall": {
+          "precision": 0.38461538461538464,
+          "recall": 0.3125,
+          "f1": 0.3448275862068966,
+          "total_gt": 16,
+          "total_llm": 13,
+          "total_matched": 5
+        }
+      },
+      "overall_f1": 0.3448275862068966,
+      "overall_precision": 0.38461538461538464,
+      "overall_recall": 0.3125
+    },
+    {
+      "query": "Tôi bị viêm giác mạc, nên dùng thuốc nhỏ mắt nào để điều trị?",
+      "answer_ground_truth": "Bạn có thể cân nhắc sử dụng các thuốc nhỏ mắt như: Thuốc nhỏ mắt Ticoldex Danapha điều trị viêm giác mạc, viêm kết mạc; Hỗn dịch nhỏ mắt Pred Forte Allergan điều trị các chứng viêm đáp ứng với steroid; Thuốc nhỏ mắt Fumeron Hanlim điều trị viêm giác mạc; Thuốc mỡ tra mắt Mediclovir 3% Medipharco điều trị viêm giác mạc; Thuốc nhỏ mắt Ciprofloxacin 0.3% Dược 3-2 điều trị loét giác mạc; Thuốc nhỏ mắt Collydexa Gold HaNoi điều trị viêm giác mạc, kết mạc.",
+      "answer_llm_predict": "Bạn có thể dùng thuốc nhỏ mắt Neodex Pharmedic, Collydexa Gold HaNoi hoặc Melevo 5mg/ml Merap để điều trị viêm giác mạc.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt",
+          "tra mắt"
+        ],
+        "indications": [
+          "loét",
+          "viêm kết mạc",
+          "viêm giác mạc",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "mediclovir",
+          "fumeron hanlim",
+          "collydexa gold hanoi",
+          "ticoldex danapha",
+          "ciprofloxacin",
+          "pred forte allergan",
+          "thu",
+          "medipharco"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "5mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "viêm giác mạc",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "merap",
+          "collydexa gold hanoi",
+          "melevo",
+          "neodex pharmedic"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1": 0.5714285714285715,
+          "gt_count": 4,
+          "llm_count": 3,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.25,
+          "recall": 0.125,
+          "f1": 0.16666666666666666,
+          "gt_count": 8,
+          "llm_count": 4,
+          "matched": 1
+        },
+        "overall": {
+          "precision": 0.4444444444444444,
+          "recall": 0.2857142857142857,
+          "f1": 0.34782608695652173,
+          "total_gt": 14,
+          "total_llm": 9,
+          "total_matched": 4
+        }
+      },
+      "overall_f1": 0.34782608695652173,
+      "overall_precision": 0.4444444444444444,
+      "overall_recall": 0.2857142857142857
+    },
+    {
+      "query": "Tôi bị viêm mũi, có thuốc uống nào giúp cải thiện không?",
+      "answer_ground_truth": "Bạn có thể tham khảo các thuốc sau đây: Thuốc bột uống Mitux 200mg DHG Pharma làm loãng chất nhầy đường hô hấp, và Thuốc bột uống Mitux E 100mg DHG Pharma cũng giúp làm loãng chất nhầy. Ngoài ra, nếu bạn cần thêm các loại thuốc xịt hoặc nhỏ mũi, có thể xem xét các lựa chọn như Thuốc xịt Hadocort-D Hà Tây, Thuốc xịt mũi Agerhinin, hoặc Thuốc xịt mũi Esha.",
+      "answer_llm_predict": "Có, bạn có thể sử dụng các thuốc như Fexihist, Zyrtec GSK, Eucol, Aerius, hoặc Thuốc Xoang Nhất Nhất để giúp cải thiện tình trạng viêm mũi. Tuy nhiên, nên tham khảo ý kiến của bác sĩ trước khi sử dụng bất kỳ loại thuốc nào.",
+      "entities_gt": {
+        "dosages": [
+          "200mg",
+          "100mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi",
+          "xịt mũi",
+          "uống"
+        ],
+        "indications": [
+          "ho"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "dhg pharma",
+          "hadocort-d",
+          "ngo",
+          "esha",
+          "agerhinin",
+          "mitux",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [],
+        "indications": [
+          "ho",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "zyrtec gsk",
+          "eucol",
+          "fexihist",
+          "xoang nh",
+          "aerius",
+          "thu",
+          "tuy"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 2,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 3,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "indications": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "gt_count": 1,
+          "llm_count": 2,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.14285714285714285,
+          "recall": 0.14285714285714285,
+          "f1": 0.14285714285714285,
+          "gt_count": 7,
+          "llm_count": 7,
+          "matched": 1
+        },
+        "overall": {
+          "precision": 0.2222222222222222,
+          "recall": 0.15384615384615385,
+          "f1": 0.18181818181818185,
+          "total_gt": 13,
+          "total_llm": 9,
+          "total_matched": 2
+        }
+      },
+      "overall_f1": 0.18181818181818185,
+      "overall_precision": 0.2222222222222222,
+      "overall_recall": 0.15384615384615385
+    },
+    {
+      "query": "Tôi bị sổ mũi, có thuốc nào giúp tôi giảm triệu chứng này không?",
+      "answer_ground_truth": "Bạn có thể xem xét các loại thuốc sau: Thuốc viêm xoang Abipha Cap, Thuốc xịt mũi Thái Dương, Thuốc nhỏ mũi Xylofar Pharmedic, Thuốc nhỏ mũi Naphazolin 0.05% Danapha, Thuốc xịt mũi Nasolspray Mekophar, Tinh dầu trẻ em Nasomom-4 Reliv, hoặc Dung dịch vệ sinh mũi Nasomom Clean&Clear Reliv. Hãy tham khảo ý kiến bác sĩ trước khi sử dụng.",
+      "answer_llm_predict": "Có, bạn có thể sử dụng một số loại thuốc sau để giảm triệu chứng sổ mũi:\n\n1. Dung dịch Setbozi Stick\n2. Thuốc nhỏ mũi Naphazolin 0.05% Danapha\n3. Siro Aerius 60ml Organon\n4. Thuốc viêm xoang Abipha Cap\n\nHãy tham khảo ý kiến của bác sĩ trước khi sử dụng bất kỳ loại thuốc nào.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi",
+          "xịt mũi"
+        ],
+        "indications": [
+          "ho",
+          "viêm xoang",
+          "viêm"
+        ],
+        "contraindications": [
+          "trẻ em"
+        ],
+        "drug_names": [
+          "dung",
+          "nasomom clean",
+          "danapha",
+          "nasolspray mekophar",
+          "nasomom-4 reliv",
+          "tinh",
+          "abipha cap",
+          "clear reliv",
+          "naphazolin",
+          "thu",
+          "xylofar pharmedic"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "60ml"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi"
+        ],
+        "indications": [
+          "sổ mũi",
+          "viêm xoang",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "danapha",
+          "organon",
+          "abipha cap",
+          "setbozi stick",
+          "siro aerius",
+          "naphazolin",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.6666666666666666,
+          "gt_count": 3,
+          "llm_count": 3,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 1,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "drug_names": {
+          "precision": 0.625,
+          "recall": 0.45454545454545453,
+          "f1": 0.5263157894736842,
+          "gt_count": 11,
+          "llm_count": 8,
+          "matched": 5
+        },
+        "overall": {
+          "precision": 0.6153846153846154,
+          "recall": 0.47058823529411764,
+          "f1": 0.5333333333333333,
+          "total_gt": 17,
+          "total_llm": 13,
+          "total_matched": 8
+        }
+      },
+      "overall_f1": 0.5333333333333333,
+      "overall_precision": 0.6153846153846154,
+      "overall_recall": 0.47058823529411764
+    },
+    {
+      "query": "Tôi bị ngứa mắt, có thuốc nào giúp giảm triệu chứng không?",
+      "answer_ground_truth": "Bạn có thể tham khảo các thuốc nhỏ mắt sau đây: Thuốc nhỏ mắt Olevid Olopatadine 5ml Merap điều trị triệu chứng ngứa mắt của bệnh viêm kết mạc dị ứng, Thuốc nhỏ mắt V.Rohto Cool (12ml) điều trị mỏi mắt, đỏ mắt, ngứa mắt, Dung dịch Relestat Allergan điều trị và phòng ngừa ngứa mắt, Thuốc nhỏ mắt Olopat OD 0.2% Ajanta điều trị tình trạng ngứa mắt kết hợp với viêm kết mạc dị ứng, và Thuốc nhỏ mắt OSLA REDI Merap điều trị các triệu chứng ngứa mắt, đỏ mắt, mờ mắt.",
+      "answer_llm_predict": "Có, bạn có thể sử dụng các thuốc nhỏ mắt như Acular Allergan, OSLA REDI Merap hoặc Eskar DK Pharma để giảm triệu chứng ngứa mắt.",
+      "entities_gt": {
+        "dosages": [
+          "12ml",
+          "5ml"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "viêm",
+          "ngứa",
+          "đỏ mắt",
+          "mỏi mắt",
+          "viêm kết mạc",
+          "dị ứng"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "olevid olopatadine",
+          "rohto cool",
+          "olopat od",
+          "ajanta",
+          "relestat allergan",
+          "osla redi merap",
+          "merap",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "ngứa"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "osla redi merap",
+          "eskar dk pharma",
+          "acular allergan"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 2,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.5,
+          "recall": 0.16666666666666666,
+          "f1": 0.25,
+          "gt_count": 6,
+          "llm_count": 2,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.3333333333333333,
+          "recall": 0.1111111111111111,
+          "f1": 0.16666666666666666,
+          "gt_count": 9,
+          "llm_count": 3,
+          "matched": 1
+        },
+        "overall": {
+          "precision": 0.5,
+          "recall": 0.16666666666666666,
+          "f1": 0.25,
+          "total_gt": 18,
+          "total_llm": 6,
+          "total_matched": 3
+        }
+      },
+      "overall_f1": 0.25,
+      "overall_precision": 0.5,
+      "overall_recall": 0.16666666666666666
+    },
+    {
+      "query": "Tôi bị nhiễm khuẩn mắt, nên dùng thuốc nào trong số các loại thuốc nhỏ mắt này?",
+      "answer_ground_truth": "Bạn có thể sử dụng các loại thuốc nhỏ mắt sau đây: Thuốc tra mắt Eyedin Makcur, Thuốc nhỏ mắt Quimodex Traphaco, Thuốc nhỏ mắt Dexalevo Drop CPC1HN, Thuốc nhỏ mắt Vigadexa Alcon, Thuốc nhỏ mắt Tobrex Alcon, Thuốc nhỏ mắt Torexvis 0,3% Gia Nguyễn, Thuốc tra mắt Tobramycin 0,3% Hatarphar, Thuốc nhỏ mắt Eyedin DX Makcur, Thuốc nhỏ mắt Moxieye 10ml CPC1HN, Thuốc nhỏ mắt Moxieye 50mg, Dung dịch nhỏ mắt Moxikune, Thuốc nhỏ mắt Clesspra DX, Thuốc nhỏ mắt Naphacollyre Nam Hà, Thuốc nhỏ mắt Metodex Merap, hoặc Thuốc Bralcib 3mg Atco. Tuy nhiên, bạn nên tham khảo ý kiến bác sĩ để có lựa chọn phù hợp nhất với tình trạng của mình.",
+      "answer_llm_predict": "Tất cả các loại thuốc nhỏ mắt bạn liệt kê đều có thể được sử dụng để điều trị nhiễm khuẩn mắt, bao gồm Eyedin DX Makcur, Biracin-E Bidiphar, Vigadexa Alcon, Naphacollyre Nam Hà và Tobrex Alcon. Tuy nhiên, để chọn loại thuốc phù hợp nhất, bạn nên tham khảo ý kiến của bác sĩ hoặc chuyên gia y tế vì họ có thể đưa ra lời khuyên dựa trên tình trạng cụ thể của bạn và loại nhiễm khuẩn mắt bạn đang gặp phải.",
+      "entities_gt": {
+        "dosages": [
+          "50mg",
+          "10ml",
+          "3mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt",
+          "tra mắt"
+        ],
+        "indications": [
+          "ho",
+          "phù"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "hatarphar",
+          "eyedin makcur",
+          "bralcib",
+          "clesspra dx",
+          "moxikune",
+          "tobramycin",
+          "cpc1hn",
+          "torexvis",
+          "thu",
+          "naphacollyre nam",
+          "vigadexa alcon",
+          "gia nguy",
+          "dexalevo drop cpc1hn",
+          "tuy",
+          "dung",
+          "metodex merap",
+          "eyedin dx makcur",
+          "atco",
+          "moxieye",
+          "tobrex alcon",
+          "quimodex traphaco"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "nhiễm khuẩn",
+          "phù"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "vigadexa alcon",
+          "eyedin dx makcur",
+          "tobrex alcon",
+          "biracin-e bidiphar",
+          "naphacollyre nam",
+          "tuy"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 3,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "gt_count": 2,
+          "llm_count": 3,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.8333333333333334,
+          "recall": 0.23809523809523808,
+          "f1": 0.37037037037037035,
+          "gt_count": 21,
+          "llm_count": 6,
+          "matched": 5
+        },
+        "overall": {
+          "precision": 0.8,
+          "recall": 0.2857142857142857,
+          "f1": 0.4210526315789473,
+          "total_gt": 28,
+          "total_llm": 10,
+          "total_matched": 8
+        }
+      },
+      "overall_f1": 0.4210526315789473,
+      "overall_precision": 0.8,
+      "overall_recall": 0.2857142857142857
+    },
+    {
+      "query": "Tôi bị mỏi mắt, có thuốc nhỏ mắt nào giúp tôi không?",
+      "answer_ground_truth": "Bạn có thể sử dụng các loại thuốc nhỏ mắt sau đây để giảm triệu chứng mỏi mắt: Thuốc nhỏ mắt V.Rohto Cool (12ml), Thuốc nhỏ mắt Daigaku Santen, Thuốc nhỏ mắt Natri Clorid 0,9% HDPharma, Thuốc nhỏ mắt Sancoba Santen, Thuốc Tobicom ICA, Thuốc nhỏ mắt Vismed TRB Chemedica, Thuốc nhỏ mắt V.Rohto For Kids, Dung dịch nhỏ mắt Eyetamin 10ml Bidiphar, Thuốc nhỏ mắt New V.Rohto, Thuốc nhỏ mắt V.Rohto Lycée 13ml, Thuốc nhỏ mắt Daiticol Dược 3-2, Thuốc nhỏ mắt Eyelight Vita DHG, Thuốc nhỏ mắt Natri clorid 0.9% Bidiphar, Thuốc nhỏ mắt Eskar DK Pharma, và Thuốc nhỏ mắt OSLA Merap.",
+      "answer_llm_predict": "Có, bạn có thể sử dụng các loại thuốc nhỏ mắt như V.Rohto Cool, Eskar DK Pharma, New V.Rohto, OSLA Merap, hoặc Natri Clorid 0,9% HDPharma để giúp giảm triệu chứng mỏi mắt.",
+      "entities_gt": {
+        "dosages": [
+          "12ml",
+          "13ml",
+          "10ml"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "mỏi mắt"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "bidiphar",
+          "new",
+          "osla merap",
+          "eyelight vita dhg",
+          "vismed trb chemedica",
+          "natri clorid",
+          "tobicom ica",
+          "daiticol",
+          "rohto for kids",
+          "rohto",
+          "rohto cool",
+          "thu",
+          "eyetamin",
+          "daigaku santen",
+          "rohto lyc",
+          "natri",
+          "hdpharma",
+          "sancoba santen",
+          "dung",
+          "eskar dk pharma"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "mỏi mắt"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "new",
+          "hdpharma",
+          "osla merap",
+          "eskar dk pharma",
+          "rohto",
+          "rohto cool",
+          "natri clorid"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 3,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 0.35,
+          "f1": 0.5185185185185185,
+          "gt_count": 20,
+          "llm_count": 7,
+          "matched": 7
+        },
+        "overall": {
+          "precision": 1.0,
+          "recall": 0.38461538461538464,
+          "f1": 0.5555555555555556,
+          "total_gt": 26,
+          "total_llm": 10,
+          "total_matched": 10
+        }
+      },
+      "overall_f1": 0.5555555555555556,
+      "overall_precision": 1.0,
+      "overall_recall": 0.38461538461538464
+    },
+    {
+      "query": "Tôi đang bị viêm phế quản, xin hỏi nên uống thuốc nào trong số các loại thuốc này?",
+      "answer_ground_truth": "Bạn có thể tham khảo các thuốc sau: Thuốc Ratida 400mg KRKA điều trị viêm phế quản mạn, nhiễm khuẩn xoang cấp; Thuốc Halixol 30mg Egis Pharma điều trị hen phế quản và viêm phế quản; Thuốc Bambuterol 10 A.T An Thiên điều trị hen phế quản, viêm phế quản mạn tính; Siro Asbunyl OPV điều trị ho do hen phế quản, viêm phế quản, khí phế thủng; Thuốc Bromhexin 4mg Dược 3-2 tan đàm trong viêm khí phế quản; Dung dịch uống Acetuss Hà Nam tiêu nhầy trong bệnh viêm phế quản; Thuốc Muspect 30 Imexpharm điều trị các bệnh cấp và mạn tính ở đường hô hấp; Viên nén Medibro 30mg Arlico tiêu chất nhầy đường hô hấp; Thuốc Hexinvon 8 Glomed điều trị tiết chất nhầy bất thường trong viêm phế quản cấp tính và mạn tính; Thuốc bột uống Mitux 200mg DHG Pharma làm loãng chất nhầy đường hô hấp.",
+      "answer_llm_predict": "Bạn có thể uống các thuốc sau: \n- Thuốc Baburol Agimexpharm\n- Thuốc Siro Seosacin Theragen Etex\n- Thuốc Siro Ambroxol Danapha\n- Thuốc Aziphar Mekophar",
+      "entities_gt": {
+        "dosages": [
+          "200mg",
+          "400mg",
+          "4mg",
+          "8 g",
+          "30mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "uống"
+        ],
+        "indications": [
+          "viêm",
+          "viêm phế quản",
+          "nhiễm khuẩn",
+          "hen",
+          "ho"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "acetuss",
+          "nam",
+          "dhg pharma",
+          "medibro",
+          "krka",
+          "ratida",
+          "bromhexin",
+          "mitux",
+          "thu",
+          "egis pharma",
+          "muspect",
+          "glomed",
+          "an thi",
+          "bambuterol",
+          "arlico",
+          "dung",
+          "halixol",
+          "imexpharm",
+          "hexinvon",
+          "siro asbunyl opv"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "uống"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "baburol agimexpharm",
+          "aziphar mekophar",
+          "siro seosacin theragen etex",
+          "thu",
+          "siro ambroxol danapha"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 5,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 5,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.2,
+          "recall": 0.05,
+          "f1": 0.08000000000000002,
+          "gt_count": 20,
+          "llm_count": 5,
+          "matched": 1
+        },
+        "overall": {
+          "precision": 0.3333333333333333,
+          "recall": 0.06451612903225806,
+          "f1": 0.1081081081081081,
+          "total_gt": 31,
+          "total_llm": 6,
+          "total_matched": 2
+        }
+      },
+      "overall_f1": 0.1081081081081081,
+      "overall_precision": 0.3333333333333333,
+      "overall_recall": 0.06451612903225806
+    },
+    {
+      "query": "Tôi bị đỏ mắt, có thuốc nhỏ nào phù hợp không?",
+      "answer_ground_truth": "Bạn có thể tham khảo các thuốc nhỏ mắt như: Thuốc nhỏ mắt V.Rohto Cool (12ml) điều trị mỏi mắt, đỏ mắt, ngứa mắt, Thuốc nhỏ mắt Eyecool điều trị đỏ mắt, sung huyết kết mạc, Thuốc nhỏ mắt V.Rohto For Kids giảm mỏi mắt, đỏ mắt, ngứa mắt, Dung dịch nhỏ mắt Eyetamin 10ml Bidiphar hỗ trợ phòng ngừa các triệu chứng chảy nước mắt, đỏ mắt, Thuốc nhỏ mắt V.Rohto Lycée 13ml điều trị đỏ mắt, ngứa mắt, mỏi mắt, Thuốc nhỏ mắt Daiticol Dược 3-2 điều trị đỏ mắt, ngứa mắt, xốn mắt, Thuốc nhỏ mắt Eskar DK Pharma điều trị mỏi mắt, ngứa mắt, và Thuốc nhỏ mắt OSLA REDI Merap điều trị các triệu chứng ngứa mắt, đỏ mắt, mờ mắt.",
+      "answer_llm_predict": "Có, bạn có thể sử dụng các loại thuốc nhỏ mắt như V.Rohto Cool, Daiticol Dược 3-2, Eyecool, hoặc OSLA REDI Merap để điều trị đỏ mắt. Tuy nhiên, nên tham khảo ý kiến của bác sĩ trước khi sử dụng bất kỳ loại thuốc nào.",
+      "entities_gt": {
+        "dosages": [
+          "12ml",
+          "13ml",
+          "10ml"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ngứa",
+          "đỏ mắt",
+          "mỏi mắt"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "bidiphar",
+          "rohto lyc",
+          "eyecool",
+          "daiticol",
+          "osla redi merap",
+          "eskar dk pharma",
+          "rohto for kids",
+          "rohto cool",
+          "thu",
+          "eyetamin"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "đỏ mắt"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "eyecool",
+          "daiticol",
+          "osla redi merap",
+          "rohto cool",
+          "tuy"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 3,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.5,
+          "recall": 0.3333333333333333,
+          "f1": 0.4,
+          "gt_count": 3,
+          "llm_count": 2,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.8,
+          "recall": 0.36363636363636365,
+          "f1": 0.5000000000000001,
+          "gt_count": 11,
+          "llm_count": 5,
+          "matched": 4
+        },
+        "overall": {
+          "precision": 0.75,
+          "recall": 0.3333333333333333,
+          "f1": 0.46153846153846156,
+          "total_gt": 18,
+          "total_llm": 8,
+          "total_matched": 6
+        }
+      },
+      "overall_f1": 0.46153846153846156,
+      "overall_precision": 0.75,
+      "overall_recall": 0.3333333333333333
+    },
+    {
+      "query": "Tôi bị viêm họng, không biết nên uống thuốc nào trong các loại trên?",
+      "answer_ground_truth": "Bạn có thể tham khảo các loại thuốc sau: Dung dịch súc miệng Medoral điều trị và ngăn ngừa viêm họng, viêm amidan; Viên ngậm Star Sore Throat OPV không đường điều trị đau họng, viêm họng; Viên ngậm Mekotricin 1mg Mekophar điều trị viêm họng, amidan cấp tính. Nếu có triệu chứng ho, bạn cũng có thể dùng Thuốc ho Bổ Phế TW3 Chỉ Khái Lộ hoặc Siro Eugica DHG để hỗ trợ điều trị.",
+      "answer_llm_predict": "Bạn có thể uống các thuốc sau: Pharbaren 500mg, Zelfamox 875/125 DT, Mekocefaclor 125mg, Neazi 500mg, Meiact 200mg.",
+      "entities_gt": {
+        "dosages": [
+          "1mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "ngậm"
+        ],
+        "indications": [
+          "ho",
+          "đau",
+          "viêm họng",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "siro eugica dhg",
+          "mekotricin",
+          "star sore throat opv",
+          "tw3 ch",
+          "medoral",
+          "mekophar",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "200mg",
+          "500mg",
+          "125mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "uống"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "meiact",
+          "pharbaren",
+          "zelfamox",
+          "neazi",
+          "mekocefaclor"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 1,
+          "llm_count": 3,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "indications": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 4,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 8,
+          "llm_count": 5,
+          "matched": 0
+        },
+        "overall": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0,
+          "total_gt": 14,
+          "total_llm": 9,
+          "total_matched": 0
+        }
+      },
+      "overall_f1": 0,
+      "overall_precision": 0.0,
+      "overall_recall": 0.0
+    },
+    {
+      "query": "Tôi bị viêm mắt, nên dùng thuốc nhỏ nào để điều trị hiệu quả?",
+      "answer_ground_truth": "Bạn có thể tham khảo các thuốc nhỏ mắt sau: Thuốc nhỏ mắt Flarex Alcon điều trị viêm không nhiễm khuẩn, Thuốc nhỏ mắt Pandex DK Pharma điều trị viêm mắt, Thuốc nhỏ mắt Tobidex Bidiphar điều trị viêm mắt, Hỗn dịch nhỏ mắt Tobradex điều trị tình trạng viêm ở mắt, Thuốc nhỏ mắt Torexvis 0,3% Gia Nguyễn phòng và điều trị viêm và ngăn ngừa nhiễm khuẩn, Thuốc mỡ tra mắt TobraDex Alcon điều trị viêm và nhiễm khuẩn, Thuốc nhỏ mắt Fumeron Hanlim điều trị dị ứng, viêm mắt, viêm kết mạc, viêm giác mạc, Thuốc nhỏ mắt Clesspra DX điều trị nhiễm khuẩn mắt, Thuốc nhỏ mắt Maxitrol Alcon điều trị viêm mắt, và Thuốc nhỏ mắt Metodex Merap điều trị viêm, nhiễm khuẩn ở mắt.",
+      "answer_llm_predict": "Bạn có thể dùng thuốc nhỏ mắt Scofi Merap, Tobcol Dược 3-2, Britop Bharat, Metodex Merap hoặc Melevo 5mg/ml Merap để điều trị viêm mắt. Tuy nhiên, nên tham khảo ý kiến của bác sĩ trước khi sử dụng bất kỳ loại thuốc nào.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt",
+          "tra mắt"
+        ],
+        "indications": [
+          "viêm",
+          "viêm kết mạc",
+          "viêm giác mạc",
+          "dị ứng",
+          "nhiễm khuẩn"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "metodex merap",
+          "pandex dk pharma",
+          "gia nguy",
+          "tobradex",
+          "flarex alcon",
+          "fumeron hanlim",
+          "tobidex bidiphar",
+          "torexvis",
+          "clesspra dx",
+          "maxitrol alcon",
+          "thu",
+          "tobradex alcon"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "5mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "metodex merap",
+          "merap",
+          "scofi merap",
+          "melevo",
+          "tobcol",
+          "britop bharat",
+          "tuy"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.5,
+          "recall": 0.2,
+          "f1": 0.28571428571428575,
+          "gt_count": 5,
+          "llm_count": 2,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.14285714285714285,
+          "recall": 0.08333333333333333,
+          "f1": 0.10526315789473685,
+          "gt_count": 12,
+          "llm_count": 7,
+          "matched": 1
+        },
+        "overall": {
+          "precision": 0.2727272727272727,
+          "recall": 0.15789473684210525,
+          "f1": 0.19999999999999998,
+          "total_gt": 19,
+          "total_llm": 11,
+          "total_matched": 3
+        }
+      },
+      "overall_f1": 0.19999999999999998,
+      "overall_precision": 0.2727272727272727,
+      "overall_recall": 0.15789473684210525
+    },
+    {
+      "query": "Tôi bị tăng nhãn áp, không biết nên chọn thuốc nhỏ mắt nào để điều trị?",
+      "answer_ground_truth": "Bạn có thể sử dụng các thuốc nhỏ mắt như: Thuốc nhỏ mắt Ganfort Allergan điều trị Glaucoma góc mở, tăng nhãn áp; Thuốc nhỏ mắt Simbrinza Novartis hỗ trợ giảm áp lực nội nhãn; Thuốc nhỏ mắt Taflotan-S 0.3ml Santen giảm áp lực nội nhãn cao do glaucoma góc mở; Dung dịch nhỏ mắt Timolol Maleate Eye Drops 0.5% Alcon điều trị tăng nhãn áp; Thuốc nhỏ mắt Travatan 2.5ml Alcon giảm áp lực nội nhãn cho bệnh tăng nhãn áp; Thuốc nhỏ mắt Alphagan P Allergan điều trị tăng nhãn áp; Thuốc nhỏ mắt Azopt Alcon điều trị tăng nhãn áp, glôcôm góc mở; và Thuốc nhỏ mắt Betoptic S Alcon điều trị tăng nhãn áp, glôcôm góc mở mạn tính.",
+      "answer_llm_predict": "Bạn có thể chọn một trong các loại thuốc nhỏ mắt sau để điều trị tăng nhãn áp: \n- Thuốc nhỏ mắt Alphagan P \n- Thuốc nhỏ mắt Azopt \n- Thuốc nhỏ mắt Travatan \n- Dung dịch nhỏ mắt Timolol Maleate Eye Drops 0.5%",
+      "entities_gt": {
+        "dosages": [
+          "0.3ml",
+          "2.5ml"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "glaucom",
+          "tăng nhãn áp"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "alphagan",
+          "santen",
+          "allergan",
+          "timolol maleate eye drops",
+          "azopt alcon",
+          "simbrinza novartis",
+          "alcon",
+          "betoptic",
+          "taflotan-s",
+          "travatan",
+          "glaucoma",
+          "thu",
+          "ganfort allergan"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "tăng nhãn áp"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "alphagan",
+          "dung",
+          "timolol maleate eye drops",
+          "travatan",
+          "thu",
+          "azopt"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 2,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "gt_count": 3,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.8333333333333334,
+          "recall": 0.35714285714285715,
+          "f1": 0.5,
+          "gt_count": 14,
+          "llm_count": 6,
+          "matched": 5
+        },
+        "overall": {
+          "precision": 0.875,
+          "recall": 0.35,
+          "f1": 0.4999999999999999,
+          "total_gt": 20,
+          "total_llm": 8,
+          "total_matched": 7
+        }
+      },
+      "overall_f1": 0.4999999999999999,
+      "overall_precision": 0.875,
+      "overall_recall": 0.35
+    },
+    {
+      "query": "Tôi bị ngạt mũi, có thuốc nào giúp giảm triệu chứng này không?",
+      "answer_ground_truth": "Bạn có thể sử dụng các loại thuốc sau: Thuốc xịt mũi Xylogen DK Pharma, Thuốc xịt Dophazolin TW2, Thuốc xịt mũi Coldi-B Nam Hà, Thuốc nhỏ mũi trẻ em Elossy 0.05%, Thuốc nhỏ mũi Jazxylo Gia Nguyễn, Thuốc xịt mũi Nasolspray Mekophar, Thuốc xịt mũi Otilin 0.1%, Thuốc nhỏ mũi trẻ em Otilin 0.05%, Thuốc nhỏ mũi Nostravin 0,05%, hoặc Thuốc Kim Long.",
+      "answer_llm_predict": "Có, bạn có thể sử dụng thuốc nhỏ mũi Nostravin 0,05% Traphaco 8ml, thuốc xịt mũi Coldi-B Nam Hà hoặc thuốc xịt mũi Otilin 0.1% Pharbaco để giảm triệu chứng ngạt mũi.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi",
+          "xịt mũi"
+        ],
+        "indications": [
+          "ho"
+        ],
+        "contraindications": [
+          "trẻ em"
+        ],
+        "drug_names": [
+          "kim long",
+          "elossy",
+          "nasolspray mekophar",
+          "otilin",
+          "coldi-b nam",
+          "jazxylo gia nguy",
+          "nostravin",
+          "dophazolin tw2",
+          "thu",
+          "xylogen dk pharma"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "8ml"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi",
+          "xịt mũi"
+        ],
+        "indications": [
+          "ho"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "otilin",
+          "coldi-b nam",
+          "pharbaco",
+          "nostravin",
+          "traphaco"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 1,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "drug_names": {
+          "precision": 0.6,
+          "recall": 0.3,
+          "f1": 0.4,
+          "gt_count": 10,
+          "llm_count": 5,
+          "matched": 3
+        },
+        "overall": {
+          "precision": 0.6666666666666666,
+          "recall": 0.42857142857142855,
+          "f1": 0.5217391304347826,
+          "total_gt": 14,
+          "total_llm": 9,
+          "total_matched": 6
+        }
+      },
+      "overall_f1": 0.5217391304347826,
+      "overall_precision": 0.6666666666666666,
+      "overall_recall": 0.42857142857142855
+    },
+    {
+      "query": "Tôi bị viêm mí mắt, có thuốc nhỏ mắt nào tôi nên dùng không?",
+      "answer_ground_truth": "Bạn có thể sử dụng các thuốc nhỏ mắt như: Polydeson Vidipha điều trị viêm kết mạc, viêm mí mắt, viêm xoang; Phileo SamChunDang điều trị viêm mí mắt, viêm bờ mi; Eporon điều trị viêm mí mắt, viêm kết mạc; Melevo 5mg/ml Merap điều trị viêm mí mắt; Neodex Pharmedic hỗ trợ điều trị viêm mí mắt. Ngoài ra, bạn cũng có thể tham khảo thêm các loại thuốc khác như Mepoly Merap, Britop Bharat, hoặc thuốc mỡ tra mắt Maxitrol cho các tình trạng khác nếu cần.",
+      "answer_llm_predict": "Bạn có thể dùng các thuốc nhỏ mắt sau để điều trị viêm mí mắt: \n\n- Thuốc nhỏ mắt Phileo SamChunDang\n- Thuốc nhỏ mắt Neodex Pharmedic\n- Thuốc nhỏ mắt Tobcol Dược 3-2\n- Thuốc nhỏ mắt Lotemax 0.5% Bausch & Lomb\n- Thuốc nhỏ mắt Rohto Antibacterial",
+      "entities_gt": {
+        "dosages": [
+          "5mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt",
+          "tra mắt"
+        ],
+        "indications": [
+          "ho",
+          "viêm xoang",
+          "viêm kết mạc",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "maxitrol",
+          "mepoly merap",
+          "neodex pharmedic",
+          "britop bharat",
+          "ngo",
+          "eporon",
+          "melevo",
+          "phileo samchundang",
+          "merap",
+          "polydeson vidipha"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "lomb",
+          "lotemax",
+          "neodex pharmedic",
+          "rohto antibacterial",
+          "tobcol",
+          "phileo samchundang",
+          "thu",
+          "bausch"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 1,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4,
+          "gt_count": 4,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.25,
+          "recall": 0.2,
+          "f1": 0.22222222222222224,
+          "gt_count": 10,
+          "llm_count": 8,
+          "matched": 2
+        },
+        "overall": {
+          "precision": 0.4,
+          "recall": 0.23529411764705882,
+          "f1": 0.29629629629629634,
+          "total_gt": 17,
+          "total_llm": 10,
+          "total_matched": 4
+        }
+      },
+      "overall_f1": 0.29629629629629634,
+      "overall_precision": 0.4,
+      "overall_recall": 0.23529411764705882
+    },
+    {
+      "query": "Tôi bị viêm tai ngoài, nên dùng thuốc nào trong số các loại thuốc trên?",
+      "answer_ground_truth": "Bạn có thể tham khảo các thuốc sau: Thuốc Polydexa Bouchara điều trị viêm tai ngoài, Dung dịch nhỏ tai ILLixime 0.3% Hanlim điều trị viêm tai ngoài, Dung dịch nhỏ tai Oteotan 1mg/0.5ml Lesvi điều trị viêm tai ngoài cấp tính, Thuốc nhỏ tai Otifar Pharmedic điều trị nhiễm khuẩn do viêm tai ngoài.",
+      "answer_llm_predict": "Bạn có thể dùng các thuốc sau: Thuốc Polydexa Bouchara, Thuốc nhỏ mắt mũi tai Nemydexan Nam Hà, Dung dịch nhỏ tai Oteotan 1mg/0.5ml Lesvi, Dung dịch nhỏ tai ILLixime 0.3% Hanlim.",
+      "entities_gt": {
+        "dosages": [
+          "1mg",
+          "0.5ml"
+        ],
+        "frequencies": [],
+        "routes": [],
+        "indications": [
+          "nhiễm khuẩn",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "hanlim",
+          "oteotan",
+          "lesvi",
+          "illixime",
+          "polydexa bouchara",
+          "otifar pharmedic",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "1mg",
+          "0.5ml"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "hanlim",
+          "oteotan",
+          "lesvi",
+          "illixime",
+          "polydexa bouchara",
+          "thu",
+          "nemydexan nam"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "indications": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 2,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.875,
+          "recall": 0.875,
+          "f1": 0.875,
+          "gt_count": 8,
+          "llm_count": 8,
+          "matched": 7
+        },
+        "overall": {
+          "precision": 0.8181818181818182,
+          "recall": 0.75,
+          "f1": 0.7826086956521738,
+          "total_gt": 12,
+          "total_llm": 11,
+          "total_matched": 9
+        }
+      },
+      "overall_f1": 0.7826086956521738,
+      "overall_precision": 0.8181818181818182,
+      "overall_recall": 0.75
+    }
+  ]
+}

@@ -1,0 +1,442 @@
+[
+  {
+    "query": "Bệnh nhân lớn tuổi có tiền sử bệnh phổi mạn tính (Thận trọng) có thể sử dụng thuốc Dung dịch uống Novocough 6mg/ml CPC1HN điều trị triệu chứng ho không, và nếu có, liều dùng sẽ như thế nào (Liều dùng)?",
+    "retrieval": {
+      "recall@k": 0.8,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Bệnh nhân lớn tuổi có tiền sử bệnh phổi mạn tính có thể sử dụng thuốc Dung dịch uống Novocough 6mg/ml CPC1HN điều trị triệu chứng ho, tuy nhiên cần sử dụng thận trọng. Liều dùng cho người lớn và trẻ em trên 12 tuổi là 60 mg/lần x 3 lần/ngày, các liều cách nhau 6 giờ. Tuy nhiên, liều dùng cụ thể có thể thay đổi tùy thuộc vào thể trạng và mức độ diễn tiến của bệnh, do đó cần tham khảo ý kiến bác sĩ hoặc chuyên viên y tế.",
+    "retrieved_ids": [
+      2651,
+      2650,
+      2652,
+      2654,
+      2649
+    ],
+    "reason_context_relevance": "The context supplied contains the drug’s indication, dosage instructions, and safety cautions for elderly patients, all of which are directly addressed in the answer.",
+    "reason_faithfulness": "The answer directly reflects the information in the context: it states that Novocough can be used with caution in elderly patients with chronic lung disease and provides the adult dosage of 60 mg per dose three times daily, matching the dosage details given.",
+    "reason_correctness": "Medically, Novocough is not contraindicated for elderly patients with chronic lung disease but should be used cautiously, and the adult dosing of 60 mg three times daily is accurate. The recommendation to consult a physician for individualized dosing is also appropriate."
+  },
+  {
+    "query": "Là bác sĩ, tôi có một bệnh nhân 65 tuổi bị suy gan nhẹ (Caution) và đang bị cảm lạnh với triệu chứng sốt nhẹ và ho khan (Usage). Vậy tôi có thể kê đơn thuốc Viên nén Midorhum OPV hạ sốt, giảm ho, giảm đau, chống dị ứng cho bệnh nhân này không? Nếu có thì liều lượng như thế nào (Dosage)?",
+    "retrieval": {
+      "recall@k": 0.2,
+      "precision@k": 0.2,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 3,
+    "answer": "Không nên kê đơn thuốc Viên nén Midorhum OPV cho bệnh nhân 65 tuổi bị suy gan nhẹ và đang bị cảm lạnh với triệu chứng sốt nhẹ và ho khan vì thông tin không cung cấp đủ dữ liệu về việc sử dụng thuốc này cho bệnh nhân suy gan.",
+    "retrieved_ids": [
+      1750,
+      2419,
+      28766,
+      7515,
+      30625
+    ],
+    "reason_context_relevance": "The response directly addresses the information (or lack thereof) about Midorhum OPV present in the context, making it fully relevant to the question.",
+    "reason_faithfulness": "The answer only states that the provided context does not contain enough information about dosage or safety of Midorhum OPV for a patient with mild liver impairment, which accurately reflects the given material and does not introduce unsupported facts.",
+    "reason_correctness": "The answer correctly identifies that dosage and safety data are missing, but it concludes that the drug should not be prescribed. This may be overly cautious; a clinician might still consider prescribing with appropriate monitoring. Hence the answer is partially correct but not fully comprehensive."
+  },
+  {
+    "query": "Bệnh nhân lớn tuổi (Thận trọng) có tiền sử dị ứng với kháng sinh nhóm quinolon (Chống chỉ định) đang bị viêm kết mạc mủ (Công dụng) thì có thể sử dụng Dung dịch nhỏ mắt Moxikune điều trị các tình trạng nhiễm khuẩn mắt, chống viêm sau phẫu thuật không?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 1.0,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Không thể sử dụng Dung dịch nhỏ mắt Moxikune cho bệnh nhân này vì bệnh nhân có tiền sử dị ứng với kháng sinh nhóm quinolon, trong khi Moxikune thuộc nhóm kháng sinh này.",
+    "retrieved_ids": [
+      812,
+      811,
+      814,
+      813,
+      810
+    ],
+    "reason_context_relevance": "The context discusses Moxikune's indications, contraindications, and cautions, which are directly relevant to determining whether it can be used in a patient with a quinolone allergy and purulent conjunctivitis.",
+    "reason_faithfulness": "The answer directly reflects the context stating that Moxikune (moxifloxacin) is contraindicated for patients with a quinolone allergy, matching the provided information.",
+    "reason_correctness": "Medically, a patient with a known allergy to quinolones should not receive Moxikune, a fluoroquinolone; therefore the answer that it cannot be used is correct."
+  },
+  {
+    "query": "Bệnh nhân bị viêm tai mạn tính có kèm theo thủng màng nhĩ (Usage) thì có thể sử dụng Thuốc nhỏ tai Otofa Bouchara điều trị các dạng chảy mũ tai không? Nếu có, liều dùng cho người lớn là bao nhiêu và cần lưu ý gì khi sử dụng (Dosage + Careful)?",
+    "retrieval": {
+      "recall@k": 0.8,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 0.9,
+    "correctness": 5,
+    "answer": "Vâng, bệnh nhân bị viêm tai mạn tính có kèm theo thủng màng nhĩ có thể sử dụng Thuốc nhỏ tai Otofa Bouchara. Liều dùng cho người lớn là 5 giọt, 2 lần/ngày. Khi sử dụng cần lưu ý tránh chạm ngón tay hoặc tai vào đầu ống nhỏ giọt, không nên dùng thuốc này đồng thời với các thuốc nhỏ tai khác, và nên khám lại nếu bệnh không cải thiện sau 10 ngày điều trị.",
+    "retrieved_ids": [
+      1266,
+      1268,
+      1270,
+      1267,
+      1265
+    ],
+    "reason_context_relevance": "The provided context directly addresses the usage, dosage, and safety considerations of Otofa Bouchara, which are exactly the topics answered. Hence the context is fully relevant to the answer.",
+    "reason_faithfulness": "The answer accurately reflects the context by confirming that Otofa Bouchara can be used for chronic otitis with tympanic membrane perforation, provides the correct adult dosage (5 drops twice daily), and includes several key cautions mentioned in the context. It omits some additional cautions but does not introduce contradictory information.",
+    "reason_correctness": "The medical information is correct: Otofa Bouchara is indicated for chronic otitis with perforated tympanic membrane, the adult dosage is 5 drops twice daily, and the highlighted precautions (avoid touching the dropper tip, do not use with other ear drops, re-evaluate after 10 days if no improvement) are accurate and align with the source material."
+  },
+  {
+    "query": "Tôi đang bị cảm cúm với các triệu chứng như sốt và nhức đầu (Usage). Tôi có thể sử dụng thuốc Lodextrin Agimexpharm điều trị các triệu chứng cảm cúm, sốt, ho, nhức đầu này không? Liều dùng của thuốc này là bao nhiêu và tôi cần lưu ý gì khi sử dụng thuốc (Dosage + Careful)?",
+    "retrieval": {
+      "recall@k": 0.8,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Bạn có thể sử dụng thuốc Lodextrin Agimexpharm để điều trị các triệu chứng cảm cúm, sốt, ho, nhức đầu. Tuy nhiên, trước khi sử dụng, bạn cần đọc kỹ hướng dẫn sử dụng và tham khảo thông tin về liều dùng, chống chỉ định, thận trọng khi sử dụng, ảnh hưởng của thuốc lên khả năng lái xe và vận hành máy móc, sử dụng thuốc cho phụ nữ trong thời kỳ mang thai và cho con bú, tương tác thuốc. \n\nLiều dùng của thuốc này không được đề cập cụ thể trong thông tin cung cấp. Bạn nên tham khảo tờ hướng dẫn sử dụng thuốc đính kèm sản phẩm hoặc tham khảo ý kiến của bác sĩ hoặc dược sĩ để biết liều dùng phù hợp với tình trạng sức khỏe của mình.\n\nKhi sử dụng thuốc, bạn cần lưu ý:\n\n- Đọc kỹ hướng dẫn sử dụng trước khi dùng.\n- Bảo quản thuốc ở nơi mát, tránh ánh sáng, nhiệt độ dưới 30⁰C.\n- Để xa tầm tay trẻ em.\n- Không nên dùng hay tăng giảm liều lượng của thuốc mà không có sự hướng dẫn của bác sĩ.\n- Báo cho bác sĩ hoặc dược sĩ danh sách những thuốc và các thực phẩm chức năng bạn đang sử dụng.\n- Tuân theo chỉ định từ bác sĩ, chỉ nên dùng thuốc khi lợi ích vượt trội nguy cơ có thể xảy ra.",
+    "retrieved_ids": [
+      1767,
+      1766,
+      1768,
+      1764,
+      1763
+    ],
+    "reason_context_relevance": "The provided context directly pertains to the drug Lodextrin Agimexpharm, its indications, contraindications, and usage instructions, which are exactly the topics addressed in the answer.",
+    "reason_faithfulness": "The answer accurately reflects the information given in the context, stating that the drug is indicated for the listed symptoms, that specific dosage is not provided, and summarizing the cautions and storage instructions without adding unsupported details.",
+    "reason_correctness": "The medical statements are correct: the drug is indicated for flu‑like symptoms such as fever and headache, the answer correctly notes the absence of a specific dosage in the source, and it appropriately highlights the need for physician guidance and the listed precautions."
+  },
+  {
+    "query": "Bệnh nhân có tiền sử suy gan (Thận trọng) có thể sử dụng Viên nén Phaanedol Plus Extra Strengh Usa - Nic Pharma giảm các chứng đau từ nhẹ đến vừa, hạ sốt không? Nếu có thì liều lượng cần điều chỉnh như thế nào (Liều dùng)?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 1.0,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 4,
+    "answer": "Bệnh nhân có tiền sử suy gan có thể sử dụng thuốc này nhưng cần dùng thận trọng. Liều lượng cần được điều chỉnh theo chỉ dẫn của bác sĩ.",
+    "retrieved_ids": [
+      2239,
+      2240,
+      2237,
+      2238,
+      2241
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp thông tin chi tiết về chống chỉ định, cảnh báo sử dụng ở bệnh nhân suy gan và hướng dẫn liều dùng chung, do đó rất liên quan đến câu hỏi về việc sử dụng thuốc và điều chỉnh liều cho bệnh nhân có tiền sử suy gan.",
+    "reason_faithfulness": "Câu trả lời chỉ ra rằng bệnh nhân có tiền sử suy gan có thể dùng thuốc nhưng cần thận trọng và nên điều chỉnh liều theo chỉ định của bác sĩ, đúng với nội dung trong ngữ cảnh về việc dùng thận trọng và cần tham khảo ý kiến y tế cho người có suy gan.",
+    "reason_correctness": "Câu trả lời đúng về mặt y khoa khi khẳng định thuốc có thể dùng với lưu ý thận trọng và cần điều chỉnh liều theo chỉ định bác sĩ, phù hợp với khuyến cáo trong ngữ cảnh. Tuy nhiên, câu trả lời không đưa ra chi tiết cụ thể về cách điều chỉnh liều (ví dụ giảm tần suất hoặc liều lượng), nên không đạt mức hoàn hảo."
+  },
+  {
+    "query": "Nếu tôi là một bệnh nhân lớn tuổi đang sử dụng Gel Genteal Alcon làm dịu cảm giác khô do đeo kính áp tròng, khói, gió, tôi có cần phải điều chỉnh liều dùng không và có điều gì tôi cần lưu ý khi sử dụng thuốc này không?",
+    "retrieval": {
+      "recall@k": 0.8,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 0.9,
+    "correctness": 3,
+    "answer": "Không cần chỉnh liều lượng ở người cao tuổi.",
+    "retrieved_ids": [
+      1141,
+      1142,
+      1143,
+      1140,
+      1139
+    ],
+    "reason_context_relevance": "The provided context directly addresses the medication, dosage, and special considerations for elderly patients, which are exactly what the question asks about. Therefore the context is fully relevant.",
+    "reason_faithfulness": "The answer correctly reflects the part of the context stating that no dose adjustment is needed for elderly patients, and does not introduce any information not present in the context. However, it omits other relevant details from the context (e.g., precautions, side‑effects, usage instructions), so while faithful, it is incomplete.",
+    "reason_correctness": "The statement that dose adjustment is not required for older adults is medically correct according to the context. However, the answer fails to mention other important cautions and advice (e.g., contraindications, possible side effects, proper administration technique), making it only partially correct for the full question."
+  },
+  {
+    "query": "Tôi có thể sử dụng Thuốc trị đau răng Dentanalgi OPC điều trị đau răng, viêm nướu răng, nha chu trong thời kỳ cho con bú không (Thận trọng), và nếu có, liều dùng thích hợp là gì (Liều dùng)?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 1.0,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Có, bạn có thể sử dụng Thuốc trị đau răng Dentanalgi OPC trong thời kỳ cho con bú. Liều dùng thích hợp là tẩm thuốc vào bông đặt nơi đau, 3 - 4 lần/ngày, hoặc nhỏ 1 ml thuốc vào khoảng 60 ml nước chín, khuấy đều, ngậm và súc miệng 3 lần/ngày, hoặc dùng theo chỉ dẫn của bác sĩ.",
+    "retrieved_ids": [
+      15,
+      14,
+      13,
+      16,
+      17
+    ],
+    "reason_context_relevance": "The provided context contains the drug's safety profile for lactating women and detailed dosage guidance, which are precisely what the question asks for.",
+    "reason_faithfulness": "The answer directly reflects the information in the context, stating that the drug can be used during breastfeeding and quoting the dosage instructions exactly as described.",
+    "reason_correctness": "According to the context, Dentanalgi OPC is indicated as safe for use by breastfeeding mothers and the dosage instructions are correctly reproduced. No contradictory medical information is present, making the answer fully correct."
+  },
+  {
+    "query": "Tôi có một bệnh nhân mắc viêm phế quản (Usage) và đang điều trị bằng Siro trị ho Pectol Te Sagopha điều trị ho, viêm phế quản, sổ mũi, cảm mạo do phong hàn gây ra. Tuy nhiên, bệnh nhân cũng đang sử dụng một số thuốc khác không được kê đơn (Interaction). Vậy tôi nên làm gì để đảm bảo an toàn cho bệnh nhân trong quá trình điều trị này (Caution)?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 1.0,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Để đảm bảo an toàn cho bệnh nhân, bạn nên yêu cầu bệnh nhân cung cấp thông tin về tất cả các thuốc và thực phẩm chức năng họ đang sử dụng, bao gồm cả những thuốc không được kê đơn, và thông báo cho bác sĩ hoặc dược sĩ để họ có thể đánh giá và tư vấn về tương tác thuốc và tác dụng phụ có thể xảy ra.",
+    "retrieved_ids": [
+      2132,
+      2133,
+      2131,
+      2130,
+      2129
+    ],
+    "reason_context_relevance": "The provided context contains explicit sections on drug interactions, the need to report other medicines, and safety precautions, which directly address the question about ensuring safety while the patient uses Pectol Te together with other OTC drugs.",
+    "reason_faithfulness": "The answer repeats the guidance from the context that the patient should disclose all medications, including non‑prescribed ones, and inform the physician or pharmacist to assess possible drug interactions and side effects. No information is added that is absent from the context.",
+    "reason_correctness": "Medically, the recommended action—collecting a complete medication list and consulting a healthcare professional for interaction review—is the appropriate and standard safety measure for a patient on multiple medications. The answer is accurate and aligns with best clinical practice."
+  },
+  {
+    "query": "Tôi có bệnh viêm kết mạc cấp tính và được kê đơn thuốc mỡ tra mắt Maxitrol điều trị ngắn hạn. Tuy nhiên, tôi có tiền sử dị ứng với neomycin (Thận trọng). Vậy tôi có thể sử dụng thuốc này không và cách dùng như thế nào (Liều dùng)?",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Không, bạn không thể sử dụng thuốc mỡ tra mắt Maxitrol vì bạn có tiền sử dị ứng với neomycin.",
+    "retrieved_ids": [
+      1004,
+      1003,
+      1002,
+      1400,
+      1021
+    ],
+    "reason_context_relevance": "The provided context discusses Maxitrol, its ingredients, contraindications, and dosage. The answer addresses the specific question about using Maxitrol with a known neomycin allergy, making the context fully relevant.",
+    "reason_faithfulness": "The answer directly reflects the information in the context that Maxitrol is contraindicated for patients with hypersensitivity to neomycin, stating that the user should not use the medication due to their allergy.",
+    "reason_correctness": "Medically, Maxitrol contains neomycin, and the drug label explicitly contraindicates use in patients with neomycin hypersensitivity. Therefore, advising the patient not to use Maxitrol is correct and safe."
+  },
+  {
+    "query": "Tôi đang bị viêm mũi dị ứng (Usage) và đã sử dụng Thuốc Kim Long chữa chứng hắt hơi, sổ mũi, ngạt mũi, mặt mũi đau nhức. Tuy nhiên, tôi lo lắng về việc liệu tôi có thể dùng thuốc này nếu tôi đang mang thai (Careful) và liều lượng chính xác mà tôi nên dùng là bao nhiêu (Dosage)?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 1.0,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Tôi không thể tư vấn về việc sử dụng thuốc khi mang thai. Tuy nhiên, theo thông tin bạn cung cấp, thuốc Kim Long chống chỉ định cho phụ nữ có thai. Liều lượng được khuyến cáo là ngày uống 2-3 lần, người lớn mỗi lần 1 gói 4g, trẻ em dưới 12 tuổi mỗi lần ½ gói 4g. Tuy nhiên, để có liều dùng phù hợp, bạn nên tham khảo ý kiến bác sĩ hoặc chuyên viên y tế.",
+    "retrieved_ids": [
+      1927,
+      1926,
+      1925,
+      1928,
+      1929
+    ],
+    "reason_context_relevance": "The context contains the necessary information about pregnancy safety and dosage for Thuốc Kim Long, which are precisely the points asked in the question, making it fully relevant.",
+    "reason_faithfulness": "The answer directly reflects the information provided in the context: it states that the drug is contraindicated in pregnancy and repeats the dosage instructions exactly as given, without adding unsupported details.",
+    "reason_correctness": "The medical statements are accurate: the drug is indeed contraindicated for pregnant women according to the context, and the dosage (2‑3 times daily, 1 gói ≈ 4 g for adults, ½ gói for children <12 y) matches the provided guidelines. The recommendation to consult a healthcare professional is also appropriate."
+  },
+  {
+    "query": "Bệnh nhân đang cho con bú (Thận trọng) có thể sử dụng Thuốc mỡ Oracortia 0.1% Thai Nakorn Patana hỗ trợ điều trị viêm nhiễm khoang miệng để giảm triệu chứng viêm miệng (Công dụng) không? Nếu có, liều dùng cụ thể là bao nhiêu (Liều dùng)?",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Bệnh nhân đang cho con bú có thể sử dụng Thuốc mỡ Oracortia 0.1% Thai Nakorn Patana hỗ trợ điều trị viêm nhiễm khoang miệng để giảm triệu chứng viêm miệng, tuy nhiên cần thận trọng và tham khảo ý kiến bác sĩ hoặc chuyên viên y tế. Liều dùng cụ thể sẽ tùy thuộc vào thể trạng và mức độ diễn tiến của bệnh, thông thường là bôi một lượng nhỏ lên vùng da bị tổn thương để tạo ra một màng mỏng.",
+    "retrieved_ids": [
+      1250,
+      1304,
+      1302,
+      1249,
+      1248
+    ],
+    "reason_context_relevance": "The response directly addresses the question using the relevant sections of the context regarding breastfeeding precautions and dosage instructions, making the context highly relevant to the answer.",
+    "reason_faithfulness": "The answer accurately reflects the information in the provided context, stating that the medication can be used with caution during breastfeeding and that dosage should be a small amount applied to the affected area, with a recommendation to consult a healthcare professional. No information is added that is absent from the context.",
+    "reason_correctness": "From a medical standpoint, the answer correctly conveys that Oracortia 0.1% can be used in breastfeeding mothers only with caution and professional guidance, and that the dosage is a small topical amount, which aligns with standard recommendations for topical corticosteroids. No incorrect medical statements are made."
+  },
+  {
+    "query": "Bệnh nhân có tiền sử mẫn cảm với một số thành phần thuốc (Chống chỉ định) có thể sử dụng Thuốc tra mắt Philoclex 5ml Hanlim điều trị tại chỗ cho mắt, nhiễm trùng mắt không? Nếu không, bệnh nhân nên làm gì để điều trị tình trạng nhiễm trùng mắt của mình (Công dụng)?",
+    "retrieval": {
+      "recall@k": 0.8,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Bệnh nhân có tiền sử mẫn cảm với một số thành phần thuốc không thể sử dụng Thuốc tra mắt Philoclex 5ml Hanlim. Thay vào đó, bệnh nhân nên tham khảo ý kiến bác sĩ để được tư vấn và điều trị phù hợp cho tình trạng nhiễm trùng mắt của mình.",
+    "retrieved_ids": [
+      260,
+      258,
+      261,
+      262,
+      257
+    ],
+    "reason_context_relevance": "The provided context discusses the contraindications, indications, and components of Philoclex 5ml, which are exactly the topics addressed by the answer. Hence the context is fully relevant to the question and the answer.",
+    "reason_faithfulness": "The answer directly reflects the information in the context: the drug is contraindicated for patients with hypersensitivity to any component, so such patients should not use Philoclex. It does not introduce any information not present in the context.",
+    "reason_correctness": "Medically, it is correct that a patient with known allergy to any ingredient of Philoclex (tobramycin or dexamethasone) should avoid the drug and seek alternative treatment under a physician's guidance. The recommendation to consult a doctor for appropriate therapy aligns with standard clinical practice."
+  },
+  {
+    "query": "Bệnh nhân cao tuổi mắc bệnh tăng nhãn áp (Usage) có thể sử dụng Thuốc nhỏ mắt Combigan Allergan giảm áp suất nội nhãn không? Liều lượng và cách dùng thế nào (Dosage) và cần lưu ý gì khi sử dụng thuốc này (Caution)?",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 0.5
+    },
+    "context_relevance": 0.98,
+    "faithfulness": 0.96,
+    "correctness": 5,
+    "answer": "Bệnh nhân cao tuổi mắc bệnh tăng nhãn áp có thể sử dụng thuốc nhỏ mắt Combigan Allergan để giảm áp suất nội nhãn. Liều dùng khuyến cáo là một giọt vào mắt bị bệnh, 2 lần/ngày, cách nhau khoảng 12 giờ. Cần lưu ý về các tác dụng phụ và tương tác thuốc, đặc biệt là khi sử dụng đồng thời với các thuốc khác. Nên tham khảo ý kiến bác sĩ hoặc chuyên viên y tế để có liều dùng phù hợp và được theo dõi chặt chẽ.",
+    "retrieved_ids": [
+      38,
+      781,
+      782,
+      780,
+      1375
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp chi tiết về thuốc Combigan, cách dùng, liều lượng và lưu ý, và câu trả lời tập trung hoàn toàn vào việc trả lời câu hỏi về việc sử dụng Combigan cho bệnh nhân cao tuổi mắc tăng nhãn áp, vì vậy mức độ liên quan rất cao.",
+    "reason_faithfulness": "Câu trả lời phản ánh chính xác các thông tin trong ngữ cảnh về Combigan: liều dùng một giọt 2 lần/ngày cách 12 giờ, khả năng dùng cho bệnh nhân cao tuổi, và nhắc nhở cần lưu ý tác dụng phụ, tương tác thuốc và tham khảo bác sĩ. Không có thông tin nào trái ngược hoặc thêm thắt không có trong ngữ cảnh.",
+    "reason_correctness": "Thông tin y khoa về việc bệnh nhân cao tuổi có thể dùng Combigan, liều một giọt 2 lần/ngày, và các cảnh báo chung (tác dụng phụ, tương tác thuốc, cần tham khảo bác sĩ) là chính xác và phù hợp với thực tiễn lâm sàng. Không có lỗi sai hay thông tin nguy hiểm."
+  },
+  {
+    "query": "Bệnh nhân bị viêm kết mạc nặng và có tiền sử glaucom (Chống chỉ định) có thể sử dụng thuốc nhỏ mắt mũi tai Nemydexan Nam Hà điều trị viêm kết mạc không? Nếu có thì liều dùng như thế nào (Liều dùng)?",
+    "retrieval": {
+      "recall@k": 0.8,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Không, bệnh nhân bị viêm kết mạc nặng và có tiền sử glaucom không thể sử dụng thuốc nhỏ mắt mũi tai Nemydexan Nam Hà vì thuốc này chống chỉ định với những người có tiền sử glaucom.",
+    "retrieved_ids": [
+      1340,
+      1338,
+      1339,
+      1342,
+      1337
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp thông tin về chỉ định, chống chỉ định và liều dùng của Nemydexan; câu trả lời sử dụng thông tin này để trả lời câu hỏi, nên ngữ cảnh hoàn toàn liên quan.",
+    "reason_faithfulness": "Câu trả lời khẳng định rằng thuốc Nemydexan không được dùng cho bệnh nhân có tiền sử glaucoma, dựa trên phần \"Chống chỉ định\" trong ngữ cảnh, do đó phản ánh đúng thông tin được cung cấp.",
+    "reason_correctness": "Theo ngữ cảnh, thuốc Nemydexan có chống chỉ định với người có tiền sử glaucoma, vì vậy việc nói rằng bệnh nhân không nên dùng thuốc là đúng về mặt y khoa."
+  },
+  {
+    "query": "Tôi bị viêm kết mạc dị ứng và bác sĩ đã chỉ định sử dụng Dung dịch Relestat Allergan điều trị và phòng ngừa ngứa mắt. Tuy nhiên, tôi cũng đang mang kính áp tròng. Vậy tôi cần lưu ý gì khi sử dụng thuốc này (Thận trọng) và liều lượng cụ thể như thế nào (Liều dùng)?",
+    "retrieval": {
+      "recall@k": 0.8,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 0.97,
+    "correctness": 5,
+    "answer": "Khi sử dụng thuốc Dung dịch Relestat Allergan điều trị và phòng ngừa ngứa mắt, bạn cần lưu ý (Thận trọng) những điều sau:\n\n- Cần khuyên bệnh nhân không mang kính áp tròng nếu đang bị đỏ mắt.\n- Không nên dùng dung dịch nhỏ mắt Relestat để điều trị kích ứng mắt do kính áp tròng.\n- Chất bảo quản benzalkonium clorid trong Relestat có thể bị hấp thu bởi kính áp tròng mềm.\n- Bệnh nhân đeo kính áp tròng mềm (ưa nước) cần được hướng dẫn về việc bỏ kính áp tròng trước khi nhỏ Relestat và đợi 10 - 15 phút để dung dịch thẩm thấu trước khi đeo lại kính áp tròng.\n\nVề liều lượng (Liều dùng), thuốc được sử dụng với liều khuyến nghị là một giọt vào mỗi mắt, 2 lần/ngày. Nên tiếp tục điều trị trong suốt giai đoạn phơi nhiễm (tức là cho đến khi mùa phấn hoa đã qua hoặc cho đến khi sự phơi nhiễm với dị nguyên đã hết), ngay cả khi không có triệu chứng.",
+    "retrieved_ids": [
+      344,
+      343,
+      345,
+      342,
+      1574
+    ],
+    "reason_context_relevance": "The response directly addresses the user's query about precautions and dosage for Relestat in a contact lens wearer, which is exactly the focus of the supplied context.",
+    "reason_faithfulness": "The answer accurately reflects the information provided in the context, summarizing the cautions for contact lens wearers and the recommended dosage without adding extraneous or contradictory details.",
+    "reason_correctness": "The medical guidance (removing soft contact lenses before instillation, waiting 10‑15 minutes, and using one drop per eye twice daily) aligns with the documented recommendations and is clinically appropriate for allergic conjunctivitis treatment with Relestat."
+  },
+  {
+    "query": "Tôi có tiền sử mẫn cảm với một số thuốc (Chống chỉ định) và hiện tại đang bị viêm kết mạc (Công dụng). Vậy tôi có thể sử dụng Thuốc nhỏ mắt Britop Bharat điều trị viêm nhiễm ở mắt không, và nếu có thì liều lượng cụ thể là bao nhiêu (Liều dùng)?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 1.0,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Không, bạn không thể sử dụng Thuốc nhỏ mắt Britop Bharat vì bạn có tiền sử mẫn cảm với một số thuốc, thuộc nhóm chống chỉ định của thuốc này.",
+    "retrieved_ids": [
+      901,
+      902,
+      904,
+      900,
+      903
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp chi tiết về chống chỉ định của thuốc Britop Bharat và đề cập đến việc dùng trong viêm kết mạc, vì vậy nó hoàn toàn liên quan đến câu hỏi về việc có nên dùng thuốc và liều lượng.",
+    "reason_faithfulness": "Câu trả lời chỉ dựa trên thông tin trong ngữ cảnh, nêu rõ rằng thuốc có chống chỉ định với người có tiền sử mẫn cảm, nên khẳng định không được dùng. Không có thông tin nào được thêm vào hoặc sai lệch.",
+    "reason_correctness": "Về mặt y khoa, câu trả lời đúng: do bệnh nhân có tiền sử mẫn cảm, thuốc này là chống chỉ định, nên không nên sử dụng và không cần đưa ra liều lượng. Đây là quyết định an toàn và phù hợp với hướng dẫn trong ngữ cảnh."
+  },
+  {
+    "query": "Tôi vừa phẫu thuật mắt và bác sĩ đã khuyên tôi sử dụng thuốc nhỏ mắt Ofloxacin 0,3% Traphaco điều trị nhiễm trùng mắt, viêm kết mạc. Tôi nên dùng thuốc này như thế nào (Usage) và có cần lưu ý gì không (Caution)?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 1.0,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 0.6,
+    "correctness": 2,
+    "answer": "Để sử dụng thuốc nhỏ mắt Ofloxacin 0,3% Traphaco sau phẫu thuật mắt, bạn nên nhỏ 2 giọt vào mỗi mắt bị bệnh 4 lần/ngày. Tuy nhiên, liều lượng có thể thay đổi tùy theo tình trạng bệnh nhân và chỉ định của bác sĩ. \n\nLưu ý không dùng chung mỗi lọ cho nhiều người để tránh lây nhiễm, không dùng quá 15 ngày sau lần mở nắp đầu tiên, và tham khảo ý kiến của thầy thuốc nếu đợt điều trị kéo dài trên 15 ngày.",
+    "retrieved_ids": [
+      1321,
+      1322,
+      1324,
+      1323,
+      1320
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp chi tiết về cách dùng và lưu ý của thuốc Ofloxacin 0,3% Traphaco, hoàn toàn liên quan đến câu hỏi về usage và caution sau phẫu thuật mắt.",
+    "reason_faithfulness": "Câu trả lời dựa trên một phần thông tin trong ngữ cảnh (liều 2 giọt 4 lần/ngày và các lưu ý chung) nhưng không phản ánh đầy đủ hướng dẫn dùng thuốc sau phẫu thuật mắt được nêu trong ngữ cảnh (nhỏ 1 giọt ngay sau phẫu thuật và sau mỗi lần thay băng, hoặc liều 5 lần/ngày trước phẫu thuật). Do đó câu trả lời chỉ một phần trung thực với ngữ cảnh.",
+    "reason_correctness": "Câu trả lời đưa ra liều dùng chung (2 giọt 4 lần/ngày) không phù hợp với hướng dẫn dùng thuốc sau phẫu thuật mắt được mô tả trong ngữ cảnh. Các lưu ý về không dùng chung, không dùng quá 15 ngày là đúng, nhưng thiếu thông tin quan trọng về liều dùng đặc thù sau phẫu thuật, nên đánh giá mức độ chính xác y khoa thấp."
+  },
+  {
+    "query": "Tôi có thể sử dụng Thuốc nhỏ mắt Eyemiru 40 EX điều trị căng mắt, xung huyết kết mạc khi đang mang thai không (Thận trọng)? Liều lượng tôi cần dùng là bao nhiêu (Liều dùng)?",
+    "retrieval": {
+      "recall@k": 0.8,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Khi mang thai, bạn nên thận trọng khi sử dụng thuốc nhỏ mắt Eyemiru 40 EX và tham khảo ý kiến của bác sĩ hoặc dược sĩ trước khi dùng. Liều lượng được khuyến nghị là nhỏ từ 1 đến 3 giọt vào mỗi mắt, 3 đến 6 lần một ngày hoặc theo chỉ định của bác sĩ hoặc dược sĩ.",
+    "retrieved_ids": [
+      571,
+      572,
+      570,
+      573,
+      1178
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp chi tiết về cách dùng, liều lượng và lưu ý thận trọng khi mang thai, vì vậy nó hoàn toàn liên quan đến câu hỏi về việc sử dụng thuốc trong thai kỳ.",
+    "reason_faithfulness": "Câu trả lời dựa hoàn toàn trên thông tin trong ngữ cảnh: nêu rõ cần thận trọng khi mang thai và khuyến cáo tham khảo ý kiến bác sĩ, đồng thời đưa liều dùng 1‑3 giọt mỗi mắt, 3‑6 lần/ngày như trong mô tả.",
+    "reason_correctness": "Câu trả lời đúng về mặt y khoa: không có báo cáo cấm dùng trong thai kỳ, chỉ cần thận trọng và hỏi ý kiến bác sĩ; liều dùng được nêu chính xác theo hướng dẫn trong ngữ cảnh."
+  },
+  {
+    "query": "Tôi bị viêm loét giác mạc (Usage) và đang mang thai (Careful), vậy tôi có thể sử dụng thuốc nhỏ mắt Moxieye 10ml CPC1HN điều trị nhiễm khuẩn ở mắt không và liều dùng cụ thể là bao nhiêu (Dosage)?",
+    "retrieval": {
+      "recall@k": 0.8,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 4,
+    "answer": "Bạn có thể sử dụng thuốc nhỏ mắt Moxieye 10ml CPC1HN để điều trị viêm loét giác mạc và nhiễm khuẩn ở mắt khi mang thai, nhưng cần tuân theo chỉ định của bác sĩ và đảm bảo rằng lợi ích của việc sử dụng thuốc vượt trội so với nguy cơ có thể xảy ra. Liều dùng cụ thể sẽ tùy thuộc vào thể trạng và mức độ diễn tiến của bệnh, vì vậy bạn cần tham khảo ý kiến bác sĩ hoặc chuyên viên y tế để có liều dùng phù hợp.",
+    "retrieved_ids": [
+      756,
+      758,
+      760,
+      757,
+      755
+    ],
+    "reason_context_relevance": "The provided context contains the drug's indication, safety considerations for pregnancy, and dosage guidance. The answer addresses exactly those points, so the context is fully relevant to the question.",
+    "reason_faithfulness": "The answer directly reflects the information in the context: it states that the drug can be used during pregnancy only under medical supervision and that dosage must be individualized, which matches the 'careful' and 'cách dùng' sections. No information is added that is absent from the context.",
+    "reason_correctness": "From a medical standpoint, topical moxifloxacin (the active ingredient) may be used in pregnancy only when the benefit outweighs the risk, which the answer correctly emphasizes. It also correctly notes that specific dosing must be determined by a clinician. The answer does not provide an exact dosage, which is appropriate given the lack of detailed dosing information in the context, but it could have been more precise if such data were available. Hence, the answer is largely correct but not maximally detailed."
+  }
+]

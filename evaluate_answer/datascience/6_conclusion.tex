@@ -1,0 +1,70 @@
+\section{KẾT LUẬN}
+
+\hspace{2em} Báo cáo này đã trình bày một giải pháp toàn diện để xây dựng một hệ thống chatbot thông minh hỗ trợ bán thuốc dựa trên các công nghệ tiên tiến trong lĩnh vực Xử lý Ngôn ngữ Tự nhiên và Truy xuất Thông tin. Dự án không chỉ giải quyết được các thách thức hiện tại trong ngành dược phẩm Việt Nam mà còn đưa ra những cải tiến đáng kể so với các phương pháp truyền thống.
+
+\subsection{Các đóng góp chính}
+
+\hspace{2em} \textbf{Thứ nhất}, báo cáo đã phân tích chi tiết ba phương pháp cốt lõi của hệ thống:
+
+\begin{itemize}
+    \item \textbf{Naive RAG}: Cung cấp một cơ sở vững chắc cho việc truy xuất thông tin dựa trên embedding, cho phép hệ thống tìm kiếm các tài liệu liên quan từ cơ sở dữ liệu dược phẩm một cách nhanh chóng. Mặc dù đơn giản, phương pháp này đã chứng minh hiệu quả trong việc giảm thời gian phản hồi từ vài giờ xuống còn vài giây.
+    
+    \item \textbf{Rerank RAG}: Bằng cách sử dụng bộ xếp hạng lại (reranker) như BM25, MonoBERT, hoặc Dense Ranking Models, hệ thống có thể cải thiện độ chính xác của truy xuất từ 20\% đến 30\%. Điều này đảm bảo rằng chỉ những tài liệu có chất lượng cao nhất mới được đưa vào để sinh câu trả lời, từ đó giảm thiểu hiện tượng hallucination và nâng cao độ tin cậy của hệ thống.
+    
+    \item \textbf{Query Reformulation (Rephrase)}: Phương pháp viết lại truy vấn sử dụng LLM giúp biến đổi các câu hỏi mơ hồ hoặc chưa tối ưu thành các truy vấn rõ ràng hơn, từ đó cải thiện chất lượng truy xuất tài liệu. Kỹ thuật này đặc biệt hữu ích trong các tình huống người dùng không cung cấp đủ ngữ cảnh hoặc sử dụng ngôn ngữ không chính thức.
+\end{itemize}
+
+\hspace{2em} \textbf{Thứ hai}, báo cáo đã thiết kế một bộ đánh giá toàn diện với 200 câu hỏi phân loại theo 5 thể loại khác nhau, phản ánh các tình huống sử dụng thực tế. Bên cạnh các metric truyền thống (Precision, Recall, MRR), báo cáo còn sử dụng các metric dựa trên LLM (Context Relevance, Faithfulness, Correctness) để đánh giá chất lượng toàn diện của hệ thống.
+
+\hspace{2em} \textbf{Thứ ba}, báo cáo đã trình bày kiến trúc Agent-based RAG chi tiết, thể hiện cách tích hợp các công nghệ khác nhau vào một hệ thống hoàn chỉnh. Kiến trúc này bao gồm các module chuyên biệt như Router để định tuyến truy vấn, RAG + Answer để truy xuất thông tin, Database + Answer cho dữ liệu có cấu trúc, và Web Search + Answer để bổ sung thông tin từ Internet khi cần thiết.
+
+\subsection{Kết quả và ý nghĩa}
+
+\hspace{2em} Thông qua các thử nghiệm với ba phương pháp khác nhau (Naive, Rerank, Rephrase), báo cáo đã chứng minh rằng việc kết hợp các công nghệ nâng cao có thể đáng kể cải thiện hiệu suất của hệ thống. Các kết quả này không chỉ xác nhận tính hiệu quả của RAG trong bối cảnh truy vấn thông tin y tế, mà còn mở ra những hướng đi mới cho việc ứng dụng AI trong ngành dược phẩm.
+
+\hspace{2em} Ý nghĩa thực tiễn của dự án là:
+\begin{itemize}
+    \item \textbf{Giảm áp lực nhân lực}: Tự động hóa công việc tư vấn dược phẩm, giúp các nhân viên dược tập trung vào các công việc phức tạp hơn yêu cầu sự phán xét chuyên môn.
+    
+    \item \textbf{Nâng cao chất lượng dịch vụ}: Cung cấp thông tin sản phẩm nhất quán, chính xác, và kịp thời 24/7, từ đó cải thiện trải nghiệm khách hàng.
+    
+    \item \textbf{Tiết kiệm chi phí}: Giảm chi phí duy trì các hệ thống hỗ trợ khách hàng truyền thống, giải phóng tài nguyên cho các lĩnh vực khác.
+    
+    \item \textbf{Hỗ trợ quyết định}: Cung cấp thông tin toàn diện và chính xác như một công cụ hỗ trợ quyết định cho các chuyên gia y tế.
+\end{itemize}
+
+\subsection{Các hạn chế và hướng phát triển trong tương lai}
+
+\hspace{2em} Mặc dù đã đạt được những kết quả tích cực, hệ thống vẫn có một số hạn chế cần được cải thiện trong các công trình tiếp theo:
+
+\begin{itemize}
+    \item \textbf{Phụ thuộc vào chất lượng dữ liệu}: Hiệu suất của hệ thống phụ thuộc lớn vào chất lượng và độ đầy đủ của cơ sở dữ liệu dược phẩm. Nếu dữ liệu không được cập nhật thường xuyên hoặc chứa lỗi, kết quả sẽ bị ảnh hưởng.
+    
+    \item \textbf{Hallucination vẫn tồn tại}: Mặc dù RAG đã giúp giảm hiện tượng này, trong một số trường hợp hiếm gặp, mô hình vẫn có thể sinh ra thông tin không chính xác hoặc tưởng tượng ra. Cần có các cơ chế kiểm tra bổ sung để phát hiện và ngăn chặn.
+    
+    \item \textbf{Độ phức tạp của hệ thống}: Kiến trúc Agent-based RAG khá phức tạp với nhiều module tương tác với nhau. Điều này yêu cầu các nhân viên kỹ thuật có kiến thức chuyên sâu để triển khai, bảo trì và cập nhật hệ thống.
+    
+    \item \textbf{Chi phí tính toán}: Sử dụng các mô hình LLM lớn như Llama-3.3-70B hoặc OpenAI-o1 có chi phí tính toán khá cao, đặc biệt khi xử lý lượng lớn truy vấn đồng thời.
+\end{itemize}
+
+\hspace{2em} Để khắc phục những hạn chế này, các hướng phát triển trong tương lai bao gồm:
+
+\begin{itemize}
+    \item \textbf{Tối ưu hóa truy xuất thông tin}: Nghiên cứu và áp dụng các phương pháp truy xuất tiên tiến hơn như Hybrid Retrieval (kết hợp keyword-based và semantic-based), Recursive Retrieval, hoặc Multi-hop Reasoning để cải thiện độ chính xác.
+    
+    \item \textbf{Cải thiện cơ chế lọc hallucination}: Phát triển các cơ chế kiểm tra tính toàn vẹn (integrity check) và xác thực (verification) mạnh hơn, có thể bao gồm việc so sánh câu trả lời với nhiều nguồn hoặc sử dụng các model đặc biệt được huấn luyện để phát hiện hallucination.
+    
+    \item \textbf{Tối ưu hóa chi phí}: Nghiên cứu sử dụng các mô hình nhỏ hơn được tinh chỉnh (fine-tuned) hoặc các mô hình nguồn mở (open-source) để giảm chi phí, đồng thời duy trì chất lượng đầu ra.
+    
+    \item \textbf{Cá nhân hóa và học liên tục}: Phát triển khả năng học từ phản hồi của người dùng, tích lũy kinh nghiệm từ các truy vấn trước đó để cải thiện hiệu suất theo thời gian.
+    
+    \item \textbf{Đánh giá trên dữ liệu lớn}: Mở rộng bộ dữ liệu đánh giá từ 200 câu hỏi hiện tại lên hàng ngàn câu hỏi, tập trung vào các lĩnh vực y tế khác ngoài dược phẩm để xác thực tính tổng quát của hệ thống.
+    
+    \item \textbf{Tích hợp với hệ thống thực tế}: Triển khai hệ thống vào môi trường sản xuất với các lượt truy vấn thực tế từ khách hàng, thu thập phản hồi để tiếp tục cải thiện.
+\end{itemize}
+
+\subsection{Kết lời}
+
+\hspace{2em} Dự án phát triển chatbot hỗ trợ bán thuốc sử dụng RAG, Reranking, và Query Reformulation đã chứng minh tiềm năng to lớn của việc kết hợp các công nghệ AI hiện đại để giải quyết các vấn đề thực tế trong ngành dược phẩm. Các công nghệ này không chỉ nâng cao độ chính xác và hiệu quả của hệ thống, mà còn mở ra những cơ hội mới cho tự động hóa và trí tuệ nhân tạo trong lĩnh vực y tế.
+
+\hspace{2em} Với sự phát triển liên tục của các mô hình ngôn ngữ lớn và các kỹ thuật truy xuất thông tin, chúng tôi tin rằng hệ thống sẽ ngày càng trở nên thông minh, hiệu quả, và có khả năng áp dụng cho nhiều lĩnh vực khác ngoài dược phẩm. Hy vọng rằng kết quả của dự án này sẽ góp phần thúc đẩy sự chuyển đổi số trong ngành dược phẩm Việt Nam, mang lại lợi ích to lớn cho doanh nghiệp, nhân viên, và đặc biệt là cho khách hàng cuối cùng.

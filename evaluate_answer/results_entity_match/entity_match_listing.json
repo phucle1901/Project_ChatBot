@@ -1,0 +1,1893 @@
+{
+  "statistics": {
+    "total_questions": 19,
+    "average_f1": 0.5726579505673262,
+    "average_precision": 0.5586105415052784,
+    "average_recall": 0.6386368940385561,
+    "by_entity_type": {
+      "dosages": {
+        "avg_f1": 0.6491228070175438,
+        "avg_precision": 0.6578947368421053,
+        "avg_recall": 0.6578947368421053
+      },
+      "frequencies": {
+        "avg_f1": 1.0,
+        "avg_precision": 1.0,
+        "avg_recall": 1.0
+      },
+      "routes": {
+        "avg_f1": 0.7807017543859649,
+        "avg_precision": 0.8157894736842105,
+        "avg_recall": 0.7894736842105263
+      },
+      "indications": {
+        "avg_f1": 0.2982456140350877,
+        "avg_precision": 0.3157894736842105,
+        "avg_recall": 0.2894736842105263
+      },
+      "contraindications": {
+        "avg_f1": 0.9473684210526315,
+        "avg_precision": 0.9473684210526315,
+        "avg_recall": 0.9473684210526315
+      },
+      "drug_names": {
+        "avg_f1": 0.5520605555435276,
+        "avg_precision": 0.5413533834586467,
+        "avg_recall": 0.6258980785296575
+      }
+    }
+  },
+  "results": [
+    {
+      "query": "Bạn có thể liệt kê các thuốc nhỏ mắt được sử dụng để điều trị nhiễm khuẩn mắt không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Dexalevo Drop CPC1HN, Thuốc nhỏ mắt Eyedin DX Makcur, Thuốc nhỏ mắt Moxieye 10ml CPC1HN, Thuốc nhỏ mắt Clesspra DX, Thuốc nhỏ mắt Tobramycin 0,3% Traphaco, Thuốc tra mắt Eyedin Makcur, Thuốc nhỏ mắt Vigadexa Alcon.",
+      "answer_llm_predict": "Một số thuốc nhỏ mắt được sử dụng để điều trị nhiễm khuẩn mắt bao gồm:\n\n1. Thuốc nhỏ mắt Naphacollyre Nam Hà\n2. Thuốc nhỏ mắt Clesspra DX\n3. Thuốc nhỏ mắt Eyedin DX Makcur\n4. Thuốc nhỏ mắt Pandex DK Pharma\n5. Thuốc nhỏ mắt Tobrex Alcon",
+      "entities_gt": {
+        "dosages": [
+          "10ml"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt",
+          "tra mắt"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "vigadexa alcon",
+          "eyedin makcur",
+          "dexalevo drop cpc1hn",
+          "eyedin dx makcur",
+          "traphaco",
+          "moxieye",
+          "clesspra dx",
+          "tobramycin",
+          "cpc1hn",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "nhiễm khuẩn"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "pandex dk pharma",
+          "eyedin dx makcur",
+          "clesspra dx",
+          "tobrex alcon",
+          "thu",
+          "naphacollyre nam"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 1,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.5,
+          "recall": 0.3,
+          "f1": 0.37499999999999994,
+          "gt_count": 10,
+          "llm_count": 6,
+          "matched": 3
+        },
+        "overall": {
+          "precision": 0.5,
+          "recall": 0.3076923076923077,
+          "f1": 0.380952380952381,
+          "total_gt": 13,
+          "total_llm": 8,
+          "total_matched": 4
+        }
+      },
+      "overall_f1": 0.380952380952381,
+      "overall_precision": 0.5,
+      "overall_recall": 0.3076923076923077
+    },
+    {
+      "query": "Bạn có thể liệt kê các loại thuốc chữa bệnh viêm kết mạc mà bạn đã đề cập không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt mũi tai TheKatadexan, Thuốc nhỏ mắt Ketofen Drop 0,5mg/ml, Thuốc nhỏ mũi Otrivin 0.1% GSK, Thuốc nhỏ mắt Systane Ultra Alcon, Thuốc nhỏ mắt, mũi, tai Polydeson Vidipha, Thuốc nhỏ mắt Ketofen Drop 0.4ml.",
+      "answer_llm_predict": "Các loại thuốc chữa bệnh viêm kết mạc đã được đề cập bao gồm:\n\n1. Thuốc nhỏ mắt Motarute Daewoo Pharm\n2. Thuốc mỡ tra mắt Ocumox Remington\n3. Thuốc nhỏ mắt Vigamox Alcon\n4. Thuốc nhỏ mắt Tobcol Dược 3-2",
+      "entities_gt": {
+        "dosages": [
+          "0.4ml",
+          "0,5mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt",
+          "nhỏ mũi"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "systane ultra alcon",
+          "otrivin",
+          "polydeson vidipha",
+          "ketofen drop",
+          "thekatadexan",
+          "gsk",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt",
+          "tra mắt"
+        ],
+        "indications": [
+          "viêm kết mạc",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "motarute daewoo pharm",
+          "tobcol",
+          "vigamox alcon",
+          "ocumox remington",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 2,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 2,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.2,
+          "recall": 0.14285714285714285,
+          "f1": 0.16666666666666666,
+          "gt_count": 7,
+          "llm_count": 5,
+          "matched": 1
+        },
+        "overall": {
+          "precision": 0.2222222222222222,
+          "recall": 0.18181818181818182,
+          "f1": 0.19999999999999998,
+          "total_gt": 11,
+          "total_llm": 9,
+          "total_matched": 2
+        }
+      },
+      "overall_f1": 0.19999999999999998,
+      "overall_precision": 0.2222222222222222,
+      "overall_recall": 0.18181818181818182
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc điều trị mỏi mắt không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt V.Rohto Cool, Thuốc Tobicom ICA, Thuốc nhỏ mắt Daigaku Santen, Thuốc nhỏ mắt Syseye Merap, Thuốc nhỏ mắt Sancoba Santen, Thuốc nhỏ mắt Eskar DK Pharma",
+      "answer_llm_predict": "Một số thuốc điều trị mỏi mắt bao gồm:\n\n- Thuốc nhỏ mắt Eskar DK Pharma\n- Thuốc nhỏ mắt V.Rohto Cool (12ml)\n- Thuốc nhỏ mắt Daigaku Santen\n- Thuốc nhỏ mắt New V.Rohto",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "daigaku santen",
+          "tobicom ica",
+          "sancoba santen",
+          "eskar dk pharma",
+          "syseye merap",
+          "rohto cool",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "12ml"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "mỏi mắt"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "daigaku santen",
+          "new",
+          "eskar dk pharma",
+          "rohto",
+          "rohto cool",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 2,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5714285714285714,
+          "f1": 0.6153846153846153,
+          "gt_count": 7,
+          "llm_count": 6,
+          "matched": 4
+        },
+        "overall": {
+          "precision": 0.5,
+          "recall": 0.625,
+          "f1": 0.5555555555555556,
+          "total_gt": 8,
+          "total_llm": 10,
+          "total_matched": 5
+        }
+      },
+      "overall_f1": 0.5555555555555556,
+      "overall_precision": 0.5,
+      "overall_recall": 0.625
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh viêm xoang trong danh sách trên không?",
+      "answer_ground_truth": "Thuốc Rhinassin-OPC, Thuốc nhỏ mũi Rhinex 0.05% Uphace, Thuốc Tỷ Viêm Nang Khang Minh, Thuốc viêm xoang Abipha Cap.",
+      "answer_llm_predict": "Danh sách thuốc : Thuốc Rhinassin-OPC, Thuốc nhỏ mũi Rhinex 0.05% Uphace, Thuốc Tỷ Viêm Nang Khang Minh, Thuốc viêm xoang Abipha Cap.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi"
+        ],
+        "indications": [
+          "viêm xoang",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "rhinassin-opc",
+          "uphace",
+          "rhinex",
+          "nang khang minh",
+          "abipha cap",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi"
+        ],
+        "indications": [
+          "viêm xoang",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "rhinassin-opc",
+          "uphace",
+          "rhinex",
+          "nang khang minh",
+          "abipha cap",
+          "danh",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1": 0.923076923076923,
+          "gt_count": 6,
+          "llm_count": 7,
+          "matched": 6
+        },
+        "overall": {
+          "precision": 0.9,
+          "recall": 1.0,
+          "f1": 0.9473684210526316,
+          "total_gt": 9,
+          "total_llm": 10,
+          "total_matched": 9
+        }
+      },
+      "overall_f1": 0.9473684210526316,
+      "overall_precision": 0.9,
+      "overall_recall": 1.0
+    },
+    {
+      "query": "Bạn có thể liệt kê các loại thuốc điều trị viêm mũi dị ứng không?",
+      "answer_ground_truth": "Thuốc xịt mũi Meseca Merap, Thuốc nhỏ mũi Rhinex 0.05%, Thuốc Rhinocort Aqua 64mcg, Thuốc Cetimed 10mg, Thuốc xịt mũi Avamys 27.5mcg, Thuốc xịt mũi Nozeytin-F, Thuốc xịt mũi Aladka, Thuốc Zentason 16.8ml, Thuốc xịt mũi Mome-Air 120, Thuốc Desloratadine 5mg, Thuốc Xoang Vạn Xuân.",
+      "answer_llm_predict": "Một số loại thuốc điều trị viêm mũi dị ứng bao gồm:\n\n1. Thuốc Betalestin Mekophar\n2. Thuốc Decolgen ND United\n3. Thuốc Esha\n4. Hỗn dịch xịt mũi Wizosone DK Pharma",
+      "entities_gt": {
+        "dosages": [
+          "27.5mcg",
+          "64mcg",
+          "5mg",
+          "16.8ml",
+          "10mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi",
+          "xịt mũi"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "rhinex",
+          "nozeytin-f",
+          "aladka",
+          "xoang",
+          "meseca merap",
+          "cetimed",
+          "avamys",
+          "mome-air",
+          "desloratadine",
+          "thu",
+          "zentason",
+          "rhinocort aqua"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "xịt mũi"
+        ],
+        "indications": [
+          "dị ứng",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "esha",
+          "decolgen nd united",
+          "betalestin mekophar",
+          "wizosone dk pharma",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 5,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 2,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.2,
+          "recall": 0.08333333333333333,
+          "f1": 0.11764705882352941,
+          "gt_count": 12,
+          "llm_count": 5,
+          "matched": 1
+        },
+        "overall": {
+          "precision": 0.25,
+          "recall": 0.10526315789473684,
+          "f1": 0.14814814814814814,
+          "total_gt": 19,
+          "total_llm": 8,
+          "total_matched": 2
+        }
+      },
+      "overall_f1": 0.14814814814814814,
+      "overall_precision": 0.25,
+      "overall_recall": 0.10526315789473684
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh khô mắt mà bạn biết không?",
+      "answer_ground_truth": "Dung dịch nhỏ mắt V.Rohto Dryeye, Thuốc nhỏ mắt Restasis 0.05% Allergan, Hỗn dịch nhỏ mắt Pred Forte Allergan, Thuốc nhỏ mắt Hylaform 0,1% CPC1HN, Thuốc nhỏ mắt Coodrop Pharmedic, Thuốc nhỏ mắt Tearidone, Thuốc nhỏ mắt Diquas Santen, Thuốc nhỏ mắt Natri Clorid 0.9% Haipharco, Dung dịch Relestat Allergan, Thuốc nhỏ mắt Telodrop Hanlim, Thuốc nhỏ mắt Refresh Tears Allergan, Thuốc nhỏ mắt Dextear 20mg/ml Samchundang Pharm, Thuốc nhỏ mắt Hameron, Thuốc nhỏ mắt Polkab 0.15% Samchundang Pharm.",
+      "answer_llm_predict": "Một số thuốc chữa bệnh khô mắt bao gồm:\n\n1. Thuốc nhỏ mắt Syseye Merap\n2. Thuốc nhỏ mắt, nhỏ mũi Natri Clorid 0,9% Haipharco\n3. Thuốc nhỏ mắt OSLA Merap\n4. Thuốc nhỏ mắt Vismed TRB Chemedica",
+      "entities_gt": {
+        "dosages": [
+          "20mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "samchundang pharm",
+          "refresh tears allergan",
+          "diquas santen",
+          "natri clorid",
+          "tearidone",
+          "coodrop pharmedic",
+          "haipharco",
+          "cpc1hn",
+          "thu",
+          "restasis",
+          "allergan",
+          "rohto dryeye",
+          "relestat allergan",
+          "hameron",
+          "telodrop hanlim",
+          "polkab",
+          "dextear",
+          "dung",
+          "hylaform",
+          "pred forte allergan"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt",
+          "nhỏ mũi"
+        ],
+        "indications": [
+          "khô mắt"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "osla merap",
+          "haipharco",
+          "syseye merap",
+          "vismed trb chemedica",
+          "thu",
+          "natri clorid"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 1,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "gt_count": 1,
+          "llm_count": 2,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.5,
+          "recall": 0.15,
+          "f1": 0.23076923076923075,
+          "gt_count": 20,
+          "llm_count": 6,
+          "matched": 3
+        },
+        "overall": {
+          "precision": 0.4444444444444444,
+          "recall": 0.18181818181818182,
+          "f1": 0.2580645161290322,
+          "total_gt": 22,
+          "total_llm": 9,
+          "total_matched": 4
+        }
+      },
+      "overall_f1": 0.2580645161290322,
+      "overall_precision": 0.4444444444444444,
+      "overall_recall": 0.18181818181818182
+    },
+    {
+      "query": "Xin hãy liệt kê các thuốc điều trị bệnh đục thủy tinh thể.",
+      "answer_ground_truth": "Thuốc tra mắt Posod Hanlim, Thuốc nhỏ mắt Eyaren Samil",
+      "answer_llm_predict": "Thuốc tra mắt Posod Hanlim và Thuốc nhỏ mắt Eyaren Samil",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "tra mắt",
+          "nhỏ mắt"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "thu",
+          "posod hanlim",
+          "eyaren samil"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "tra mắt",
+          "nhỏ mắt"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "thu",
+          "posod hanlim",
+          "eyaren samil"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 3,
+          "llm_count": 3,
+          "matched": 3
+        },
+        "overall": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "total_gt": 5,
+          "total_llm": 5,
+          "total_matched": 5
+        }
+      },
+      "overall_f1": 1.0,
+      "overall_precision": 1.0,
+      "overall_recall": 1.0
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh viêm mắt mà bạn đã đề cập không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Scofi Merap, Dung dịch nhỏ mắt Moxikune, Hỗn dịch nhỏ mắt Tobradex, Thuốc nhỏ mắt Torexvis 0,3% Gia Nguyễn, Thuốc nhỏ mắt Pandex DK Pharma, Thuốc nhỏ mắt Tobidex Bidiphar.",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc chữa bệnh viêm mắt đã được đề cập:\n\n1. Thuốc nhỏ mắt Scofi Merap\n2. Thuốc nhỏ mắt Ofloxacin 0,3% Traphaco\n3. Thuốc nhỏ mắt Tobcol Dược 3-2\n4. Thuốc mỡ tra mắt MediClophencid-H Medipharco\n5. Thuốc nhỏ mắt Metodex Merap",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "pandex dk pharma",
+          "gia nguy",
+          "tobradex",
+          "tobidex bidiphar",
+          "torexvis",
+          "moxikune",
+          "scofi merap",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt",
+          "tra mắt"
+        ],
+        "indications": [
+          "hen",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "metodex merap",
+          "scofi merap",
+          "ofloxacin",
+          "tobcol",
+          "traphaco",
+          "thu",
+          "mediclophencid-h medipharco"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "gt_count": 1,
+          "llm_count": 2,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 2,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.2857142857142857,
+          "recall": 0.2222222222222222,
+          "f1": 0.25,
+          "gt_count": 9,
+          "llm_count": 7,
+          "matched": 2
+        },
+        "overall": {
+          "precision": 0.2727272727272727,
+          "recall": 0.3,
+          "f1": 0.28571428571428564,
+          "total_gt": 10,
+          "total_llm": 11,
+          "total_matched": 3
+        }
+      },
+      "overall_f1": 0.28571428571428564,
+      "overall_precision": 0.2727272727272727,
+      "overall_recall": 0.3
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc điều trị viêm mí mắt không?",
+      "answer_ground_truth": "Thuốc tra mắt Eporon, Thuốc nhỏ mắt Phileo SamChunDang",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc điều trị viêm mí mắt:\n\n1. Thuốc nhỏ mắt FML Allergan\n2. Thuốc nhỏ mắt Tobcol Dược 3-2\n3. Thuốc nhỏ mắt Lotemax 0.5% Bausch & Lomb\n4. Thuốc nhỏ mắt Phileo SamChunDang",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "tra mắt",
+          "nhỏ mắt"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "eporon",
+          "thu",
+          "phileo samchundang"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "lomb",
+          "lotemax",
+          "tobcol",
+          "phileo samchundang",
+          "fml allergan",
+          "thu",
+          "bausch"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.2857142857142857,
+          "recall": 0.6666666666666666,
+          "f1": 0.4,
+          "gt_count": 3,
+          "llm_count": 7,
+          "matched": 2
+        },
+        "overall": {
+          "precision": 0.3333333333333333,
+          "recall": 0.6,
+          "f1": 0.42857142857142855,
+          "total_gt": 5,
+          "total_llm": 9,
+          "total_matched": 3
+        }
+      },
+      "overall_f1": 0.42857142857142855,
+      "overall_precision": 0.3333333333333333,
+      "overall_recall": 0.6
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc điều trị bệnh đỏ mắt không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt V.Rohto Lycée 13ml, Thuốc nhỏ mắt Eyecool, Thuốc nhỏ mắt Daiticol Dược 3-2",
+      "answer_llm_predict": "Một số thuốc điều trị bệnh đỏ mắt bao gồm:\n\n1. Thuốc nhỏ mắt Daiticol Dược 3-2\n2. Thuốc nhỏ mắt Topramycin 0,3% Traphaco\n3. Thuốc nhỏ mắt Eyecool\n4. Thuốc nhỏ mắt V.Rohto Lycée 13ml",
+      "entities_gt": {
+        "dosages": [
+          "13ml"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "rohto lyc",
+          "eyecool",
+          "thu",
+          "daiticol"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "13ml"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "đỏ mắt"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "rohto lyc",
+          "eyecool",
+          "daiticol",
+          "topramycin",
+          "traphaco",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "gt_count": 4,
+          "llm_count": 6,
+          "matched": 4
+        },
+        "overall": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "total_gt": 6,
+          "total_llm": 9,
+          "total_matched": 6
+        }
+      },
+      "overall_f1": 0.8,
+      "overall_precision": 0.6666666666666666,
+      "overall_recall": 1.0
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh giảm áp lực nội nhãn không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Philhyal-San Daewoo điều trị rối loạn biểu mô giác, kết mạc; Thuốc xịt mũi Thái Dương điều trị hắt hơi, sổ mũi, nghẹt mũi.",
+      "answer_llm_predict": "Thuốc nhỏ mắt Philhyal-San Daewoo chữa trị rối loạn biểu mô giác, kết mạc; Thuốc xịt mũi Thái Dương điều trị hắt hơi, sổ mũi, tắc mũi.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt",
+          "xịt mũi"
+        ],
+        "indications": [
+          "sổ mũi",
+          "nghẹt mũi"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "philhyal-san daewoo",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt",
+          "xịt mũi"
+        ],
+        "indications": [
+          "sổ mũi"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "philhyal-san daewoo",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "overall": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091,
+          "total_gt": 6,
+          "total_llm": 5,
+          "total_matched": 5
+        }
+      },
+      "overall_f1": 0.9090909090909091,
+      "overall_precision": 1.0,
+      "overall_recall": 0.8333333333333334
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh viêm mi mắt không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Sanlein 0.3% Santen, Thuốc nhỏ mắt Tobcol-Dex Dược 3-2",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc chữa bệnh viêm mi mắt:\n\n1. Thuốc nhỏ mắt Tobcol Dược 3-2\n2. Thuốc nhỏ mắt Tobcol-Dex Dược 3-2\n3. Thuốc nhỏ mắt Phileo SamChunDang\n4. Thuốc nhỏ mắt Cravit 1.5% Santen\n5. Thuốc nhỏ mắt Oflovid Santen",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "santen",
+          "thu",
+          "tobcol-dex",
+          "sanlein"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "oflovid santen",
+          "santen",
+          "cravit",
+          "tobcol",
+          "phileo samchundang",
+          "tobcol-dex",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.42857142857142855,
+          "recall": 0.75,
+          "f1": 0.5454545454545454,
+          "gt_count": 4,
+          "llm_count": 7,
+          "matched": 3
+        },
+        "overall": {
+          "precision": 0.4444444444444444,
+          "recall": 0.8,
+          "f1": 0.5714285714285714,
+          "total_gt": 5,
+          "total_llm": 9,
+          "total_matched": 4
+        }
+      },
+      "overall_f1": 0.5714285714285714,
+      "overall_precision": 0.4444444444444444,
+      "overall_recall": 0.8
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh tăng nhãn áp và nhiễm khuẩn ở mắt không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Tobrex Alcon điều trị nhiễm khuẩn ở mắt, Dung dịch nhỏ mắt Timolol Maleate Eye Drops 0.5% Alcon điều trị tăng nhãn áp.",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc chữa bệnh tăng nhãn áp và nhiễm khuẩn ở mắt:\n\n- Thuốc chữa tăng nhãn áp: Alphagan P\n- Thuốc chữa nhiễm khuẩn ở mắt: \n + Tobramycin 0,3% \n + Tobrex \n + Metodex \n + Clesspra DX",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "nhiễm khuẩn",
+          "tăng nhãn áp"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "timolol maleate eye drops",
+          "alcon",
+          "tobrex alcon",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [],
+        "indications": [
+          "nhiễm khuẩn",
+          "tăng nhãn áp"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "alphagan",
+          "metodex",
+          "tobramycin",
+          "clesspra dx",
+          "thu",
+          "tobrex"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 1,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.16666666666666666,
+          "recall": 0.2,
+          "f1": 0.1818181818181818,
+          "gt_count": 5,
+          "llm_count": 6,
+          "matched": 1
+        },
+        "overall": {
+          "precision": 0.375,
+          "recall": 0.375,
+          "f1": 0.375,
+          "total_gt": 8,
+          "total_llm": 8,
+          "total_matched": 3
+        }
+      },
+      "overall_f1": 0.375,
+      "overall_precision": 0.375,
+      "overall_recall": 0.375
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc điều trị viêm giác mạc không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Fumeron Hanlim điều trị dị ứng, viêm mắt, viêm kết mạc, viêm giác mạc.",
+      "answer_llm_predict": "Thuốc Fumeron Hanlim điều trị dị ứng, viêm mắt, viêm kết mạc, viêm giác mạc.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "dị ứng",
+          "viêm kết mạc",
+          "viêm giác mạc",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "thu",
+          "fumeron hanlim"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [],
+        "indications": [
+          "dị ứng",
+          "viêm kết mạc",
+          "viêm giác mạc",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "thu",
+          "fumeron hanlim"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 1,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 4,
+          "llm_count": 4,
+          "matched": 4
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "overall": {
+          "precision": 1.0,
+          "recall": 0.8571428571428571,
+          "f1": 0.923076923076923,
+          "total_gt": 7,
+          "total_llm": 6,
+          "total_matched": 6
+        }
+      },
+      "overall_f1": 0.923076923076923,
+      "overall_precision": 1.0,
+      "overall_recall": 0.8571428571428571
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa viêm bờ mi không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Cravit 0.5% Santen và thuốc nhỏ mắt Cravit 1.5% Santen.",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc chữa viêm bờ mi:\n\n1. Thuốc nhỏ mắt Cravit 1.5% Santen\n2. Thuốc nhỏ mắt Oflovid Santen\n3. Thuốc nhỏ mắt Cravit 0.5% Santen\n4. Thuốc nhỏ mắt Bronuck Senju Pharm",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "santen",
+          "cravit",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "oflovid santen",
+          "santen",
+          "bronuck senju pharm",
+          "cravit",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.6,
+          "recall": 1.0,
+          "f1": 0.7499999999999999,
+          "gt_count": 3,
+          "llm_count": 5,
+          "matched": 3
+        },
+        "overall": {
+          "precision": 0.5714285714285714,
+          "recall": 1.0,
+          "f1": 0.7272727272727273,
+          "total_gt": 4,
+          "total_llm": 7,
+          "total_matched": 4
+        }
+      },
+      "overall_f1": 0.7272727272727273,
+      "overall_precision": 0.5714285714285714,
+      "overall_recall": 1.0
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa ngạt mũi và liên quan đến bệnh lý này không?",
+      "answer_ground_truth": "Thuốc nhỏ mũi trẻ em Elossy 0.05%, Thuốc xịt mũi Coldi-B Nam Hà, Thuốc xịt mũi Xylogen DK Pharma",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc chữa ngạt mũi và liên quan đến bệnh lý này:\n\n1. Thuốc nhỏ mũi Nostravin 0,05% \n2. Thuốc xịt mũi Otilin 0.1% \n3. Thuốc xịt mũi Xylogen \n4. Thuốc Kim Long \n5. Thuốc chống dị ứng Kacerin 10mg",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi",
+          "xịt mũi"
+        ],
+        "indications": [],
+        "contraindications": [
+          "trẻ em"
+        ],
+        "drug_names": [
+          "coldi-b nam",
+          "elossy",
+          "thu",
+          "xylogen dk pharma"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "10mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi",
+          "xịt mũi"
+        ],
+        "indications": [
+          "dị ứng"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "kim long",
+          "xylogen",
+          "otilin",
+          "kacerin",
+          "nostravin",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 1,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "drug_names": {
+          "precision": 0.16666666666666666,
+          "recall": 0.25,
+          "f1": 0.2,
+          "gt_count": 4,
+          "llm_count": 6,
+          "matched": 1
+        },
+        "overall": {
+          "precision": 0.3,
+          "recall": 0.42857142857142855,
+          "f1": 0.3529411764705882,
+          "total_gt": 7,
+          "total_llm": 10,
+          "total_matched": 3
+        }
+      },
+      "overall_f1": 0.3529411764705882,
+      "overall_precision": 0.3,
+      "overall_recall": 0.42857142857142855
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc hỗ trợ điều trị ung thư phổi không?",
+      "answer_ground_truth": "Thuốc Tarceva 150mg Roche, Thuốc Tagrisso 40mg Astra, Thuốc Alimta 100mg Eli Lilly, Thuốc Giotrif 30mg Boehringer.",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc hỗ trợ điều trị ung thư phổi được đề cập:\n\n1. Thuốc Alecensa 150mg của Hãng Roche\n2. Thuốc Tarceva 150mg của Hãng Roche\n3. Thuốc Giotrif 30mg của Hãng Boehringer",
+      "entities_gt": {
+        "dosages": [
+          "150mg",
+          "100mg",
+          "30mg",
+          "40mg"
+        ],
+        "frequencies": [],
+        "routes": [],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "eli lilly",
+          "boehringer",
+          "tagrisso",
+          "roche",
+          "tarceva",
+          "alimta",
+          "giotrif",
+          "thu",
+          "astra"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "150mg",
+          "30mg"
+        ],
+        "frequencies": [],
+        "routes": [],
+        "indications": [
+          "ung thư"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "boehringer",
+          "alecensa",
+          "tarceva",
+          "roche",
+          "thu",
+          "giotrif"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 4,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.8333333333333334,
+          "recall": 0.5555555555555556,
+          "f1": 0.6666666666666667,
+          "gt_count": 9,
+          "llm_count": 6,
+          "matched": 5
+        },
+        "overall": {
+          "precision": 0.7777777777777778,
+          "recall": 0.5384615384615384,
+          "f1": 0.6363636363636364,
+          "total_gt": 13,
+          "total_llm": 9,
+          "total_matched": 7
+        }
+      },
+      "overall_f1": 0.6363636363636364,
+      "overall_precision": 0.7777777777777778,
+      "overall_recall": 0.5384615384615384
+    },
+    {
+      "query": "Xin hãy liệt kê các thuốc chữa bệnh liên quan đến Ung Thư Biểu Mô Đường Niệu.",
+      "answer_ground_truth": "Dung dịch tiêm Imfinzi INJ 500mg/10ml Astrazeneca.",
+      "answer_llm_predict": "Một số thuốc chữa bệnh liên quan đến Ung Thư Biểu Mô Đường Niệu bao gồm:\n\n1. Thuốc Imfinzi INJ 120mg/2,4ml AstraZeneca\n2. Thuốc Imfinzi INJ 120mg/2,4ml AstraZeneca (Hãng Astra)\n3. Dung dịch tiêm Imfinzi INJ 500mg/10ml Astrazeneca\n4. Dung dịch tiêm Imfinzi INJ 500mg/10ml Astrazeneca (Hãng Astra)",
+      "entities_gt": {
+        "dosages": [
+          "10ml",
+          "500mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "tiêm"
+        ],
+        "indications": [],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "imfinzi inj",
+          "astrazeneca"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "2,4ml",
+          "120mg",
+          "500mg",
+          "10ml"
+        ],
+        "frequencies": [],
+        "routes": [
+          "tiêm"
+        ],
+        "indications": [
+          "ung thư"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "ung th",
+          "imfinzi inj",
+          "astrazeneca",
+          "thu",
+          "astra"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 4,
+          "matched": 2
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "gt_count": 3,
+          "llm_count": 6,
+          "matched": 3
+        },
+        "overall": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "total_gt": 6,
+          "total_llm": 12,
+          "total_matched": 6
+        }
+      },
+      "overall_f1": 0.6666666666666666,
+      "overall_precision": 0.5,
+      "overall_recall": 1.0
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh liên quan đến u lympho tế bào vỏ không?",
+      "answer_ground_truth": "Thuốc Calquence 100mg Astra điều trị u lympho tế bào vỏ, bạch cầu mạn dòng lympho.",
+      "answer_llm_predict": "Dựa trên thông tin cung cấp, có hai loại thuốc được đề cập để điều trị u lympho tế bào vỏ:\n\n1. Thuốc Calquence 100mg của Hãng Astra, thành phần chính là Acalabrutinib.\n2. Thuốc Imbruvica của Hãng Janssen, thành phần chính là Ibrutinib.",
+      "entities_gt": {
+        "dosages": [
+          "100mg"
+        ],
+        "frequencies": [],
+        "routes": [],
+        "indications": [
+          "ho"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "calquence",
+          "thu",
+          "astra"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "100mg"
+        ],
+        "frequencies": [],
+        "routes": [],
+        "indications": [
+          "ho"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "ibrutinib",
+          "acalabrutinib",
+          "imbruvica",
+          "calquence",
+          "thu",
+          "astra",
+          "janssen"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.42857142857142855,
+          "recall": 1.0,
+          "f1": 0.6,
+          "gt_count": 3,
+          "llm_count": 7,
+          "matched": 3
+        },
+        "overall": {
+          "precision": 0.5555555555555556,
+          "recall": 1.0,
+          "f1": 0.7142857142857143,
+          "total_gt": 5,
+          "total_llm": 9,
+          "total_matched": 5
+        }
+      },
+      "overall_f1": 0.7142857142857143,
+      "overall_precision": 0.5555555555555556,
+      "overall_recall": 1.0
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+\section{PHƯƠNG PHÁP}
+
+\subsection{Naive RAG}
+
+Retrieval-Augmented Generation (RAG) là một phương pháp được đề xuất gần đây nhằm cải thiện khả năng của mô hình ngôn ngữ lớn (LLM) bằng cách kết hợp tìm kiếm thông tin liên quan từ một kho dữ liệu bên ngoài \cite{lewis2020retrieval}. Phiên bản đơn giản nhất của RAG, được gọi là Naive RAG, tuân theo một quy trình tuyến tính gồm năm bước chính:
+
+\begin{enumerate}
+    \item \textbf{Encoding truy vấn}: Truy vấn được nhập vào dưới dạng văn bản tự nhiên từ người dùng. Bước này lấy chuỗi ký tự thô và chuẩn bị cho giai đoạn tiếp theo.
+    
+    \item \textbf{Chuyển đổi thành Vector Embedding}: Truy vấn được biến đổi thành một vector nhúng (embedding) có chiều cao định trước bằng cách sử dụng mô hình encoder được huấn luyện trước (pre-trained encoder). Các mô hình phổ biến bao gồm Sentence-BERT \cite{reimers2019sentence}, DAN (Dual Attention Networks), hoặc API embeddings từ các dịch vụ như OpenAI. Quá trình này cho phép biểu diễn ngữ nghĩa của truy vấn trong không gian vectơ liên tục.
+    
+    \item \textbf{Truy xuất tài liệu ứng viên}: Hệ thống tìm kiếm trong kho dữ liệu (thường được lập chỉ mục bằng vector) để tìm $k$ tài liệu có độ tương đồng cao nhất với vector truy vấn. Sự tương đồng được tính toán bằng các hàm khoảng cách như cosine similarity hay tích vô hướng (dot product). Thông thường, $k$ được đặt ở một giá trị khá lớn (50--100) để đảm bảo một lượng ứng viên đủ lớn.
+    
+    \item \textbf{Xây dựng ngữ cảnh}: Các tài liệu được truy xuất được kết hợp với truy vấn gốc theo một định dạng prompt nhất định. Ngữ cảnh này được xây dựng sao cho mô hình ngôn ngữ có đủ thông tin để sinh ra câu trả lời chính xác.
+    
+    \item \textbf{Sinh câu trả lời}: Prompt đã được xây dựng được đưa vào một mô hình ngôn ngữ lớn (LLM), chẳng hạn như GPT-3.5, GPT-4, hoặc Llama \cite{touvron2023llama}, để sinh ra câu trả lời cuối cùng. Mô hình này tạo ra câu trả lời dựa trên cả tri thức nội tại của nó và thông tin từ ngữ cảnh được cung cấp.
+\end{enumerate}
+
+Mặc dù Naive RAG có độ đơn giản và khả năng triển khai nhanh chóng, phương pháp này gặp phải nhiều hạn chế đáng kể:
+
+\begin{itemize}
+    \item \textbf{Chất lượng truy xuất không ổn định}: Phương pháp tìm kiếm dựa trên embedding có thể dễ dàng bị "lạc đường" trong không gian vectơ. Các tài liệu được truy xuất có thể chứa nhiễu (noise) hoặc không thực sự liên quan về mặt ngữ nghĩa đến ý định thực của người dùng \cite{xu2023retrieval}. Ví dụ, một truy vấn về "cách trị bệnh huyết áp cao" có thể truy xuất các tài liệu về "huyết áp" mà không cụ thể nói về các phương pháp điều trị.
+    
+    \item \textbf{Phụ thuộc vào chất lượng của truy vấn ban đầu}: Nếu truy vấn của người dùng không được diễn đạt rõ ràng hoặc thiếu thông tin ngữ cảnh quan trọng, kết quả truy xuất sẽ bị ảnh hưởng nặng nề. Một truy vấn mơ hồ như "nó là gì?" mà không có bối cảnh sẽ khó có thể được xử lý hiệu quả \cite{hashemi2020query}.
+    
+    \item \textbf{Không có xếp hạng lại trên cơ sở ngữ nghĩa sâu}: Các tài liệu được sắp xếp chỉ dựa trên độ tương đồng cosine hoặc tích vô hướng của embedding, không xem xét các yếu tố phức tạp hơn như sự liên quan ngữ nghĩa thực sự hoặc độ tin cậy của nguồn \cite{gao2023retrieval}. Điều này có thể dẫn đến việc các tài liệu có "khác biệt mềm mỏng" nhưng thực chất liên quan cao lại bị xếp hạng thấp.
+\end{itemize}
+
+\subsection{Rerank RAG}
+
+\subsubsection{Động lực và ý tưởng cơ bản}
+
+Để giải quyết những hạn chế cơ bản của Naive RAG, một số nghiên cứu gần đây đã đề xuất phương pháp Rerank RAG (also referred to as ``Reranking in RAG'' hoặc ``Two-Stage Retrieval''). Ý tưởng chính là sử dụng một bộ xếp hạng lại (reranker) thứ cấp để tinh chỉnh kết quả từ giai đoạn truy xuất ban đầu \cite{sun2023step, ma2021cascade}.
+
+Quy trình hoạt động như sau: Sau khi Naive RAG truy xuất một tập hợp lớn các tài liệu ứng viên (thường là 50--100 tài liệu dựa trên độ tương đồng embedding), hệ thống thực hiện một bước xếp hạng lại bằng cách sử dụng một mô hình đặc biệt được huấn luyện hoặc được tinh chỉnh để đánh giá độ liên quan thực sự giữa truy vấn và từng tài liệu. Những tài liệu được xếp hạng cao nhất (thường là top-5 đến top-10) sau đó được chọn để xây dựng ngữ cảnh cho mô hình ngôn ngữ.
+
+\subsubsection{Lợi ích và hiệu suất}
+
+Một số công trình nghiên cứu đã chứng minh rằng việc sử dụng Reranking có thể:
+
+\begin{itemize}
+    \item \textbf{Cải thiện độ chính xác}: Theo các kết quả thực nghiệm, Rerank RAG có thể cải thiện độ chính xác của truy xuất từ 20\% đến 30\% so với Naive RAG trên nhiều bộ dữ liệu (datasets) tiêu chuẩn \cite{ma2021cascade, santhanam2021colbert}.
+    
+    \item \textbf{Giảm nhiễu trong ngữ cảnh}: Bằng cách loại bỏ các tài liệu ít liên quan, phương pháp này đảm bảo rằng LLM chỉ nhận được thông tin chất lượng cao nhất, giảm thiểu khả năng bị mô hình "bị lạc hướng" (hallucination) vì nhiễu trong đầu vào \cite{gao2023retrieval}.
+    
+    \item \textbf{Nâng cao độ tin cậy và nhất quán}: Với ngữ cảnh được lọc và xếp hạng tốt hơn, các câu trả lời sinh ra từ LLM thường có độ tin cậy cao hơn và nhất quán hơn qua nhiều lần truy vấn tương tự \cite{xu2023retrieval}.
+\end{itemize}
+
+\subsubsection{Các phương pháp xếp hạng lại phổ biến}
+
+Trong việc xây dựng bộ xếp hạng lại, có ba lớp phương pháp chính được sử dụng rộng rãi:
+
+\begin{itemize}
+    \item \textbf{BM25 (Best Matching 25)}: BM25 là một thuật toán tìm kiếm dựa trên tìm kiếm từ khóa được phát triển vào những năm 1990 \cite{robertson2009probabilistic}. Mô hình này sử dụng khái niệm Okapi BM25, tính toán điểm số của một tài liệu dựa trên:
+    \begin{itemize}
+        \item Tần suất của các từ trong tài liệu và toàn bộ tập hợp (term frequency \& inverse document frequency)
+        \item Độ dài của tài liệu (document length normalization)
+    \end{itemize}
+    BM25 có những ưu điểm là dễ triển khai, hiệu quả về mặt tính toán, và ổn định trên nhiều miền khác nhau. Tuy nhiên, nó không nắm bắt ngữ nghĩa sâu và phụ thuộc vào sự phân bố từ.
+    
+    \item \textbf{Neural Rerankers (ví dụ: MonoBERT)}: Mô hình BERT được fine-tune để làm bộ xếp hạng được gọi là MonoBERT được đề xuất bởi Nogueira \& Cho (2019) \cite{nogueira2019passage}. Phương pháp này:
+    \begin{itemize}
+        \item Lấy một cặp (query, document) và đưa qua mô hình BERT đã được tinh chỉnh
+        \item Sử dụng token [CLS] hoặc một tầng phân loại đặc biệt để cho ra một điểm số liên quan (relevance score)
+        \item Xếp hạng lại các tài liệu dựa trên các điểm số này
+    \end{itemize}
+    MonoBERT có khả năng nắm bắt các quan hệ ngữ nghĩa phức tạp hơn BM25, nhưng có chi phí tính toán cao hơn vì phải xử lý từng cặp một cách độc lập.
+    
+    \item \textbf{Dense Ranking Models}: Các mô hình xếp hạng dày đặc (dense) như DPR (Dense Passage Retrieval) \cite{karpukhin2020dense} hoặc ColBERT \cite{santhanam2021colbert} sử dụng các mạng neural để học các hàm embedding đặc biệt cho cả truy vấn và tài liệu:
+    \begin{itemize}
+        \item Huấn luyện hai bộ mã hóa (encoder) riêng biệt, một cho truy vấn và một cho tài liệu
+        \item Sử dụng các hàm loss như contrastive loss hoặc triplet loss để tối ưu hóa sao cho truy vấn và tài liệu liên quan có embedding gần nhau
+        \item Cho phép tính toán điểm số dựa trên tương đồng embedding giữa các vector này
+    \end{itemize}
+    Phương pháp này cân bằng tốt giữa hiệu suất và chi phí tính toán, và có thể đạt hiệu suất rất cao trên các tác vụ truy xuất thông tin.
+\end{itemize}
+
+\subsection{Rephrase: Viết lại truy vấn}
+
+\subsubsection{Nền tảng lý thuyết}
+
+Viết lại truy vấn (query rewriting) hay còn gọi là query reformulation là một kỹ thuật được phát triển từ lâu trong lĩnh vực Information Retrieval \cite{zhou2007query}. Tuy nhiên, với sự phát triển của các mô hình ngôn ngữ lớn, kỹ thuật này lại được tái khám phá và áp dụng trong bối cảnh RAG.
+
+Một trong những quan sát quan trọng là truy vấn ban đầu từ người dùng không phải lúc nào cũng được phát biểu một cách tối ưu cho việc truy xuất thông tin tự động. Người dùng có thể:
+\begin{itemize}
+    \item Sử dụng ngôn ngữ không chính thức hoặc lóng (colloquial)
+    \item Thiếu một số từ khóa quan trọng cần thiết cho tìm kiếm hiệu quả
+    \item Đặt câu hỏi mơ hồ mà không cung cấp đủ ngữ cảnh
+    \item Chỉ cung cấp một phần của ý định thực thứ của họ
+\end{itemize}
+
+Do đó, viết lại truy vấn nhằm mục đích chuyển đổi truy vấn ban đầu thành một hoặc nhiều truy vấn được tối ưu hóa, giúp hệ thống truy xuất tìm kiếm và xác định những tài liệu liên quan nhất \cite{harishmaran2016query}.
+
+\subsubsection{Phương pháp triển khai}
+
+Có hai hướng tiếp cận chính để thực hiện query reformulation:
+
+\paragraph{Sử dụng mô hình ngôn ngữ lớn (LLM-based Rewriting)}
+
+Phương pháp này lợi dụng khả năng sinh tạo ngôn ngữ của các mô hình lớn như GPT-3.5-turbo, GPT-4, hoặc Llama-2 \cite{touvron2023llama2}. Quá trình hoạt động như sau:
+
+\begin{enumerate}
+    \item Xây dựng một prompt cụ thể yêu cầu mô hình viết lại hoặc mở rộng truy vấn
+    \item Đưa truy vấn gốc kèm theo prompt vào LLM
+    \item LLM sinh ra một hoặc nhiều phiên bản được viết lại của truy vấn
+    \item Các truy vấn này được sử dụng cho giai đoạn truy xuất
+\end{enumerate}
+
+Ưu điểm: LLM có khả năng hiểu ngữ nghĩa sâu, có thể tạo ra các truy vấn rất tự nhiên và liên quan. Hạn chế: Chi phí tính toán cao, phụ thuộc vào chất lượng của prompt engineering.
+
+\paragraph{Phương pháp NLP truyền thống (Traditional NLP-based Methods)}
+
+Các kỹ thuật NLP cổ điển cũng có thể được sử dụng để cải thiện truy vấn, bao gồm:
+
+\begin{itemize}
+    \item \textbf{Trích xuất từ khóa (Keyword Extraction)}: Sử dụng các phương pháp như TF-IDF, TextRank \cite{mihalcea2004textrank}, hoặc YAKE \cite{campos2018yake} để tự động xác định những từ quan trọng nhất trong truy vấn và tài liệu liên quan.
+    
+    \item \textbf{Phân tích cú pháp (Syntactic Parsing)}: Sử dụng dependency parsing để hiểu cấu trúc ngữ pháp và từ đó tái cấu trúc lại truy vấn một cách rõ ràng hơn.
+    
+    \item \textbf{Phân tích ngữ nghĩa (Semantic Analysis)}: Sử dụng các kỹ thuật như named entity recognition (NER) hoặc relation extraction để nhận diện các thực thể và quan hệ trong truy vấn, từ đó xây dựng lại truy vấn có cấu trúc tốt hơn.
+\end{itemize}
+
+Ưu điểm: Chi phí tính toán thấp, có thể giải thích được. Hạn chế: Hiệu suất thường thấp hơn so với LLM-based methods, khó xử lý các trường hợp ngôn ngữ phức tạp.
+
+\subsubsection{Các chiến lược reformulation}
+
+Có ba chiến lược chính để viết lại truy vấn:
+
+\begin{itemize}
+    \item \textbf{Query Expansion}: Chiến lược này thêm các từ bổ sung vào truy vấn gốc. Các từ bổ sung này có thể là:
+    \begin{itemize}
+        \item Từ đồng nghĩa hoặc gần nghĩa (synonyms): Nếu truy vấn hỏi về ``máu cao'', có thể thêm ``tăng huyết áp'' \cite{manning2010introduction}
+        \item Thuật ngữ liên quan (related terms): Nếu truy vấn hỏi về ``tiểu đường'', có thể thêm ``insulin'', ``glucose'', ``blood sugar''
+    \end{itemize}
+    Mục đích là tăng khả năng truy xuất tìm thấy các tài liệu có thể sử dụng các từ ngữ khác nhau nhưng vẫn nói về cùng một chủ đề.
+    
+    \item \textbf{Query Reformulation}: Chiến lược này viết lại toàn bộ truy vấn theo một cách khác để:
+    \begin{itemize}
+        \item Làm cho truy vấn rõ ràng hơn: Biến một câu hỏi mơ hồ thành một câu hỏi cụ thể
+        \item Bổ sung ngữ cảnh: Thêm các chi tiết giúp LLM hoặc hệ thống truy xuất hiểu rõ hơn về ý định
+        \item Đơn giản hóa: Chia một truy vấn phức tạp thành các phần nhỏ hơn
+    \end{itemize}
+    Ví dụ: Truy vấn ``Làm thế nào để'' được biến đổi thành ``Các bước để'' hoặc ``Phương pháp để''.
+    
+    \item \textbf{Multi-hop Query Decomposition}: Đối với các truy vấn phức tạp yêu cầu multiple bước suy luận, chiến lược này tách truy vấn thành nhiều câu hỏi con (sub-questions) \cite{khattab2021demonstrate}:
+    \begin{itemize}
+        \item Mỗi câu hỏi con tập trung vào một khía cạnh cụ thể của vấn đề
+        \item Hệ thống xử lý từng câu hỏi con một cách riêng biệt
+        \item Kết quả từ các câu hỏi con được kết hợp để sinh ra câu trả lời cuối cùng
+    \end{itemize}
+    Ví dụ: Truy vấn ``Tác động của sự thay đổi khí hậu đến nông nghiệp ở Việt Nam'' có thể được tách thành: (1) ``Sự thay đổi khí hậu'' (2) ``Tác động đến nông nghiệp'', (3) ``Tình hình ở Việt Nam''.
+\end{itemize}
+
+\subsubsection{Lợi ích}
+
+Việc áp dụng query reformulation mang lại các lợi ích sau:
+
+\begin{itemize}
+    \item \textbf{Tăng tỷ lệ tìm kiếm chính xác}: Một truy vấn được tối ưu hóa tốt có khả năng cao hơn để hệ thống tìm thấy các tài liệu thực sự liên quan \cite{xu2023retrieval}.
+    
+    \item \textbf{Xử lý các truy vấn mơ hồ}: Các truy vấn ban đầu mơ hồ hoặc thiếu ngữ cảnh có thể được làm rõ và bổ sung, cải thiện khả năng xử lý của hệ thống.
+    
+    \item \textbf{Giảm sự lệ thuộc vào chất lượng truy vấn}: Hệ thống trở nên mạnh mẽ hơn với các truy vấn kém chất lượng từ người dùng.
+    
+    \item \textbf{Tăng độ bao phủ ngữ cảnh}: Bằng cách khai thác các mặt khác nhau của một truy vấn, hệ thống có thể truy xuất được nhiều góc độ của chủ đề, làm cho câu trả lời toàn diện hơn.
+\end{itemize}
+
+\subsection{Triển khai của chúng tôi: Kết hợp Rephrase và Rerank}
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{images/our_method.png}
+\end{center}
+
+Dựa trên các phân tích trên, hệ thống RAG của chúng tôi được thiết kế để kết hợp cả hai kỹ thuật Rephrase và Rerank trong một pipeline tích hợp. Ý tưởng cơ bản là tối ưu hóa cả giai đoạn đầu vào (truy vấn) lẫn giai đoạn đầu ra (tài liệu truy xuất), từ đó nâng cao chất lượng câu trả lời sinh ra.
+
+Kiến trúc tổng thể gồm bốn bước chính:
+
+\begin{enumerate}
+    \item \textbf{Query Reformulation}: Viết lại hoặc mở rộng truy vấn ban đầu để tối ưu hóa cho giai đoạn truy xuất
+    
+    \item \textbf{Dense Retrieval}: Truy xuất một tập hợp lớn các tài liệu ứng viên (top-k, với $k \approx 50$--$100$) dựa trên độ tương đồng embedding giữa truy vấn được viết lại và các tài liệu trong kho
+    
+    \item \textbf{Reranking}: Xếp hạng lại các tài liệu ứng viên bằng cách sử dụng một bộ xếp hạng được huấn luyện đặc biệt, chỉ giữ lại top-n tài liệu (với $n \approx 5$--$10$) có điểm số xếp hạng cao nhất
+    
+    \item \textbf{Generation}: Sử dụng mô hình ngôn ngữ lớn với ngữ cảnh tốt nhất từ các tài liệu đã được xếp hạng để sinh câu trả lời cuối cùng
+\end{enumerate}
+
+Lợi ích của thiết kế này là:
+\begin{itemize}
+    \item \textbf{Tối ưu hóa hai chiều}: Thay vì chỉ tập trung vào một khía cạnh, hệ thống tối ưu hóa cả truy vấn (đầu vào) lẫn tài liệu (đầu ra)
+    
+    \item \textbf{Tính linh hoạt}: Mỗi thành phần có thể được cải thiện hoặc thay thế độc lập mà không ảnh hưởng đến các thành phần khác
+    
+    \item \textbf{Hiệu suất cao}: Bằng cách sử dụng một bộ xếp hạng chuyên biệt, hệ thống có thể loại bỏ hiệu quả các tài liệu không liên quan mà có thể đã lọt qua giai đoạn truy xuất ban đầu
+\end{itemize}
+
+\subsection{Phương pháp đánh giá kết quả trả lời}
+
+Để đánh giá chất lượng câu trả lời được sinh ra bởi hệ thống RAG so với câu trả lời chuẩn (ground truth), chúng tôi đề xuất sử dụng hai phương pháp đánh giá bổ sung cho nhau: (1) Cross-Encoder Semantic Similarity để đánh giá độ tương đồng ngữ nghĩa tổng thể, và (2) Medical Entity Match Score để đánh giá chuyên biệt cho dữ liệu y tế.
+
+\subsubsection{Cross-Encoder Semantic Similarity Score}
+
+\paragraph{Mô tả phương pháp}
+
+Cross-Encoder là một kiến trúc mạng neural có khả năng đánh giá độ tương đồng ngữ nghĩa giữa hai đoạn văn bản bằng cách xử lý đồng thời cả hai chuỗi đầu vào \cite{reimers2019sentence}. Khác với Bi-Encoder (xử lý hai chuỗi độc lập rồi so sánh embedding), Cross-Encoder cho phép tương tác sâu giữa các token của hai chuỗi thông qua cơ chế self-attention, từ đó nắm bắt được các quan hệ ngữ nghĩa phức tạp hơn.
+
+Trong nghiên cứu này, chúng tôi sử dụng mô hình \texttt{BAAI/bge-reranker-v2-m3} - một Cross-Encoder đa ngôn ngữ được huấn luyện trên dữ liệu retrieval đa dạng, có khả năng xử lý tốt tiếng Việt và các văn bản chuyên ngành.
+
+\paragraph{Công thức tính toán}
+
+Cho câu trả lời ground truth $A_{gt}$ và câu trả lời của LLM $A_{llm}$, điểm Cross-Encoder được tính như sau:
+
+\begin{equation}
+    \text{Score}_{CE} = \sigma\left( f_{CE}(A_{gt}, A_{llm}) \right)
+\end{equation}
+
+Trong đó:
+\begin{itemize}
+    \item $f_{CE}$ là hàm Cross-Encoder, nhận vào cặp văn bản và trả về logit score
+    \item $\sigma$ là hàm sigmoid để chuẩn hóa điểm số về khoảng $[0, 1]$
+\end{itemize}
+
+Điểm số càng cao (gần 1) thể hiện hai câu trả lời càng tương đồng về mặt ngữ nghĩa.
+
+\subsubsection{Medical Entity Match Score}
+
+
+\paragraph{Động lực}
+
+Mặc dù Cross-Encoder đánh giá tốt độ tương đồng ngữ nghĩa tổng thể, phương pháp này có thể không phát hiện được các sai sót cụ thể trong thông tin y khoa quan trọng như liều lượng thuốc, chỉ định, hay chống chỉ định. Để khắc phục hạn chế này, chúng tôi đề xuất phương pháp Medical Entity Match Score (MEMS) - đánh giá dựa trên việc trích xuất và so khớp các thực thể y tế (medical entities).
+
+\paragraph{Các loại thực thể y tế được trích xuất}
+
+Hệ thống trích xuất 6 loại thực thể y tế chính từ văn bản sử dụng phương pháp \textbf{Rule-Based Named Entity Recognition} với biểu thức chính quy (Regular Expression) được thiết kế riêng cho văn bản y khoa tiếng Việt.
+
+\paragraph{Phương pháp trích xuất thực thể}
+
+Do không có sẵn mô hình NER (Named Entity Recognition) chuyên biệt cho dữ liệu thuốc tiếng Việt, chúng tôi xây dựng hệ thống trích xuất thực thể dựa trên quy tắc (rule-based). Phương pháp này sử dụng các biểu thức chính quy (regex) và từ điển từ khóa y khoa để nhận diện từng loại thực thể cụ thể. Dưới đây là mô tả chi tiết cách trích xuất từng loại thực thể:
+
+\begin{enumerate}
+    \item \textbf{Liều lượng (Dosages)}: Hệ thống nhận diện các cụm từ chứa số kết hợp với đơn vị đo lường y khoa. Các mẫu được tìm kiếm bao gồm: số lượng kèm đơn vị khối lượng (mg, g, mcg), đơn vị thể tích (ml, lít), hoặc đơn vị đếm (viên, giọt, gói, ống). Hệ thống cũng nhận diện các khoảng liều như ``1-2 viên'' hoặc ``5-10 ml''. Ví dụ các chuỗi được trích xuất: ``500mg'', ``2 viên'', ``1-2 giọt'', ``5ml''.
+    
+    \item \textbf{Tần suất dùng thuốc (Frequencies)}: Nhận diện các cụm từ mô tả số lần sử dụng thuốc trong một khoảng thời gian. Các mẫu bao gồm: ``X lần/ngày'', ``ngày X lần'', ``mỗi X giờ'', ``X giờ một lần'', hoặc các từ chỉ thời điểm như ``sáng'', ``trưa'', ``tối''. Ví dụ: ``3 lần/ngày'', ``mỗi 4 giờ'', ``sáng và tối''.
+    
+    \item \textbf{Đường dùng (Routes)}: Sử dụng từ điển các thuật ngữ chỉ phương thức sử dụng thuốc trong tiếng Việt. Danh sách bao gồm: ``uống'', ``nhỏ mắt'', ``nhỏ mũi'', ``xịt mũi'', ``tiêm'', ``bôi'', ``tra mắt'', ``ngậm'', ``hít'', ``đường uống'', ``đường tiêm'', ``qua da'', ``tại chỗ'', ``dùng ngoài'', ``dùng trong''.
+    
+    \item \textbf{Chỉ định (Indications)}: Sử dụng bộ từ khóa gồm hơn 40 thuật ngữ y khoa phổ biến về triệu chứng và bệnh lý. Danh sách bao gồm các từ như: ``viêm'', ``nhiễm khuẩn'', ``nhiễm trùng'', ``đau'', ``sốt'', ``ho'', ``cảm'', ``dị ứng'', ``ngứa'', ``sổ mũi'', ``nghẹt mũi'', ``viêm xoang'', ``viêm họng'', ``viêm phế quản'', ``hen'', ``suyễn'', ``tiêu chảy'', ``táo bón'', ``buồn nôn'', ``đau đầu'', ``chóng mặt'', ``mỏi mắt'', ``đỏ mắt'', ``khô mắt'', ``viêm kết mạc'', ``tăng nhãn áp'', và nhiều từ khóa khác.
+    
+    \item \textbf{Chống chỉ định (Contraindications)}: Nhận diện các cụm từ cảnh báo và trường hợp không nên dùng thuốc. Từ điển bao gồm: ``mang thai'', ``có thai'', ``cho con bú'', ``trẻ em'', ``trẻ dưới X tuổi'', ``người cao tuổi'', ``suy gan'', ``suy thận'', ``quá mẫn'', ``dị ứng với'', ``không dùng'', ``chống chỉ định'', ``thận trọng''.
+    
+    \item \textbf{Tên thuốc (Drug Names)}: Nhận diện tên thương mại của thuốc dựa trên đặc điểm hình thái học. Tên thuốc thường bắt đầu bằng chữ cái viết hoa và có thể bao gồm chữ số, dấu gạch ngang. Hệ thống tìm kiếm các cụm từ có dạng: một hoặc nhiều từ bắt đầu bằng chữ hoa liên tiếp, có thể kèm theo số hoặc ký tự đặc biệt. Ví dụ: ``Paracetamol'', ``Tobrex Alcon'', ``V.Rohto Cool'', ``Amoxicillin 500mg''.
+\end{enumerate}
+
+\paragraph{Quy trình trích xuất}
+
+Quy trình trích xuất thực thể được thực hiện theo bốn bước:
+
+\begin{enumerate}
+    \item \textbf{Tiền xử lý văn bản}: Văn bản đầu vào được chuẩn hóa bằng cách chuyển về chữ thường (lowercase) để so khớp từ khóa. Riêng với tên thuốc, văn bản gốc được giữ nguyên định dạng viết hoa để nhận diện chính xác.
+    
+    \item \textbf{Áp dụng các mẫu trích xuất}: Với mỗi loại thực thể, hệ thống áp dụng các biểu thức chính quy hoặc tìm kiếm từ khóa trong từ điển tương ứng. Tất cả các chuỗi khớp với mẫu được thu thập.
+    
+    \item \textbf{Chuẩn hóa kết quả}: Các thực thể được trích xuất được chuẩn hóa bằng cách loại bỏ khoảng trắng thừa, chuyển về chữ thường để đảm bảo tính nhất quán khi so sánh.
+    
+    \item \textbf{Lưu trữ theo loại}: Các thực thể được phân loại và lưu vào các tập hợp (set) riêng biệt theo từng loại, sẵn sàng cho bước so khớp và tính điểm.
+\end{enumerate}
+
+
+\paragraph{Công thức tính toán}
+
+Cho tập thực thể trích xuất từ ground truth $E_{gt}$ và từ câu trả lời LLM $E_{llm}$, các chỉ số đánh giá được tính như sau:
+
+\textbf{Precision} - Tỷ lệ thực thể trong câu trả lời LLM khớp với ground truth:
+\begin{equation}
+    \text{Precision} = \frac{|E_{llm} \cap E_{gt}|}{|E_{llm}|}
+\end{equation}
+
+\textbf{Recall} - Tỷ lệ thực thể trong ground truth được LLM trả lời đúng:
+\begin{equation}
+    \text{Recall} = \frac{|E_{llm} \cap E_{gt}|}{|E_{gt}|}
+\end{equation}
+
+\textbf{F1-Score} - Điểm cân bằng giữa Precision và Recall:
+\begin{equation}
+    \text{F1} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+\end{equation}
+
+Để xử lý các trường hợp diễn đạt khác nhau nhưng cùng ý nghĩa (ví dụ: ``500mg'' và ``500 mg'', hoặc ``viêm xoang'' và ``viêm các xoang''), chúng tôi sử dụng kỹ thuật so khớp mờ (fuzzy matching) thay vì so khớp chính xác. Cụ thể, hai thực thể $e_1$ và $e_2$ được coi là khớp nhau nếu độ tương đồng chuỗi của chúng vượt qua ngưỡng $\theta = 0.8$:
+
+\begin{equation}
+    \text{match}(e_1, e_2) = \begin{cases}
+        1 & \text{nếu } \text{similarity}(e_1, e_2) \geq \theta \\
+        0 & \text{ngược lại}
+    \end{cases}
+\end{equation}
+
+

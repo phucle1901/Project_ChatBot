@@ -1,0 +1,124 @@
+{
+  "statistics": {
+    "total_questions": 19,
+    "average_score": 0.8493171156423432,
+    "min_score": 0.17189364879592386,
+    "max_score": 0.9999796963077434
+  },
+  "results": [
+    {
+      "query": "Bạn có thể liệt kê các thuốc nhỏ mắt được sử dụng để điều trị nhiễm khuẩn mắt không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Dexalevo Drop CPC1HN, Thuốc nhỏ mắt Eyedin DX Makcur, Thuốc nhỏ mắt Moxieye 10ml CPC1HN, Thuốc nhỏ mắt Clesspra DX, Thuốc nhỏ mắt Tobramycin 0,3% Traphaco, Thuốc tra mắt Eyedin Makcur, Thuốc nhỏ mắt Vigadexa Alcon.",
+      "answer_llm_predict": "Một số thuốc nhỏ mắt được sử dụng để điều trị nhiễm khuẩn mắt bao gồm:\n\n1. Thuốc nhỏ mắt Naphacollyre Nam Hà\n2. Thuốc nhỏ mắt Clesspra DX\n3. Thuốc nhỏ mắt Eyedin DX Makcur\n4. Thuốc nhỏ mắt Pandex DK Pharma\n5. Thuốc nhỏ mắt Tobrex Alcon",
+      "score": 0.8870089915514326
+    },
+    {
+      "query": "Bạn có thể liệt kê các loại thuốc chữa bệnh viêm kết mạc mà bạn đã đề cập không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt mũi tai TheKatadexan, Thuốc nhỏ mắt Ketofen Drop 0,5mg/ml, Thuốc nhỏ mũi Otrivin 0.1% GSK, Thuốc nhỏ mắt Systane Ultra Alcon, Thuốc nhỏ mắt, mũi, tai Polydeson Vidipha, Thuốc nhỏ mắt Ketofen Drop 0.4ml.",
+      "answer_llm_predict": "Các loại thuốc chữa bệnh viêm kết mạc đã được đề cập bao gồm:\n\n1. Thuốc nhỏ mắt Motarute Daewoo Pharm\n2. Thuốc mỡ tra mắt Ocumox Remington\n3. Thuốc nhỏ mắt Vigamox Alcon\n4. Thuốc nhỏ mắt Tobcol Dược 3-2",
+      "score": 0.17189364879592386
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc điều trị mỏi mắt không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt V.Rohto Cool, Thuốc Tobicom ICA, Thuốc nhỏ mắt Daigaku Santen, Thuốc nhỏ mắt Syseye Merap, Thuốc nhỏ mắt Sancoba Santen, Thuốc nhỏ mắt Eskar DK Pharma",
+      "answer_llm_predict": "Một số thuốc điều trị mỏi mắt bao gồm:\n\n- Thuốc nhỏ mắt Eskar DK Pharma\n- Thuốc nhỏ mắt V.Rohto Cool (12ml)\n- Thuốc nhỏ mắt Daigaku Santen\n- Thuốc nhỏ mắt New V.Rohto",
+      "score": 0.7759445507683053
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh viêm xoang trong danh sách trên không?",
+      "answer_ground_truth": "Thuốc Rhinassin-OPC, Thuốc nhỏ mũi Rhinex 0.05% Uphace, Thuốc Tỷ Viêm Nang Khang Minh, Thuốc viêm xoang Abipha Cap.",
+      "answer_llm_predict": "Danh sách thuốc : Thuốc Rhinassin-OPC, Thuốc nhỏ mũi Rhinex 0.05% Uphace, Thuốc Tỷ Viêm Nang Khang Minh, Thuốc viêm xoang Abipha Cap.",
+      "score": 0.999974928406152
+    },
+    {
+      "query": "Bạn có thể liệt kê các loại thuốc điều trị viêm mũi dị ứng không?",
+      "answer_ground_truth": "Thuốc xịt mũi Meseca Merap, Thuốc nhỏ mũi Rhinex 0.05%, Thuốc Rhinocort Aqua 64mcg, Thuốc Cetimed 10mg, Thuốc xịt mũi Avamys 27.5mcg, Thuốc xịt mũi Nozeytin-F, Thuốc xịt mũi Aladka, Thuốc Zentason 16.8ml, Thuốc xịt mũi Mome-Air 120, Thuốc Desloratadine 5mg, Thuốc Xoang Vạn Xuân.",
+      "answer_llm_predict": "Một số loại thuốc điều trị viêm mũi dị ứng bao gồm:\n\n1. Thuốc Betalestin Mekophar\n2. Thuốc Decolgen ND United\n3. Thuốc Esha\n4. Hỗn dịch xịt mũi Wizosone DK Pharma",
+      "score": 0.7272012166848617
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh khô mắt mà bạn biết không?",
+      "answer_ground_truth": "Dung dịch nhỏ mắt V.Rohto Dryeye, Thuốc nhỏ mắt Restasis 0.05% Allergan, Hỗn dịch nhỏ mắt Pred Forte Allergan, Thuốc nhỏ mắt Hylaform 0,1% CPC1HN, Thuốc nhỏ mắt Coodrop Pharmedic, Thuốc nhỏ mắt Tearidone, Thuốc nhỏ mắt Diquas Santen, Thuốc nhỏ mắt Natri Clorid 0.9% Haipharco, Dung dịch Relestat Allergan, Thuốc nhỏ mắt Telodrop Hanlim, Thuốc nhỏ mắt Refresh Tears Allergan, Thuốc nhỏ mắt Dextear 20mg/ml Samchundang Pharm, Thuốc nhỏ mắt Hameron, Thuốc nhỏ mắt Polkab 0.15% Samchundang Pharm.",
+      "answer_llm_predict": "Một số thuốc chữa bệnh khô mắt bao gồm:\n\n1. Thuốc nhỏ mắt Syseye Merap\n2. Thuốc nhỏ mắt, nhỏ mũi Natri Clorid 0,9% Haipharco\n3. Thuốc nhỏ mắt OSLA Merap\n4. Thuốc nhỏ mắt Vismed TRB Chemedica",
+      "score": 0.7277820199254955
+    },
+    {
+      "query": "Xin hãy liệt kê các thuốc điều trị bệnh đục thủy tinh thể.",
+      "answer_ground_truth": "Thuốc tra mắt Posod Hanlim, Thuốc nhỏ mắt Eyaren Samil",
+      "answer_llm_predict": "Thuốc tra mắt Posod Hanlim và Thuốc nhỏ mắt Eyaren Samil",
+      "score": 0.9999778743309043
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh viêm mắt mà bạn đã đề cập không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Scofi Merap, Dung dịch nhỏ mắt Moxikune, Hỗn dịch nhỏ mắt Tobradex, Thuốc nhỏ mắt Torexvis 0,3% Gia Nguyễn, Thuốc nhỏ mắt Pandex DK Pharma, Thuốc nhỏ mắt Tobidex Bidiphar.",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc chữa bệnh viêm mắt đã được đề cập:\n\n1. Thuốc nhỏ mắt Scofi Merap\n2. Thuốc nhỏ mắt Ofloxacin 0,3% Traphaco\n3. Thuốc nhỏ mắt Tobcol Dược 3-2\n4. Thuốc mỡ tra mắt MediClophencid-H Medipharco\n5. Thuốc nhỏ mắt Metodex Merap",
+      "score": 0.8394709400397776
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc điều trị viêm mí mắt không?",
+      "answer_ground_truth": "Thuốc tra mắt Eporon, Thuốc nhỏ mắt Phileo SamChunDang",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc điều trị viêm mí mắt:\n\n1. Thuốc nhỏ mắt FML Allergan\n2. Thuốc nhỏ mắt Tobcol Dược 3-2\n3. Thuốc nhỏ mắt Lotemax 0.5% Bausch & Lomb\n4. Thuốc nhỏ mắt Phileo SamChunDang",
+      "score": 0.804405915893501
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc điều trị bệnh đỏ mắt không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt V.Rohto Lycée 13ml, Thuốc nhỏ mắt Eyecool, Thuốc nhỏ mắt Daiticol Dược 3-2",
+      "answer_llm_predict": "Một số thuốc điều trị bệnh đỏ mắt bao gồm:\n\n1. Thuốc nhỏ mắt Daiticol Dược 3-2\n2. Thuốc nhỏ mắt Topramycin 0,3% Traphaco\n3. Thuốc nhỏ mắt Eyecool\n4. Thuốc nhỏ mắt V.Rohto Lycée 13ml",
+      "score": 0.9704086268107062
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh giảm áp lực nội nhãn không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Philhyal-San Daewoo điều trị rối loạn biểu mô giác, kết mạc; Thuốc xịt mũi Thái Dương điều trị hắt hơi, sổ mũi, nghẹt mũi.",
+      "answer_llm_predict": "Thuốc nhỏ mắt Philhyal-San Daewoo chữa trị rối loạn biểu mô giác, kết mạc; Thuốc xịt mũi Thái Dương điều trị hắt hơi, sổ mũi, tắc mũi.",
+      "score": 0.9999787219339408
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh viêm mi mắt không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Sanlein 0.3% Santen, Thuốc nhỏ mắt Tobcol-Dex Dược 3-2",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc chữa bệnh viêm mi mắt:\n\n1. Thuốc nhỏ mắt Tobcol Dược 3-2\n2. Thuốc nhỏ mắt Tobcol-Dex Dược 3-2\n3. Thuốc nhỏ mắt Phileo SamChunDang\n4. Thuốc nhỏ mắt Cravit 1.5% Santen\n5. Thuốc nhỏ mắt Oflovid Santen",
+      "score": 0.8484706618201715
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh tăng nhãn áp và nhiễm khuẩn ở mắt không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Tobrex Alcon điều trị nhiễm khuẩn ở mắt, Dung dịch nhỏ mắt Timolol Maleate Eye Drops 0.5% Alcon điều trị tăng nhãn áp.",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc chữa bệnh tăng nhãn áp và nhiễm khuẩn ở mắt:\n\n- Thuốc chữa tăng nhãn áp: Alphagan P\n- Thuốc chữa nhiễm khuẩn ở mắt: \n + Tobramycin 0,3% \n + Tobrex \n + Metodex \n + Clesspra DX",
+      "score": 0.9386884633979415
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc điều trị viêm giác mạc không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Fumeron Hanlim điều trị dị ứng, viêm mắt, viêm kết mạc, viêm giác mạc.",
+      "answer_llm_predict": "Thuốc Fumeron Hanlim điều trị dị ứng, viêm mắt, viêm kết mạc, viêm giác mạc.",
+      "score": 0.9999796963077434
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa viêm bờ mi không?",
+      "answer_ground_truth": "Thuốc nhỏ mắt Cravit 0.5% Santen và thuốc nhỏ mắt Cravit 1.5% Santen.",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc chữa viêm bờ mi:\n\n1. Thuốc nhỏ mắt Cravit 1.5% Santen\n2. Thuốc nhỏ mắt Oflovid Santen\n3. Thuốc nhỏ mắt Cravit 0.5% Santen\n4. Thuốc nhỏ mắt Bronuck Senju Pharm",
+      "score": 0.9319595797274409
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa ngạt mũi và liên quan đến bệnh lý này không?",
+      "answer_ground_truth": "Thuốc nhỏ mũi trẻ em Elossy 0.05%, Thuốc xịt mũi Coldi-B Nam Hà, Thuốc xịt mũi Xylogen DK Pharma",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc chữa ngạt mũi và liên quan đến bệnh lý này:\n\n1. Thuốc nhỏ mũi Nostravin 0,05% \n2. Thuốc xịt mũi Otilin 0.1% \n3. Thuốc xịt mũi Xylogen \n4. Thuốc Kim Long \n5. Thuốc chống dị ứng Kacerin 10mg",
+      "score": 0.6349961275385564
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc hỗ trợ điều trị ung thư phổi không?",
+      "answer_ground_truth": "Thuốc Tarceva 150mg Roche, Thuốc Tagrisso 40mg Astra, Thuốc Alimta 100mg Eli Lilly, Thuốc Giotrif 30mg Boehringer.",
+      "answer_llm_predict": "Dưới đây là danh sách các thuốc hỗ trợ điều trị ung thư phổi được đề cập:\n\n1. Thuốc Alecensa 150mg của Hãng Roche\n2. Thuốc Tarceva 150mg của Hãng Roche\n3. Thuốc Giotrif 30mg của Hãng Boehringer",
+      "score": 0.9053222982086733
+    },
+    {
+      "query": "Xin hãy liệt kê các thuốc chữa bệnh liên quan đến Ung Thư Biểu Mô Đường Niệu.",
+      "answer_ground_truth": "Dung dịch tiêm Imfinzi INJ 500mg/10ml Astrazeneca.",
+      "answer_llm_predict": "Một số thuốc chữa bệnh liên quan đến Ung Thư Biểu Mô Đường Niệu bao gồm:\n\n1. Thuốc Imfinzi INJ 120mg/2,4ml AstraZeneca\n2. Thuốc Imfinzi INJ 120mg/2,4ml AstraZeneca (Hãng Astra)\n3. Dung dịch tiêm Imfinzi INJ 500mg/10ml Astrazeneca\n4. Dung dịch tiêm Imfinzi INJ 500mg/10ml Astrazeneca (Hãng Astra)",
+      "score": 0.9853843298993641
+    },
+    {
+      "query": "Bạn có thể liệt kê các thuốc chữa bệnh liên quan đến u lympho tế bào vỏ không?",
+      "answer_ground_truth": "Thuốc Calquence 100mg Astra điều trị u lympho tế bào vỏ, bạch cầu mạn dòng lympho.",
+      "answer_llm_predict": "Dựa trên thông tin cung cấp, có hai loại thuốc được đề cập để điều trị u lympho tế bào vỏ:\n\n1. Thuốc Calquence 100mg của Hãng Astra, thành phần chính là Acalabrutinib.\n2. Thuốc Imbruvica của Hãng Janssen, thành phần chính là Ibrutinib.",
+      "score": 0.9881766051636294
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "statistics": {
+    "total_questions": 20,
+    "average_score": 0.9752699726829188,
+    "min_score": 0.5883570718632035,
+    "max_score": 0.9999524235457434
+  },
+  "results": [
+    {
+      "query": "Bệnh nhân lớn tuổi có tiền sử bệnh phổi mạn tính (Thận trọng) có thể sử dụng thuốc Dung dịch uống Novocough 6mg/ml CPC1HN điều trị triệu chứng ho không, và nếu có, liều dùng sẽ như thế nào (Liều dùng)?",
+      "answer_ground_truth": "Bệnh nhân lớn tuổi có thể sử dụng thuốc Dung dịch uống Novocough 6mg/ml CPC1HN điều trị triệu chứng ho, nhưng cần thận trọng do có nguy cơ cao hơn về tác dụng phụ và tương tác thuốc. Liều dùng cho người lớn là 60 mg/lần, 3 lần/ngày, với các liều cách nhau 6 giờ. Tuy nhiên, liều dùng cụ thể cần được điều chỉnh dựa trên thể trạng và mức độ diễn tiến của bệnh, vì vậy bệnh nhân nên tham khảo ý kiến bác sĩ trước khi sử dụng.",
+      "answer_llm_predict": "Bệnh nhân lớn tuổi có tiền sử bệnh phổi mạn tính có thể sử dụng thuốc Dung dịch uống Novocough 6mg/ml CPC1HN điều trị triệu chứng ho, tuy nhiên cần sử dụng thận trọng. Liều dùng cho người lớn và trẻ em trên 12 tuổi là 60 mg/lần x 3 lần/ngày, các liều cách nhau 6 giờ. Tuy nhiên, liều dùng cụ thể có thể thay đổi tùy thuộc vào thể trạng và mức độ diễn tiến của bệnh, do đó cần tham khảo ý kiến bác sĩ hoặc chuyên viên y tế.",
+      "score": 0.9936856353291037
+    },
+    {
+      "query": "Là bác sĩ, tôi có một bệnh nhân 65 tuổi bị suy gan nhẹ (Caution) và đang bị cảm lạnh với triệu chứng sốt nhẹ và ho khan (Usage). Vậy tôi có thể kê đơn thuốc Viên nén Midorhum OPV hạ sốt, giảm ho, giảm đau, chống dị ứng cho bệnh nhân này không? Nếu có thì liều lượng như thế nào (Dosage)?",
+      "answer_ground_truth": "Bạn cần thận trọng khi kê đơn thuốc Viên nén Midorhum OPV cho bệnh nhân suy gan, vì acetaminophen có thể gây độc cho gan, đặc biệt ở người có bệnh lý gan. Trong trường hợp này, bạn nên giảm liều. Theo liều dùng khuyến cáo, bệnh nhân trên 12 tuổi có thể uống 1 viên/lần x 2 lần/ngày, nhưng đối với bệnh nhân suy gan, liều lượng nên điều chỉnh thành 1 viên/lần x 1 lần/ngày hoặc uống cách ngày. Bạn cũng nên theo dõi chặt chẽ các triệu chứng và tình trạng của bệnh nhân trong quá trình điều trị.",
+      "answer_llm_predict": "Không nên kê đơn thuốc Viên nén Midorhum OPV cho bệnh nhân 65 tuổi bị suy gan nhẹ và đang bị cảm lạnh với triệu chứng sốt nhẹ và ho khan vì thông tin không cung cấp đủ dữ liệu về việc sử dụng thuốc này cho bệnh nhân suy gan.",
+      "score": 0.9822877012965885
+    },
+    {
+      "query": "Bệnh nhân lớn tuổi (Thận trọng) có tiền sử dị ứng với kháng sinh nhóm quinolon (Chống chỉ định) đang bị viêm kết mạc mủ (Công dụng) thì có thể sử dụng Dung dịch nhỏ mắt Moxikune điều trị các tình trạng nhiễm khuẩn mắt, chống viêm sau phẫu thuật không?",
+      "answer_ground_truth": "Bệnh nhân lớn tuổi có tiền sử dị ứng với kháng sinh nhóm quinolon không nên sử dụng Dung dịch nhỏ mắt Moxikune vì thuốc này có chứa moxifloxacin, một loại kháng sinh thuộc nhóm quinolon, và có thể gây ra phản ứng quá mẫn nghiêm trọng. Do đó, việc sử dụng thuốc này cho bệnh nhân là không an toàn.",
+      "answer_llm_predict": "Không thể sử dụng Dung dịch nhỏ mắt Moxikune cho bệnh nhân này vì bệnh nhân có tiền sử dị ứng với kháng sinh nhóm quinolon, trong khi Moxikune thuộc nhóm kháng sinh này.",
+      "score": 0.9995289881819112
+    },
+    {
+      "query": "Bệnh nhân bị viêm tai mạn tính có kèm theo thủng màng nhĩ (Usage) thì có thể sử dụng Thuốc nhỏ tai Otofa Bouchara điều trị các dạng chảy mũ tai không? Nếu có, liều dùng cho người lớn là bao nhiêu và cần lưu ý gì khi sử dụng (Dosage + Careful)?",
+      "answer_ground_truth": "Có, bệnh nhân bị viêm tai mạn tính có kèm theo thủng màng nhĩ có thể sử dụng Thuốc nhỏ tai Otofa Bouchara để điều trị các dạng chảy mũ tai. Liều dùng cho người lớn là 5 giọt, 2 lần/ngày, nhỏ vào tai bị bệnh vào buổi sáng và buổi tối. Tuy nhiên, cần lưu ý ngưng thuốc ngay nếu xảy ra phát ban da hay có bất kỳ dấu hiệu phản ứng nào. Ngoài ra, không nên dùng thuốc này đồng thời với các thuốc nhỏ tai khác và nếu bệnh không cải thiện sau 10 ngày điều trị, bệnh nhân nên đi khám lại.",
+      "answer_llm_predict": "Vâng, bệnh nhân bị viêm tai mạn tính có kèm theo thủng màng nhĩ có thể sử dụng Thuốc nhỏ tai Otofa Bouchara. Liều dùng cho người lớn là 5 giọt, 2 lần/ngày. Khi sử dụng cần lưu ý tránh chạm ngón tay hoặc tai vào đầu ống nhỏ giọt, không nên dùng thuốc này đồng thời với các thuốc nhỏ tai khác, và nên khám lại nếu bệnh không cải thiện sau 10 ngày điều trị.",
+      "score": 0.9997346976231016
+    },
+    {
+      "query": "Tôi đang bị cảm cúm với các triệu chứng như sốt và nhức đầu (Usage). Tôi có thể sử dụng thuốc Lodextrin Agimexpharm điều trị các triệu chứng cảm cúm, sốt, ho, nhức đầu này không? Liều dùng của thuốc này là bao nhiêu và tôi cần lưu ý gì khi sử dụng thuốc (Dosage + Careful)?",
+      "answer_ground_truth": "Bạn có thể sử dụng thuốc Lodextrin Agimexpharm để điều trị các triệu chứng cảm cúm bao gồm sốt và nhức đầu. Liều dùng cụ thể tùy thuộc vào thể trạng và mức độ diễn tiến của bệnh, vì vậy bạn nên tham khảo ý kiến bác sĩ hoặc chuyên viên y tế để có liều dùng phù hợp. Ngoài ra, bạn cần thận trọng khi sử dụng thuốc này, đặc biệt nếu bạn có tiền sử quá mẫn với bất kỳ thành phần nào của thuốc. Đọc kỹ hướng dẫn sử dụng trước khi dùng và không nên tự ý thay đổi liều lượng mà không có sự hướng dẫn của bác sĩ.",
+      "answer_llm_predict": "Bạn có thể sử dụng thuốc Lodextrin Agimexpharm để điều trị các triệu chứng cảm cúm, sốt, ho, nhức đầu. Tuy nhiên, trước khi sử dụng, bạn cần đọc kỹ hướng dẫn sử dụng và tham khảo thông tin về liều dùng, chống chỉ định, thận trọng khi sử dụng, ảnh hưởng của thuốc lên khả năng lái xe và vận hành máy móc, sử dụng thuốc cho phụ nữ trong thời kỳ mang thai và cho con bú, tương tác thuốc. \n\nLiều dùng của thuốc này không được đề cập cụ thể trong thông tin cung cấp. Bạn nên tham khảo tờ hướng dẫn sử dụng thuốc đính kèm sản phẩm hoặc tham khảo ý kiến của bác sĩ hoặc dược sĩ để biết liều dùng phù hợp với tình trạng sức khỏe của mình.\n\nKhi sử dụng thuốc, bạn cần lưu ý:\n\n- Đọc kỹ hướng dẫn sử dụng trước khi dùng.\n- Bảo quản thuốc ở nơi mát, tránh ánh sáng, nhiệt độ dưới 30⁰C.\n- Để xa tầm tay trẻ em.\n- Không nên dùng hay tăng giảm liều lượng của thuốc mà không có sự hướng dẫn của bác sĩ.\n- Báo cho bác sĩ hoặc dược sĩ danh sách những thuốc và các thực phẩm chức năng bạn đang sử dụng.\n- Tuân theo chỉ định từ bác sĩ, chỉ nên dùng thuốc khi lợi ích vượt trội nguy cơ có thể xảy ra.",
+      "score": 0.9997694932780068
+    },
+    {
+      "query": "Bệnh nhân có tiền sử suy gan (Thận trọng) có thể sử dụng Viên nén Phaanedol Plus Extra Strengh Usa - Nic Pharma giảm các chứng đau từ nhẹ đến vừa, hạ sốt không? Nếu có thì liều lượng cần điều chỉnh như thế nào (Liều dùng)?",
+      "answer_ground_truth": "Bệnh nhân có tiền sử suy gan nên thận trọng khi sử dụng Viên nén Phaanedol Plus Extra Strengh Usa - Nic Pharma vì paracetamol có thể gây độc cho gan, đặc biệt khi dùng liều cao. Nếu cần thiết phải dùng thuốc này, bác sĩ nên xem xét giảm liều và theo dõi chặt chẽ tình trạng gan của bệnh nhân. Đối với người lớn, liều thông thường là 1 viên mỗi lần, 3-4 lần/ngày, nhưng có thể cần điều chỉnh liều dựa trên tình trạng sức khỏe cụ thể của bệnh nhân.",
+      "answer_llm_predict": "Bệnh nhân có tiền sử suy gan có thể sử dụng thuốc này nhưng cần dùng thận trọng. Liều lượng cần được điều chỉnh theo chỉ dẫn của bác sĩ.",
+      "score": 0.99883958037482
+    },
+    {
+      "query": "Nếu tôi là một bệnh nhân lớn tuổi đang sử dụng Gel Genteal Alcon làm dịu cảm giác khô do đeo kính áp tròng, khói, gió, tôi có cần phải điều chỉnh liều dùng không và có điều gì tôi cần lưu ý khi sử dụng thuốc này không?",
+      "answer_ground_truth": "Bạn không cần phải điều chỉnh liều lượng Gel Genteal Alcon vì thuốc này không yêu cầu điều chỉnh cho người cao tuổi (Liều dùng). Tuy nhiên, bạn cần thận trọng khi sử dụng, đặc biệt nếu có dấu hiệu đau mắt, thay đổi thị lực, hoặc đỏ mắt kéo dài; trong những trường hợp này, bạn nên ngưng sử dụng ngay lập tức và tham khảo ý kiến bác sĩ (Thận trọng).",
+      "answer_llm_predict": "Không cần chỉnh liều lượng ở người cao tuổi.",
+      "score": 0.9848692716928064
+    },
+    {
+      "query": "Tôi có thể sử dụng Thuốc trị đau răng Dentanalgi OPC điều trị đau răng, viêm nướu răng, nha chu trong thời kỳ cho con bú không (Thận trọng), và nếu có, liều dùng thích hợp là gì (Liều dùng)?",
+      "answer_ground_truth": "Có, bạn có thể sử dụng Thuốc trị đau răng Dentanalgi OPC điều trị đau răng, viêm nướu răng, nha chu trong thời kỳ cho con bú. Liều dùng thích hợp là tẩm thuốc vào bông đặt nơi đau, 3 - 4 lần/ngày, hoặc nhỏ 1 ml thuốc (30 giọt) vào khoảng 60 ml nước chín, khuấy đều, ngậm và súc miệng 3 lần/ngày. Tuy nhiên, bạn nên tham khảo ý kiến bác sĩ để có liều dùng phù hợp với tình trạng của bạn.",
+      "answer_llm_predict": "Có, bạn có thể sử dụng Thuốc trị đau răng Dentanalgi OPC trong thời kỳ cho con bú. Liều dùng thích hợp là tẩm thuốc vào bông đặt nơi đau, 3 - 4 lần/ngày, hoặc nhỏ 1 ml thuốc vào khoảng 60 ml nước chín, khuấy đều, ngậm và súc miệng 3 lần/ngày, hoặc dùng theo chỉ dẫn của bác sĩ.",
+      "score": 0.9997367616790969
+    },
+    {
+      "query": "Tôi có một bệnh nhân mắc viêm phế quản (Usage) và đang điều trị bằng Siro trị ho Pectol Te Sagopha điều trị ho, viêm phế quản, sổ mũi, cảm mạo do phong hàn gây ra. Tuy nhiên, bệnh nhân cũng đang sử dụng một số thuốc khác không được kê đơn (Interaction). Vậy tôi nên làm gì để đảm bảo an toàn cho bệnh nhân trong quá trình điều trị này (Caution)?",
+      "answer_ground_truth": "Trước khi tiếp tục điều trị bằng Siro trị ho Pectol Te Sagopha, bạn cần kiểm tra danh sách các thuốc mà bệnh nhân đang sử dụng để xác định xem có tương tác nào có thể xảy ra hay không (Interaction). Đặc biệt, bạn cần lưu ý đến tình trạng sức khỏe tổng thể của bệnh nhân và tham khảo ý kiến của bác sĩ hoặc dược sĩ để đảm bảo rằng việc sử dụng thuốc này là an toàn, nhất là trong trường hợp bệnh nhân có dấu hiệu quá mẫn với bất kỳ thành phần nào của thuốc (Caution). Hơn nữa, cần tuân thủ liều dùng đã được bác sĩ chỉ định để tránh nguy cơ quá liều hoặc tác dụng phụ không mong muốn.",
+      "answer_llm_predict": "Để đảm bảo an toàn cho bệnh nhân, bạn nên yêu cầu bệnh nhân cung cấp thông tin về tất cả các thuốc và thực phẩm chức năng họ đang sử dụng, bao gồm cả những thuốc không được kê đơn, và thông báo cho bác sĩ hoặc dược sĩ để họ có thể đánh giá và tư vấn về tương tác thuốc và tác dụng phụ có thể xảy ra.",
+      "score": 0.5883570718632035
+    },
+    {
+      "query": "Tôi có bệnh viêm kết mạc cấp tính và được kê đơn thuốc mỡ tra mắt Maxitrol điều trị ngắn hạn. Tuy nhiên, tôi có tiền sử dị ứng với neomycin (Thận trọng). Vậy tôi có thể sử dụng thuốc này không và cách dùng như thế nào (Liều dùng)?",
+      "answer_ground_truth": "Trong trường hợp bạn có tiền sử dị ứng với neomycin, bạn không nên sử dụng thuốc mỡ tra mắt Maxitrol vì đây là một trong những thành phần hoạt chất của thuốc, có thể gây phản ứng dị ứng nghiêm trọng (Thận trọng). Nếu bạn vẫn cần điều trị viêm kết mạc, hãy tham khảo ý kiến bác sĩ để tìm một phương pháp điều trị an toàn hơn. Nếu bạn không có vấn đề với các thành phần của thuốc, liều dùng sẽ là tra một lượng thuốc vào túi kết mạc, có thể tới 3 hoặc 4 lần một ngày.",
+      "answer_llm_predict": "Không, bạn không thể sử dụng thuốc mỡ tra mắt Maxitrol vì bạn có tiền sử dị ứng với neomycin.",
+      "score": 0.9983386093266648
+    },
+    {
+      "query": "Tôi đang bị viêm mũi dị ứng (Usage) và đã sử dụng Thuốc Kim Long chữa chứng hắt hơi, sổ mũi, ngạt mũi, mặt mũi đau nhức. Tuy nhiên, tôi lo lắng về việc liệu tôi có thể dùng thuốc này nếu tôi đang mang thai (Careful) và liều lượng chính xác mà tôi nên dùng là bao nhiêu (Dosage)?",
+      "answer_ground_truth": "Thuốc Kim Long chữa chứng hắt hơi, sổ mũi, ngạt mũi, mặt mũi đau nhức được chỉ định cho viêm mũi dị ứng. Tuy nhiên, thuốc này không được khuyến cáo sử dụng cho phụ nữ mang thai (Careful). Về liều dùng, người lớn có thể dùng mỗi lần 1 gói 4 g, 2-3 lần một ngày, nhưng nếu bạn đang mang thai, bạn nên tham khảo ý kiến bác sĩ trước khi sử dụng để đảm bảo an toàn cho cả mẹ và thai nhi.",
+      "answer_llm_predict": "Tôi không thể tư vấn về việc sử dụng thuốc khi mang thai. Tuy nhiên, theo thông tin bạn cung cấp, thuốc Kim Long chống chỉ định cho phụ nữ có thai. Liều lượng được khuyến cáo là ngày uống 2-3 lần, người lớn mỗi lần 1 gói 4g, trẻ em dưới 12 tuổi mỗi lần ½ gói 4g. Tuy nhiên, để có liều dùng phù hợp, bạn nên tham khảo ý kiến bác sĩ hoặc chuyên viên y tế.",
+      "score": 0.9753431444580398
+    },
+    {
+      "query": "Bệnh nhân đang cho con bú (Thận trọng) có thể sử dụng Thuốc mỡ Oracortia 0.1% Thai Nakorn Patana hỗ trợ điều trị viêm nhiễm khoang miệng để giảm triệu chứng viêm miệng (Công dụng) không? Nếu có, liều dùng cụ thể là bao nhiêu (Liều dùng)?",
+      "answer_ground_truth": "Bệnh nhân đang cho con bú cần thận trọng khi sử dụng Thuốc mỡ Oracortia 0.1% Thai Nakorn Patana, chỉ nên dùng khi lợi ích cho bệnh nhân vượt trội hơn nguy cơ cho trẻ đang bú mẹ. Thuốc được chỉ định hỗ trợ điều trị viêm nhiễm khoang miệng và liều dùng là bôi một lượng nhỏ lên vùng da bị tổn thương (không chà xát) để tạo ra một màng mỏng, tốt nhất là sau khi ăn và nên sử dụng vào buổi tối. Tuy nhiên, để đảm bảo an toàn, bệnh nhân nên tham khảo ý kiến bác sĩ để có liều dùng phù hợp với tình trạng sức khỏe của mình.",
+      "answer_llm_predict": "Bệnh nhân đang cho con bú có thể sử dụng Thuốc mỡ Oracortia 0.1% Thai Nakorn Patana hỗ trợ điều trị viêm nhiễm khoang miệng để giảm triệu chứng viêm miệng, tuy nhiên cần thận trọng và tham khảo ý kiến bác sĩ hoặc chuyên viên y tế. Liều dùng cụ thể sẽ tùy thuộc vào thể trạng và mức độ diễn tiến của bệnh, thông thường là bôi một lượng nhỏ lên vùng da bị tổn thương để tạo ra một màng mỏng.",
+      "score": 0.9988883318306349
+    },
+    {
+      "query": "Bệnh nhân có tiền sử mẫn cảm với một số thành phần thuốc (Chống chỉ định) có thể sử dụng Thuốc tra mắt Philoclex 5ml Hanlim điều trị tại chỗ cho mắt, nhiễm trùng mắt không? Nếu không, bệnh nhân nên làm gì để điều trị tình trạng nhiễm trùng mắt của mình (Công dụng)?",
+      "answer_ground_truth": "Bệnh nhân có tiền sử mẫn cảm với bất kỳ thành phần nào của thuốc không được khuyến cáo sử dụng Thuốc tra mắt Philoclex 5ml Hanlim điều trị tại chỗ cho mắt, nhiễm trùng mắt (Chống chỉ định). Để điều trị tình trạng nhiễm trùng mắt, bệnh nhân nên tham khảo ý kiến bác sĩ để tìm kiếm phương án điều trị thay thế phù hợp với tình trạng sức khỏe của mình (Công dụng).",
+      "answer_llm_predict": "Bệnh nhân có tiền sử mẫn cảm với một số thành phần thuốc không thể sử dụng Thuốc tra mắt Philoclex 5ml Hanlim. Thay vào đó, bệnh nhân nên tham khảo ý kiến bác sĩ để được tư vấn và điều trị phù hợp cho tình trạng nhiễm trùng mắt của mình.",
+      "score": 0.9998390691750131
+    },
+    {
+      "query": "Bệnh nhân cao tuổi mắc bệnh tăng nhãn áp (Usage) có thể sử dụng Thuốc nhỏ mắt Combigan Allergan giảm áp suất nội nhãn không? Liều lượng và cách dùng thế nào (Dosage) và cần lưu ý gì khi sử dụng thuốc này (Caution)?",
+      "answer_ground_truth": "Bệnh nhân cao tuổi mắc bệnh tăng nhãn áp có thể sử dụng Thuốc nhỏ mắt Combigan Allergan để giảm áp suất nội nhãn. Liều lượng khuyến cáo là một giọt nhỏ vào mắt bệnh nhân hai lần mỗi ngày, cách nhau khoảng 12 giờ. Khi sử dụng thuốc, cần lưu ý rằng bệnh nhân cao tuổi có thể có những yếu tố riêng biệt, vì vậy cần theo dõi cẩn thận tình trạng sức khỏe của họ. Ngoài ra, do thuốc có thể hấp thu toàn thân, bệnh nhân nên được thông báo về các tác dụng phụ có thể xảy ra và cần thận trọng nếu có tiền sử bệnh tim mạch hoặc hô hấp.",
+      "answer_llm_predict": "Bệnh nhân cao tuổi mắc bệnh tăng nhãn áp có thể sử dụng thuốc nhỏ mắt Combigan Allergan để giảm áp suất nội nhãn. Liều dùng khuyến cáo là một giọt vào mắt bị bệnh, 2 lần/ngày, cách nhau khoảng 12 giờ. Cần lưu ý về các tác dụng phụ và tương tác thuốc, đặc biệt là khi sử dụng đồng thời với các thuốc khác. Nên tham khảo ý kiến bác sĩ hoặc chuyên viên y tế để có liều dùng phù hợp và được theo dõi chặt chẽ.",
+      "score": 0.9998415637808975
+    },
+    {
+      "query": "Bệnh nhân bị viêm kết mạc nặng và có tiền sử glaucom (Chống chỉ định) có thể sử dụng thuốc nhỏ mắt mũi tai Nemydexan Nam Hà điều trị viêm kết mạc không? Nếu có thì liều dùng như thế nào (Liều dùng)?",
+      "answer_ground_truth": "Bệnh nhân có tiền sử glaucom không nên sử dụng thuốc nhỏ mắt mũi tai Nemydexan Nam Hà do thuốc chống chỉ định cho người có tiền sử glaucom. Nếu vẫn muốn điều trị viêm kết mạc, cần tham khảo ý kiến bác sĩ để tìm phương pháp điều trị khác phù hợp hơn. Liều dùng thuốc này cho bệnh nhân không có chống chỉ định là mỗi lần 1 - 2 giọt, 3-4 lần/ngày, nhưng trong trường hợp này, việc sử dụng thuốc là không được phép.",
+      "answer_llm_predict": "Không, bệnh nhân bị viêm kết mạc nặng và có tiền sử glaucom không thể sử dụng thuốc nhỏ mắt mũi tai Nemydexan Nam Hà vì thuốc này chống chỉ định với những người có tiền sử glaucom.",
+      "score": 0.9991959140643708
+    },
+    {
+      "query": "Tôi bị viêm kết mạc dị ứng và bác sĩ đã chỉ định sử dụng Dung dịch Relestat Allergan điều trị và phòng ngừa ngứa mắt. Tuy nhiên, tôi cũng đang mang kính áp tròng. Vậy tôi cần lưu ý gì khi sử dụng thuốc này (Thận trọng) và liều lượng cụ thể như thế nào (Liều dùng)?",
+      "answer_ground_truth": "Khi sử dụng Dung dịch Relestat Allergan điều trị và phòng ngừa ngứa mắt, bạn cần lưu ý rằng không nên mang kính áp tròng khi bị đỏ mắt. Trước khi nhỏ thuốc, hãy bỏ kính áp tròng ra và đợi 10 - 15 phút để dung dịch thẩm thấu trước khi đeo lại. Liều dùng khuyến nghị là một giọt vào mỗi mắt, 2 lần/ngày, và nên tiếp tục điều trị trong suốt giai đoạn phơi nhiễm với dị nguyên.",
+      "answer_llm_predict": "Khi sử dụng thuốc Dung dịch Relestat Allergan điều trị và phòng ngừa ngứa mắt, bạn cần lưu ý (Thận trọng) những điều sau:\n\n- Cần khuyên bệnh nhân không mang kính áp tròng nếu đang bị đỏ mắt.\n- Không nên dùng dung dịch nhỏ mắt Relestat để điều trị kích ứng mắt do kính áp tròng.\n- Chất bảo quản benzalkonium clorid trong Relestat có thể bị hấp thu bởi kính áp tròng mềm.\n- Bệnh nhân đeo kính áp tròng mềm (ưa nước) cần được hướng dẫn về việc bỏ kính áp tròng trước khi nhỏ Relestat và đợi 10 - 15 phút để dung dịch thẩm thấu trước khi đeo lại kính áp tròng.\n\nVề liều lượng (Liều dùng), thuốc được sử dụng với liều khuyến nghị là một giọt vào mỗi mắt, 2 lần/ngày. Nên tiếp tục điều trị trong suốt giai đoạn phơi nhiễm (tức là cho đến khi mùa phấn hoa đã qua hoặc cho đến khi sự phơi nhiễm với dị nguyên đã hết), ngay cả khi không có triệu chứng.",
+      "score": 0.9999524235457434
+    },
+    {
+      "query": "Tôi có tiền sử mẫn cảm với một số thuốc (Chống chỉ định) và hiện tại đang bị viêm kết mạc (Công dụng). Vậy tôi có thể sử dụng Thuốc nhỏ mắt Britop Bharat điều trị viêm nhiễm ở mắt không, và nếu có thì liều lượng cụ thể là bao nhiêu (Liều dùng)?",
+      "answer_ground_truth": "Nếu bạn có tiền sử mẫn cảm với bất kỳ thành phần nào của Thuốc nhỏ mắt Britop Bharat, thì bạn không nên sử dụng thuốc này (Chống chỉ định). Nếu bạn không có mẫn cảm và bác sĩ đã xác nhận thuốc là an toàn cho bạn, liều lượng sẽ tùy thuộc vào thể trạng và mức độ diễn tiến của bệnh, bạn nên tham khảo ý kiến bác sĩ hoặc chuyên viên y tế để có liều dùng phù hợp (Liều dùng).",
+      "answer_llm_predict": "Không, bạn không thể sử dụng Thuốc nhỏ mắt Britop Bharat vì bạn có tiền sử mẫn cảm với một số thuốc, thuộc nhóm chống chỉ định của thuốc này.",
+      "score": 0.9976586593489525
+    },
+    {
+      "query": "Tôi vừa phẫu thuật mắt và bác sĩ đã khuyên tôi sử dụng thuốc nhỏ mắt Ofloxacin 0,3% Traphaco điều trị nhiễm trùng mắt, viêm kết mạc. Tôi nên dùng thuốc này như thế nào (Usage) và có cần lưu ý gì không (Caution)?",
+      "answer_ground_truth": "Sau phẫu thuật mắt, bạn nên nhỏ thuốc nhỏ mắt Ofloxacin 0,3% Traphaco 1 giọt ngay sau khi phẫu thuật và tiếp tục nhỏ 1 giọt sau mỗi lần thay băng. Ngoài ra, bạn cần nhỏ thuốc 5 lần mỗi ngày trong 2 ngày trước khi phẫu thuật. Lưu ý rằng bạn không nên dùng thuốc chung với người khác để tránh lây nhiễm và cũng không nên sử dụng thuốc này nếu bạn có tiền sử mẫn cảm với các thành phần của thuốc hoặc nhóm thuốc Quinolon. Nếu bạn có bất kỳ triệu chứng nào nghi ngờ, hãy tham khảo ý kiến bác sĩ ngay lập tức.",
+      "answer_llm_predict": "Để sử dụng thuốc nhỏ mắt Ofloxacin 0,3% Traphaco sau phẫu thuật mắt, bạn nên nhỏ 2 giọt vào mỗi mắt bị bệnh 4 lần/ngày. Tuy nhiên, liều lượng có thể thay đổi tùy theo tình trạng bệnh nhân và chỉ định của bác sĩ. \n\nLưu ý không dùng chung mỗi lọ cho nhiều người để tránh lây nhiễm, không dùng quá 15 ngày sau lần mở nắp đầu tiên, và tham khảo ý kiến của thầy thuốc nếu đợt điều trị kéo dài trên 15 ngày.",
+      "score": 0.9954438862855455
+    },
+    {
+      "query": "Tôi có thể sử dụng Thuốc nhỏ mắt Eyemiru 40 EX điều trị căng mắt, xung huyết kết mạc khi đang mang thai không (Thận trọng)? Liều lượng tôi cần dùng là bao nhiêu (Liều dùng)?",
+      "answer_ground_truth": "Chưa có báo cáo cụ thể về việc sử dụng Thuốc nhỏ mắt Eyemiru 40 EX trong thời kỳ mang thai, vì vậy cần thận trọng và tham khảo ý kiến bác sĩ trước khi sử dụng (Thận trọng). Nếu bác sĩ đồng ý, liều dùng thông thường là từ 1 đến 3 giọt vào mỗi mắt, 3 đến 6 lần một ngày hoặc theo chỉ định của bác sĩ (Liều dùng). Tuy nhiên, bạn cần theo dõi phản ứng của cơ thể và ngưng sử dụng nếu có bất kỳ dấu hiệu bất thường nào.",
+      "answer_llm_predict": "Khi mang thai, bạn nên thận trọng khi sử dụng thuốc nhỏ mắt Eyemiru 40 EX và tham khảo ý kiến của bác sĩ hoặc dược sĩ trước khi dùng. Liều lượng được khuyến nghị là nhỏ từ 1 đến 3 giọt vào mỗi mắt, 3 đến 6 lần một ngày hoặc theo chỉ định của bác sĩ hoặc dược sĩ.",
+      "score": 0.9994319064800213
+    },
+    {
+      "query": "Tôi bị viêm loét giác mạc (Usage) và đang mang thai (Careful), vậy tôi có thể sử dụng thuốc nhỏ mắt Moxieye 10ml CPC1HN điều trị nhiễm khuẩn ở mắt không và liều dùng cụ thể là bao nhiêu (Dosage)?",
+      "answer_ground_truth": "Trong trường hợp bạn bị viêm loét giác mạc, thuốc nhỏ mắt Moxieye 10ml CPC1HN được chỉ định để điều trị nhiễm khuẩn ở mắt. Tuy nhiên, vì bạn đang mang thai, bạn cần tham khảo ý kiến bác sĩ trước khi sử dụng thuốc, chỉ nên dùng thuốc khi lợi ích vượt trội nguy cơ có thể xảy ra. Liều dùng cụ thể sẽ tùy thuộc vào thể trạng và mức độ diễn tiến của bệnh, vì vậy hãy tham khảo ý kiến của bác sĩ hoặc chuyên viên y tế để có liều dùng phù hợp.",
+      "answer_llm_predict": "Bạn có thể sử dụng thuốc nhỏ mắt Moxieye 10ml CPC1HN để điều trị viêm loét giác mạc và nhiễm khuẩn ở mắt khi mang thai, nhưng cần tuân theo chỉ định của bác sĩ và đảm bảo rằng lợi ích của việc sử dụng thuốc vượt trội so với nguy cơ có thể xảy ra. Liều dùng cụ thể sẽ tùy thuộc vào thể trạng và mức độ diễn tiến của bệnh, vì vậy bạn cần tham khảo ý kiến bác sĩ hoặc chuyên viên y tế để có liều dùng phù hợp.",
+      "score": 0.9946567440438505
+    }
+  ]
+}

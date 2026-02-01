@@ -1,0 +1,44 @@
+\section{CÁC CÔNG TRÌNH LIÊN QUAN}
+\subsection{Chatbot tư vấn thuốc và hỗ trợ bệnh nhân}
+
+Trong những năm gần đây, các ứng dụng chatbot được triển khai rộng rãi trong lĩnh vực y tế để cải thiện trải nghiệm của bệnh nhân. Florence \cite{florence2019} là một trợ lý sức khỏe cá nhân sử dụng hội thoại tự nhiên để tương tác với người dùng. Tương tự, các nền tảng như HealthLine và Mayo Clinic đã phát triển hệ thống hỏi đáp triệu chứng giúp bệnh nhân tìm kiếm thông tin ban đầu về sức khỏe. Những chatbot này sử dụng các kỹ thuật xử lý ngôn ngữ tự nhiên (NLP) để hiểu ý định của người dùng và cung cấp các phản hồi có liên quan.
+
+Trong bối cảnh tư vấn thuốc, các hệ thống này cần có khả năng:
+\begin{itemize}
+\item Xác định đúng tên và loại thuốc từ câu hỏi của bệnh nhân
+\item Cung cấp thông tin về công dụng, liều dùng, và tác dụng phụ
+\item Cảnh báo các tương tác thuốc nguy hiểm
+\item Gợi ý thay thế thuốc an toàn
+\end{itemize}
+
+\subsection{Xử lý dữ liệu thuốc và trích xuất thông tin}
+
+Trích xuất thông tin thuốc từ các nguồn dữ liệu không có cấu trúc là một thách thức quan trọng trong các hệ thống tư vấn. Named Entity Recognition (NER) là một kỹ thuật phổ biến để xác định các thực thể y tế, bao gồm tên thuốc, bệnh tật, và triệu chứng \cite{ner2020}. 
+
+Các bộ dữ liệu về thuốc như DrugBank, PubChem, và UMLS (Unified Medical Language System) cung cấp các cơ sở tri thức phong phú về thuốc, bao gồm:
+\begin{itemize}
+\item Thông tin về thành phần hoạt chất
+\item Chỉ định và chống chỉ định
+\item Tương tác thuốc-thuốc
+\item Tác dụng phụ và độc tính
+\end{itemize}
+
+\subsection{Mô hình ngôn ngữ trong lĩnh vực y tế}
+
+Các mô hình ngôn ngữ tiên tiến như BERT, BioBERT, và ClinicalBERT \cite{biobert2019, clinicalbert2020} được huấn luyện trên các tập dữ liệu y tế lớn để hiểu rõ hơn về bối cảnh y tế. BioBERT được huấn luyện trên PubMed và PMC, cho phép nó nắm bắt tốt hơn các quan hệ giữa các thực thể sinh học và y tế. ClinicalBERT được tinh chỉnh trên các hồ sơ lâm sàng thực tế, làm cho nó phù hợp hơn cho các ứng dụng như:
+\begin{itemize}
+\item Trả lời câu hỏi y tế
+\item Phân loại tài liệu lâm sàng
+\item Trích xuất thông tin thuốc và triệu chứng
+\end{itemize}
+
+\subsection{Thách thức và hướng phát triển}
+
+Các thách thức chính trong xây dựng chatbot tư vấn thuốc bao gồm:
+\begin{itemize}
+\item \textbf{Độ chính xác của thông tin:} Cần đảm bảo thông tin thuốc được cung cấp là chính xác và cập nhật
+\item \textbf{Sự hiểu biết bối cảnh:} Chatbot cần hiểu toàn bộ bối cảnh y tế của bệnh nhân
+\item \textbf{Độ tin cậy:} Người dùng cần tin tưởng vào các khuyến nghị của chatbot
+\item \textbf{Quy định pháp luật:} Tuân thủ các quy định bảo vệ dữ liệu sức khỏe và tư vấn y tế
+\item \textbf{Xử lý ngôn ngữ tự nhiên:} Hiểu được các phương thức diễn đạt khác nhau của bệnh nhân
+\end{itemize}

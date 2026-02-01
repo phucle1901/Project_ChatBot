@@ -1,0 +1,192 @@
+{
+  "about_1_drug.json": {
+    "total_questions": 100,
+    "average_f1": 0.7058262641774619,
+    "average_precision": 0.679854804615674,
+    "average_recall": 0.8133918581418581,
+    "by_entity_type": {
+      "dosages": {
+        "avg_f1": 0.8333376623376623,
+        "avg_precision": 0.8370000000000001,
+        "avg_recall": 0.8461666666666666
+      },
+      "frequencies": {
+        "avg_f1": 0.9633333333333334,
+        "avg_precision": 0.96,
+        "avg_recall": 0.97
+      },
+      "routes": {
+        "avg_f1": 0.7566666666666667,
+        "avg_precision": 0.76,
+        "avg_recall": 0.76
+      },
+      "indications": {
+        "avg_f1": 0.7799550011392113,
+        "avg_precision": 0.7849149184149184,
+        "avg_recall": 0.8136994949494949
+      },
+      "contraindications": {
+        "avg_f1": 0.8534603174603174,
+        "avg_precision": 0.8456666666666667,
+        "avg_recall": 0.873
+      },
+      "drug_names": {
+        "avg_f1": 0.5765470248705541,
+        "avg_precision": 0.5629285714285714,
+        "avg_recall": 0.6408333333333333
+      }
+    }
+  },
+  "about_2_drug.json": {
+    "total_questions": 20,
+    "average_f1": 0.7944061368851554,
+    "average_precision": 0.7937632625372564,
+    "average_recall": 0.8224425729069692,
+    "by_entity_type": {
+      "dosages": {
+        "avg_f1": 0.7333333333333333,
+        "avg_precision": 0.73,
+        "avg_recall": 0.7375
+      },
+      "frequencies": {
+        "avg_f1": 0.8928571428571429,
+        "avg_precision": 0.8800000000000001,
+        "avg_recall": 0.925
+      },
+      "routes": {
+        "avg_f1": 0.9333333333333333,
+        "avg_precision": 0.9333333333333333,
+        "avg_recall": 0.9583333333333334
+      },
+      "indications": {
+        "avg_f1": 0.7082467532467532,
+        "avg_precision": 0.7139285714285715,
+        "avg_recall": 0.8142857142857143
+      },
+      "contraindications": {
+        "avg_f1": 0.8658080808080808,
+        "avg_precision": 0.9025000000000001,
+        "avg_recall": 0.8983333333333332
+      },
+      "drug_names": {
+        "avg_f1": 0.8356746031746031,
+        "avg_precision": 0.8705952380952381,
+        "avg_recall": 0.8095238095238093
+      }
+    }
+  },
+  "comprehensive_1_drug.json": {
+    "total_questions": 20,
+    "average_f1": 0.6702992615001298,
+    "average_precision": 0.8619215506715505,
+    "average_recall": 0.610297619047619,
+    "by_entity_type": {
+      "dosages": {
+        "avg_f1": 0.8083333333333333,
+        "avg_precision": 0.825,
+        "avg_recall": 0.8
+      },
+      "frequencies": {
+        "avg_f1": 0.625,
+        "avg_precision": 0.65,
+        "avg_recall": 0.6166666666666667
+      },
+      "routes": {
+        "avg_f1": 0.8333333333333333,
+        "avg_precision": 0.85,
+        "avg_recall": 0.825
+      },
+      "indications": {
+        "avg_f1": 0.6967857142857143,
+        "avg_precision": 0.8083333333333332,
+        "avg_recall": 0.6608333333333334
+      },
+      "contraindications": {
+        "avg_f1": 0.6009523809523809,
+        "avg_precision": 0.6475,
+        "avg_recall": 0.625
+      },
+      "drug_names": {
+        "avg_f1": 0.6071428571428571,
+        "avg_precision": 0.7333333333333333,
+        "avg_recall": 0.5616666666666668
+      }
+    }
+  },
+  "listing.json": {
+    "total_questions": 19,
+    "average_f1": 0.5726579505673262,
+    "average_precision": 0.5586105415052784,
+    "average_recall": 0.6386368940385561,
+    "by_entity_type": {
+      "dosages": {
+        "avg_f1": 0.6491228070175438,
+        "avg_precision": 0.6578947368421053,
+        "avg_recall": 0.6578947368421053
+      },
+      "frequencies": {
+        "avg_f1": 1.0,
+        "avg_precision": 1.0,
+        "avg_recall": 1.0
+      },
+      "routes": {
+        "avg_f1": 0.7807017543859649,
+        "avg_precision": 0.8157894736842105,
+        "avg_recall": 0.7894736842105263
+      },
+      "indications": {
+        "avg_f1": 0.2982456140350877,
+        "avg_precision": 0.3157894736842105,
+        "avg_recall": 0.2894736842105263
+      },
+      "contraindications": {
+        "avg_f1": 0.9473684210526315,
+        "avg_precision": 0.9473684210526315,
+        "avg_recall": 0.9473684210526315
+      },
+      "drug_names": {
+        "avg_f1": 0.5520605555435276,
+        "avg_precision": 0.5413533834586467,
+        "avg_recall": 0.6258980785296575
+      }
+    }
+  },
+  "symptom.json": {
+    "total_questions": 20,
+    "average_f1": 0.3574067967587916,
+    "average_precision": 0.5206060606060606,
+    "average_recall": 0.2837623410384571,
+    "by_entity_type": {
+      "dosages": {
+        "avg_f1": 0.1,
+        "avg_precision": 0.1,
+        "avg_recall": 0.1
+      },
+      "frequencies": {
+        "avg_f1": 1.0,
+        "avg_precision": 1.0,
+        "avg_recall": 1.0
+      },
+      "routes": {
+        "avg_f1": 0.6900000000000001,
+        "avg_precision": 0.8,
+        "avg_recall": 0.6333333333333333
+      },
+      "indications": {
+        "avg_f1": 0.4553571428571429,
+        "avg_precision": 0.55,
+        "avg_recall": 0.4425
+      },
+      "contraindications": {
+        "avg_f1": 0.9,
+        "avg_precision": 0.9,
+        "avg_recall": 0.9
+      },
+      "drug_names": {
+        "avg_f1": 0.30684247477668536,
+        "avg_precision": 0.45553571428571427,
+        "avg_recall": 0.2465333277833278
+      }
+    }
+  }
+}

@@ -1,0 +1,442 @@
+[
+  {
+    "query": "Tôi bị viêm mũi dị ứng, có thuốc uống nào hiệu quả không?",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Có, bạn có thể sử dụng các thuốc như Fexihist, Eucol, Axofen, Oralegic hoặc Zyrtec để điều trị viêm mũi dị ứng.",
+    "retrieved_ids": [
+      1678,
+      3697,
+      31328,
+      31856,
+      2565
+    ],
+    "reason_context_relevance": "The context contains information about oral drugs for treating allergic rhinitis, which directly addresses the user's question about effective oral medication for viêm mũi dị ứng.",
+    "reason_faithfulness": "The answer lists exactly the oral antihistamine medications (Fexihist, Eucol, Axofen, Oralegic, Zyrtec) that are described in the provided context, without adding information not present in the context.",
+    "reason_correctness": "All listed drugs are recognized antihistamines used to treat allergic rhinitis and are appropriate options for the condition. The answer correctly identifies effective oral medications, though a clinician’s guidance would be advisable for individual use."
+  },
+  {
+    "query": "Tôi bị viêm kết mạc, có thuốc nhỏ mắt nào hiệu quả không?",
+    "retrieval": {
+      "recall@k": 0.5,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 0.9,
+    "correctness": 4,
+    "answer": "Có, bạn có thể sử dụng các thuốc nhỏ mắt như Motarute Daewoo Pharm, Ofloxacin 0,3% Traphaco, hoặc Ketofen Drop 0,5mg/ml CPC1HN để điều trị viêm kết mạc. Tuy nhiên, nên tham khảo ý kiến của bác sĩ trước khi sử dụng bất kỳ loại thuốc nào.",
+    "retrieved_ids": [
+      1054,
+      1324,
+      304,
+      303,
+      207
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp danh sách thuốc nhỏ mắt điều trị viêm kết mạc, và câu trả lời cũng tập trung trả lời câu hỏi về thuốc nhỏ mắt hiệu quả cho viêm kết mạc, nên hoàn toàn liên quan.",
+    "reason_faithfulness": "Câu trả lời dựa trên các thông tin trong ngữ cảnh (liệt kê Motarute Daewoo Pharm, Ofloxacin 0,3% Traphaco và Ketofen Drop) và không đưa ra thông tin không có trong ngữ cảnh. Tuy nhiên, nó bỏ qua thuốc Daenase Ophthalmic Solution Alti-Allergics Reyon cũng được đề cập trong ngữ cảnh, nên không đạt điểm tối đa.",
+    "reason_correctness": "Các thuốc được nêu (Motarute, Ofloxacin, Ketofen) thực sự có thể dùng cho viêm kết mạc và lời khuyên tham khảo bác sĩ là hợp lý. Tuy nhiên, câu trả lời chưa phân biệt rõ loại viêm kết mạc (bacterial, allergic) và không đề cập đến thuốc Daenase dành cho viêm kết mạc do dị ứng, nên không đạt mức hoàn hảo."
+  },
+  {
+    "query": "Tôi bị khô mắt, có thuốc nhỏ mắt nào hiệu quả không?",
+    "retrieval": {
+      "recall@k": 0.5,
+      "precision@k": 0.6,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 3,
+    "answer": "Có, bạn có thể sử dụng các loại thuốc nhỏ mắt như Syseye Merap, OSLA Merap, Natri Clorid 0,9% Haipharco hoặc Optive UD Allergan để điều trị khô mắt.",
+    "retrieved_ids": [
+      352,
+      1246,
+      1138,
+      436,
+      1072
+    ],
+    "reason_context_relevance": "The context describes several eye drops used to alleviate dry eye symptoms, which is exactly what the question asks for; therefore the context is fully relevant.",
+    "reason_faithfulness": "The answer directly lists the eye drop products that are mentioned in the provided context, without adding information not present in the context.",
+    "reason_correctness": "The answer includes appropriate treatments such as Optive UD (a known artificial tear) and the Merap products, which are plausible for dry eye. However, it also lists 0.9% sodium chloride eye drops, which are primarily for irrigation and not a standard therapy for dry eye, and it lacks guidance on usage or safety. Hence the medical correctness is moderate, not fully accurate."
+  },
+  {
+    "query": "Tôi bị hen phế quản, nên uống thuốc nào trong các loại thuốc được gợi ý?",
+    "retrieval": {
+      "recall@k": 0.3333333333333333,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 2,
+    "answer": "Bạn bị hen phế quản, nên uống thuốc Thuốc Givet-10 Davipharm, Thuốc Baburol Agimexpharm hoặc Thuốc Hayex Davipharm. Tuy nhiên, để có liều dùng phù hợp, bạn cần tham khảo ý kiến bác sĩ hoặc chuyên viên y tế.",
+    "retrieved_ids": [
+      3533,
+      2509,
+      2511,
+      3332,
+      1845
+    ],
+    "reason_context_relevance": "The response directly addresses the question using the list of suggested medications from the context, making the context highly relevant to the answer.",
+    "reason_faithfulness": "The answer only mentions drugs that are present in the provided context (Givet-10 Davipharm, Baburol Agimexpharm, Hayex Davipharm) and does not introduce any information not found in the context. It stays true to the source material.",
+    "reason_correctness": "While the answer lists drugs that are mentioned in the context, it does not provide appropriate clinical guidance. It suggests taking any of the three drugs without considering patient‑specific factors, contraindications, or dosage details that are crucial for safe asthma management. Therefore, the medical correctness of the recommendation is limited."
+  },
+  {
+    "query": "Tôi bị nghẹt mũi, có thuốc nào giúp tôi giảm triệu chứng này không?",
+    "retrieval": {
+      "recall@k": 0.42857142857142855,
+      "precision@k": 0.6,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 4,
+    "answer": "Có, bạn có thể sử dụng các thuốc như Thuốc xịt mũi Thông Xoang Nam Dược, Thuốc Xoang Nhất Nhất, Thuốc Esha, Thuốc nhỏ mũi Naphazolin 0.05% Danapha, hoặc Thuốc xịt mũi Otrivin 0.1% GSK để giảm triệu chứng nghẹt mũi.",
+    "retrieved_ids": [
+      1366,
+      1492,
+      466,
+      1264,
+      71
+    ],
+    "reason_context_relevance": "The context consists of several nasal decongestant sprays and drops that are indicated for nasal congestion, which is precisely the topic of the user's question.",
+    "reason_faithfulness": "The answer lists exactly the medications described in the provided context and states they can be used to relieve nasal congestion, which directly reflects the information given.",
+    "reason_correctness": "All listed products are indeed indicated for relieving nasal congestion, so the answer is medically correct. However, it omits important safety information such as usage duration limits, possible side effects, and contraindications, which prevents it from being a fully comprehensive and optimal medical recommendation."
+  },
+  {
+    "query": "Tôi bị viêm xoang, có thuốc uống nào giúp điều trị không?",
+    "retrieval": {
+      "recall@k": 0.42857142857142855,
+      "precision@k": 0.6,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 0.95,
+    "correctness": 3,
+    "answer": "Có, bạn có thể sử dụng các thuốc như Thuốc Xoang Nhất Nhất, Thuốc viêm xoang Abipha Cap, Cốm pha hỗn dịch uống Mecefix-B.E 50mg Merap, hoặc Thuốc Glazi 250 Abbott để điều trị viêm xoang. Tuy nhiên, bạn nên tham khảo ý kiến của bác sĩ trước khi sử dụng bất kỳ loại thuốc nào.",
+    "retrieved_ids": [
+      466,
+      25370,
+      27527,
+      27629,
+      25992
+    ],
+    "reason_context_relevance": "The context is entirely about oral medications for treating sinusitis, and the answer directly addresses that topic by naming those drugs.",
+    "reason_faithfulness": "The answer lists exactly the medications described in the context and states they can be used for sinusitis, matching the information provided. No extraneous or fabricated details are introduced.",
+    "reason_correctness": "While it is true that there are oral medications for sinusitis and the answer correctly advises consulting a physician, the specific drug names are not standard or widely recognized in medical literature, and the answer lacks detail on indications, contraindications, and dosing. Therefore the medical correctness is moderate but not fully reliable."
+  },
+  {
+    "query": "Tôi bị viêm giác mạc, nên dùng thuốc nhỏ mắt nào để điều trị?",
+    "retrieval": {
+      "recall@k": 0.42857142857142855,
+      "precision@k": 0.6,
+      "mrr": 0.5
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 3,
+    "answer": "Bạn có thể dùng thuốc nhỏ mắt Neodex Pharmedic, Collydexa Gold HaNoi hoặc Melevo 5mg/ml Merap để điều trị viêm giác mạc.",
+    "retrieved_ids": [
+      1228,
+      1534,
+      1066,
+      448,
+      1324
+    ],
+    "reason_context_relevance": "The context consists of descriptions of eye drop medications for keratitis, and the answer directly uses that information to suggest suitable drugs, making it fully relevant.",
+    "reason_faithfulness": "The answer only mentions eye drops that are listed in the provided context as treatments for keratitis, and does not introduce any information not present in the context.",
+    "reason_correctness": "While the listed medications are described in the context as treating keratitis, standard medical practice for keratitis often recommends specific antibiotic eye drops (e.g., fluoroquinolones like Ofloxacin) and a professional evaluation. The answer omits such first‑line options and lacks safety guidance, making it only partially correct."
+  },
+  {
+    "query": "Tôi bị viêm mũi, có thuốc uống nào giúp cải thiện không?",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 4,
+    "answer": "Có, bạn có thể sử dụng các thuốc như Fexihist, Zyrtec GSK, Eucol, Aerius, hoặc Thuốc Xoang Nhất Nhất để giúp cải thiện tình trạng viêm mũi. Tuy nhiên, nên tham khảo ý kiến của bác sĩ trước khi sử dụng bất kỳ loại thuốc nào.",
+    "retrieved_ids": [
+      1678,
+      2565,
+      3697,
+      31364,
+      466
+    ],
+    "reason_context_relevance": "Ngữ cảnh chứa danh sách các thuốc dùng để điều trị viêm mũi dị ứng, trực tiếp liên quan đến câu hỏi về thuốc uống giúp cải thiện viêm mũi.",
+    "reason_faithfulness": "Câu trả lời chỉ liệt kê các thuốc đã được nêu trong ngữ cảnh và không thêm thông tin không có trong ngữ cảnh, do đó phản ánh trung thực nội dung cung cấp.",
+    "reason_correctness": "Các thuốc được đề xuất (Fexihist, Zyrtec, Eucol, Aerius, Thuốc Xoang Nhất Nhất) là các antihistamine hoặc thuốc hỗ trợ điều trị viêm mũi dị ứng, phù hợp cho nhiều trường hợp viêm mũi do dị ứng. Tuy nhiên, viêm mũi có thể có nguyên nhân không phải dị ứng, và câu trả lời không đề cập đến các loại thuốc khác hoặc các biện pháp điều trị bổ sung, nên không đạt mức hoàn hảo."
+  },
+  {
+    "query": "Tôi bị sổ mũi, có thuốc nào giúp tôi giảm triệu chứng này không?",
+    "retrieval": {
+      "recall@k": 0.5,
+      "precision@k": 0.6,
+      "mrr": 0.5
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Có, bạn có thể sử dụng một số loại thuốc sau để giảm triệu chứng sổ mũi:\n\n1. Dung dịch Setbozi Stick\n2. Thuốc nhỏ mũi Naphazolin 0.05% Danapha\n3. Siro Aerius 60ml Organon\n4. Thuốc viêm xoang Abipha Cap\n\nHãy tham khảo ý kiến của bác sĩ trước khi sử dụng bất kỳ loại thuốc nào.",
+    "retrieved_ids": [
+      2379,
+      1264,
+      31364,
+      1384,
+      63
+    ],
+    "reason_context_relevance": "Ngữ cảnh liệt kê các thuốc dùng để giảm sổ mũi, hắt hơi và các triệu chứng liên quan, nên rất liên quan và cung cấp đủ thông tin để trả lời câu hỏi về thuốc giảm sổ mũi.",
+    "reason_faithfulness": "Câu trả lời chỉ liệt kê các loại thuốc đã được nêu trong ngữ cảnh (Setbozi Stick, Naphazolin 0.05% Danapha, Siro Aerius, Abipha Cap) và không đưa thông tin nào không có trong ngữ cảnh, do đó hoàn toàn dựa trên nội dung đã cung cấp.",
+    "reason_correctness": "Các thuốc được nêu (Setbozi Stick, Naphazolin, Aerius, Abipha) đều có chỉ định điều trị sổ mũi hoặc các triệu chứng rhinitis/viêm xoang, phù hợp với yêu cầu của người hỏi. Câu trả lời còn nhắc nhở tham khảo ý kiến bác sĩ, đáp ứng đúng về mặt y khoa."
+  },
+  {
+    "query": "Tôi bị ngứa mắt, có thuốc nào giúp giảm triệu chứng không?",
+    "retrieval": {
+      "recall@k": 0.42857142857142855,
+      "precision@k": 0.6,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Có, bạn có thể sử dụng các thuốc nhỏ mắt như Acular Allergan, OSLA REDI Merap hoặc Eskar DK Pharma để giảm triệu chứng ngứa mắt.",
+    "retrieved_ids": [
+      1576,
+      1325,
+      1571,
+      1330,
+      982
+    ],
+    "reason_context_relevance": "The context is entirely about eye drops for itching and related symptoms, and the answer addresses the same topic, making the context highly relevant to the answer.",
+    "reason_faithfulness": "The answer directly references the eye drop medications described in the context (Acular Allergan, OSLA REDI Merap, Eskar DK Pharma) and states they can reduce itching, which aligns with the information provided.",
+    "reason_correctness": "All listed medications are indeed indicated for relieving eye itching or allergic conjunctivitis as described in the context, and the answer correctly states that they can be used for this purpose. No incorrect medical claims are made."
+  },
+  {
+    "query": "Tôi bị nhiễm khuẩn mắt, nên dùng thuốc nào trong số các loại thuốc nhỏ mắt này?",
+    "retrieval": {
+      "recall@k": 0.42857142857142855,
+      "precision@k": 0.6,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 0.9,
+    "correctness": 4,
+    "answer": "Tất cả các loại thuốc nhỏ mắt bạn liệt kê đều có thể được sử dụng để điều trị nhiễm khuẩn mắt, bao gồm Eyedin DX Makcur, Biracin-E Bidiphar, Vigadexa Alcon, Naphacollyre Nam Hà và Tobrex Alcon. Tuy nhiên, để chọn loại thuốc phù hợp nhất, bạn nên tham khảo ý kiến của bác sĩ hoặc chuyên gia y tế vì họ có thể đưa ra lời khuyên dựa trên tình trạng cụ thể của bạn và loại nhiễm khuẩn mắt bạn đang gặp phải.",
+    "retrieved_ids": [
+      754,
+      1468,
+      394,
+      1042,
+      586
+    ],
+    "reason_context_relevance": "The provided context lists the same eye drop medications and states they are used for eye infections, directly matching the question about which to use. Therefore the context is fully relevant.",
+    "reason_faithfulness": "The answer restates that all listed eye drops treat bacterial eye infections, which aligns with the context. It does not introduce information not present in the context, but it slightly overgeneralizes by implying any of them can be used without specifying indications, yet remains largely faithful.",
+    "reason_correctness": "Medically, it is correct to advise consulting a physician before selecting an antibiotic eye drop, as choice depends on the specific pathogen and patient factors. Stating that all listed drops can treat bacterial eye infections is generally true, but may be oversimplified; thus the answer is mostly correct but not perfectly precise."
+  },
+  {
+    "query": "Tôi bị mỏi mắt, có thuốc nhỏ mắt nào giúp tôi không?",
+    "retrieval": {
+      "recall@k": 0.5714285714285714,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 4,
+    "answer": "Có, bạn có thể sử dụng các loại thuốc nhỏ mắt như V.Rohto Cool, Eskar DK Pharma, New V.Rohto, OSLA Merap, hoặc Natri Clorid 0,9% HDPharma để giúp giảm triệu chứng mỏi mắt.",
+    "retrieved_ids": [
+      59,
+      982,
+      664,
+      1246,
+      358
+    ],
+    "reason_context_relevance": "The context consists of several eye‑drop products indicated for eye fatigue, which directly addresses the user's request for a medication to relieve eye fatigue.",
+    "reason_faithfulness": "The answer lists exactly the eye drop products described in the context and states they can help with eye fatigue, matching the provided information without adding unsupported claims.",
+    "reason_correctness": "The answer is largely medically accurate: the listed products are indeed indicated for eye fatigue, redness, and itching. However, including \"Natri Clorid 0.9% HDPharma\"—a saline solution primarily for nasal use—may be misleading as an eye‑drop treatment, and the response lacks cautions such as consulting a healthcare professional before use."
+  },
+  {
+    "query": "Tôi đang bị viêm phế quản, xin hỏi nên uống thuốc nào trong số các loại thuốc này?",
+    "retrieval": {
+      "recall@k": 0.5,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 3,
+    "answer": "Bạn có thể uống các thuốc sau: \n- Thuốc Baburol Agimexpharm\n- Thuốc Siro Seosacin Theragen Etex\n- Thuốc Siro Ambroxol Danapha\n- Thuốc Aziphar Mekophar",
+    "retrieved_ids": [
+      3332,
+      26658,
+      2331,
+      3308,
+      27233
+    ],
+    "reason_context_relevance": "The response directly uses the context about drug indications for bronchitis to answer the user's question, showing full relevance.",
+    "reason_faithfulness": "The answer only mentions drugs that are listed in the provided context and does not introduce any information not present in the context. No hallucinated content is observed.",
+    "reason_correctness": "All four drugs listed (Baburol, Seosacin, Ambroxol, Aziphar) are indeed indicated for bronchitis according to the context, so they are medically appropriate. However, the answer omits Givet-10 Davipharm, which is also indicated for chronic bronchitis, making the answer incomplete. Additionally, the answer lacks dosage, contraindications, and the recommendation to consult a physician, which are important for safe medical advice."
+  },
+  {
+    "query": "Tôi bị đỏ mắt, có thuốc nhỏ nào phù hợp không?",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 4,
+    "answer": "Có, bạn có thể sử dụng các loại thuốc nhỏ mắt như V.Rohto Cool, Daiticol Dược 3-2, Eyecool, hoặc OSLA REDI Merap để điều trị đỏ mắt. Tuy nhiên, nên tham khảo ý kiến của bác sĩ trước khi sử dụng bất kỳ loại thuốc nào.",
+    "retrieved_ids": [
+      59,
+      844,
+      286,
+      694,
+      1330
+    ],
+    "reason_context_relevance": "The provided context consists entirely of descriptions of eye‑drop medications for red, itchy, or irritated eyes, which directly addresses the user’s question about suitable eye‑drop treatments for redness.",
+    "reason_faithfulness": "The answer lists eye‑drop products (V.Rohto Cool, Daiticol Dược 3‑2, Eyecool, OSLA REDI Merap) that are explicitly mentioned in the context as being indicated for redness of the eye, and it does not introduce any information not present in the context.",
+    "reason_correctness": "The answer correctly states that the listed eye‑drops can be used for red eye, which aligns with the indications in the context. It also responsibly advises consulting a physician before use. However, it does not discuss potential contraindications, the need for proper diagnosis, or that some products (e.g., antibiotic drops) should only be used under medical supervision, so the answer is not fully comprehensive."
+  },
+  {
+    "query": "Tôi bị viêm họng, không biết nên uống thuốc nào trong các loại trên?",
+    "retrieval": {
+      "recall@k": 0.8,
+      "precision@k": 0.8,
+      "mrr": 0.5
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 2,
+    "answer": "Bạn có thể uống các thuốc sau: Pharbaren 500mg, Zelfamox 875/125 DT, Mekocefaclor 125mg, Neazi 500mg, Meiact 200mg.",
+    "retrieved_ids": [
+      25370,
+      28066,
+      27353,
+      25304,
+      27539
+    ],
+    "reason_context_relevance": "The context describes the indications of each listed medication for sore throat, and the answer directly references those medications, making the context fully relevant to the answer.",
+    "reason_faithfulness": "The answer repeats exactly the list of drugs and their dosages that are mentioned in the provided context, without adding any information not present in the context.",
+    "reason_correctness": "While all listed drugs are indicated for sore throat, recommending that the patient take *all* of them simultaneously is medically inappropriate and potentially harmful. A correct answer should suggest selecting a single appropriate medication, not prescribing multiple antibiotics at once."
+  },
+  {
+    "query": "Tôi bị viêm mắt, nên dùng thuốc nhỏ nào để điều trị hiệu quả?",
+    "retrieval": {
+      "recall@k": 0.4,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 4,
+    "answer": "Bạn có thể dùng thuốc nhỏ mắt Scofi Merap, Tobcol Dược 3-2, Britop Bharat, Metodex Merap hoặc Melevo 5mg/ml Merap để điều trị viêm mắt. Tuy nhiên, nên tham khảo ý kiến của bác sĩ trước khi sử dụng bất kỳ loại thuốc nào.",
+    "retrieved_ids": [
+      658,
+      448,
+      903,
+      1084,
+      1066
+    ],
+    "reason_context_relevance": "The question asks which eye drops to use for eye inflammation, and the context provides a list of eye drops indicated for various types of eye inflammation. The answer directly uses this context, making it fully relevant.",
+    "reason_faithfulness": "The answer lists exactly the eye drop medications described in the context and does not introduce any information that is not present in the context. It stays true to the provided details.",
+    "reason_correctness": "The answer correctly identifies that the listed medications are used for eye inflammation, matching the context. However, it does not differentiate which drug is appropriate for specific types of inflammation, nor does it mention dosage, contraindications, or potential side‑effects, so the medical guidance is incomplete."
+  },
+  {
+    "query": "Tôi bị tăng nhãn áp, không biết nên chọn thuốc nhỏ mắt nào để điều trị?",
+    "retrieval": {
+      "recall@k": 0.4,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 3,
+    "answer": "Bạn có thể chọn một trong các loại thuốc nhỏ mắt sau để điều trị tăng nhãn áp: \n- Thuốc nhỏ mắt Alphagan P \n- Thuốc nhỏ mắt Azopt \n- Thuốc nhỏ mắt Travatan \n- Dung dịch nhỏ mắt Timolol Maleate Eye Drops 0.5%",
+    "retrieved_ids": [
+      1378,
+      1457,
+      1373,
+      592,
+      424
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp danh sách các thuốc nhỏ mắt dùng để điều trị tăng nhãn áp; câu trả lời sử dụng ngay những thông tin này, vì vậy ngữ cảnh hoàn toàn liên quan và hỗ trợ cho câu trả lời.",
+    "reason_faithfulness": "Câu trả lời chỉ liệt kê các loại thuốc nhỏ mắt đã được nêu trong ngữ cảnh (Alphagan P, Azopt, Travatan, Timolol) và không thêm thông tin không có trong ngữ cảnh, nên hoàn toàn dựa trên nội dung đã cho.",
+    "reason_correctness": "Các thuốc được liệt kê đều là các lựa chọn hợp lệ trong điều trị tăng nhãn áp, nhưng câu trả lời không cung cấp hướng dẫn cụ thể về lựa chọn, liều dùng, hoặc các cân nhắc an toàn, do đó chỉ đúng một phần và chưa đầy đủ cho câu hỏi yêu cầu lựa chọn thuốc phù hợp."
+  },
+  {
+    "query": "Tôi bị ngạt mũi, có thuốc nào giúp giảm triệu chứng này không?",
+    "retrieval": {
+      "recall@k": 0.5,
+      "precision@k": 0.6,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 4,
+    "answer": "Có, bạn có thể sử dụng thuốc nhỏ mũi Nostravin 0,05% Traphaco 8ml, thuốc xịt mũi Coldi-B Nam Hà hoặc thuốc xịt mũi Otilin 0.1% Pharbaco để giảm triệu chứng ngạt mũi.",
+    "retrieved_ids": [
+      1492,
+      1491,
+      772,
+      1204,
+      2421
+    ],
+    "reason_context_relevance": "The context consists of descriptions of nasal decongestant medications, which directly addresses the question about treatments for nasal congestion.",
+    "reason_faithfulness": "The answer only mentions drugs (Nostravin, Coldi-B, Otilin) that are explicitly listed in the provided context and does not introduce any information not present in the context.",
+    "reason_correctness": "The answer correctly identifies medications that can alleviate nasal congestion as described in the context. However, it omits important clinical considerations such as dosage, contraindications, and potential side effects, so it is not fully comprehensive."
+  },
+  {
+    "query": "Tôi bị viêm mí mắt, có thuốc nhỏ mắt nào tôi nên dùng không?",
+    "retrieval": {
+      "recall@k": 0.2857142857142857,
+      "precision@k": 0.4,
+      "mrr": 0.5
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 4,
+    "answer": "Bạn có thể dùng các thuốc nhỏ mắt sau để điều trị viêm mí mắt: \n\n- Thuốc nhỏ mắt Phileo SamChunDang\n- Thuốc nhỏ mắt Neodex Pharmedic\n- Thuốc nhỏ mắt Tobcol Dược 3-2\n- Thuốc nhỏ mắt Lotemax 0.5% Bausch & Lomb\n- Thuốc nhỏ mắt Rohto Antibacterial",
+    "retrieved_ids": [
+      185,
+      1228,
+      448,
+      1114,
+      292
+    ],
+    "reason_context_relevance": "The context describes several eye‑drop medications indicated for viêm mí mắt (blepharitis), which is exactly the information needed to answer the user's question.",
+    "reason_faithfulness": "The answer directly lists the eye‑drop products that are mentioned in the provided context and does not add any information that is not present in the context.",
+    "reason_correctness": "All the listed eye drops are indeed indicated for treating blepharitis according to the context, so the answer is medically relevant. However, the response omits important clinical guidance such as prescription requirements, possible side‑effects, contraindications, and dosing instructions, which are necessary for safe self‑medication."
+  },
+  {
+    "query": "Tôi bị viêm tai ngoài, nên dùng thuốc nào trong số các loại thuốc trên?",
+    "retrieval": {
+      "recall@k": 0.16666666666666666,
+      "precision@k": 0.2,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Bạn có thể dùng các thuốc sau: Thuốc Polydexa Bouchara, Thuốc nhỏ mắt mũi tai Nemydexan Nam Hà, Dung dịch nhỏ tai Oteotan 1mg/0.5ml Lesvi, Dung dịch nhỏ tai ILLixime 0.3% Hanlim.",
+    "retrieved_ids": [
+      161,
+      156,
+      1342,
+      1240,
+      1186
+    ],
+    "reason_context_relevance": "The context describes several medications that are indicated for \"viêm tai ngoài\" (otitis externa). The answer directly uses this information to suggest those medications, making the context fully relevant.",
+    "reason_faithfulness": "The answer only lists the drugs that are explicitly mentioned in the provided context and does not introduce any information not present in the context.",
+    "reason_correctness": "All four drugs mentioned (Polydexa Bouchara, Nemydexan Nam Hà, Oteotan, ILLixime) are indicated for treating otitis externa according to the context, so the answer is medically correct."
+  }
+]

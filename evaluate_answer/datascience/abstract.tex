@@ -1,0 +1,10 @@
+\begin{center}
+    \textbf{\Large MỞ ĐẦU}
+\end{center}
+\vspace{1em}
+
+\hspace{2em} Báo cáo này trình bày phát triển một hệ thống chatbot thông minh hỗ trợ bán thuốc bằng cách tích hợp các công nghệ tiên tiến như Retrieval-Augmented Generation (RAG), Reranking, và Query Reformulation. Dự án tập trung vào việc cải thiện độ chính xác trong truy xuất thông tin sản phẩm dược phẩm và giảm hiệu tượng hallucination thông qua các phương pháp nâng cao.
+
+\hspace{2em} Hệ thống được triển khai theo kiến trúc Agent-based RAG với các module chuyên biệt: Router để định tuyến truy vấn, RAG + Answer cho thông tin dược phẩm, Database + Answer cho dữ liệu có cấu trúc, và Web Search + Answer để bổ sung thông tin từ Internet. Đánh giá được thực hiện trên 200 câu hỏi phân loại theo 5 thể loại với các metric truyền thống (Precision, Recall, MRR) và metric dựa trên LLM (Context Relevance, Faithfulness, Correctness).
+
+\hspace{2em} Kết quả thử nghiệm cho thấy phương pháp Rerank RAG cải thiện độ chính xác 20-30\% so với Naive RAG, và Query Reformulation giúp nâng cao chất lượng truy xuất trong các tình huống với truy vấn mơ hồ. Dự án mở ra những cơ hội mới cho tự động hóa và trí tuệ nhân tạo trong lĩnh vực y tế, góp phần thúc đẩy chuyển đổi số trong ngành dược phẩm Việt Nam.

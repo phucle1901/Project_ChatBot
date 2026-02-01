@@ -1,0 +1,257 @@
+\section{THỰC NGHIỆM}
+
+\subsection{Thiết kế đánh giá}
+
+Để đánh giá hiệu quả của hệ thống, nhóm đã thiết kế bộ đánh giá toàn diện bao gồm 5 loại câu hỏi khác nhau, phản ánh các tình huống sử dụng thực tế của hệ thống truy hồi-sinh thế thông tin về thuốc:
+
+\subsubsection{Bộ câu hỏi đánh giá}
+
+\begin{itemize}
+    \item \textbf{Bộ 1 - Truy xuất thông tin đơn lẻ/kết hợp:} Gồm 100 câu hỏi về 1 loại thuốc, trong đó 50 câu hỏi về một field duy nhất của thuốc và 50 câu hỏi về 2-3 field khác nhau của cùng một loại thuốc.
+    
+    \item \textbf{Bộ 2 - Giải quyết tình huống phức tạp:} Gồm 20 câu hỏi yêu cầu tổng hợp logic từ nhiều trường dữ liệu của thuốc để trả lời các tình huống phức tạp.
+    
+    \item \textbf{Bộ 3 - Đối chiếu và so sánh:} Gồm 20 câu hỏi yêu cầu so sánh sự khác biệt hoặc tương đồng giữa hai loại thuốc ở cùng một tiêu chí đánh giá.
+    
+    \item \textbf{Bộ 4 - Liệt kê danh sách:} Gồm 20 câu hỏi yêu cầu tìm kiếm và liệt kê các thuốc có chung đặc điểm hoặc công dụng điều trị.
+    
+    \item \textbf{Bộ 5 - Tư vấn dựa trên triệu chứng:} Gồm 20 câu hỏi mô phỏng tình huống người dùng đến tư vấn lựa chọn thuốc phù hợp dựa trên triệu chứng của bệnh nhân.
+\end{itemize}
+
+Tổng cộng, bộ đánh giá bao gồm 200 câu hỏi, cung cấp một cái nhìn toàn diện về khả năng của hệ thống trong các loại truy vấn khác nhau.
+
+\subsection{Thiết lập thử nghiệm}
+
+\subsubsection{Các mô hình sử dụng}
+
+Nhóm đã triển khai và so sánh ba cách tiếp cận khác nhau:
+
+\begin{itemize}
+    \item \textbf{Naive:} Phương pháp cơ bản sử dụng trực tiếp câu hỏi gốc để truy hồi ngữ cảnh.
+    
+    \item \textbf{Rerank:} Cải tiến phương pháp naive bằng cách sử dụng một mô hình reranker để đánh giá lại chất lượng của từng ngữ cảnh được truy hồi và xếp hạng lại theo mức độ liên quan.
+    
+    \item \textbf{Rephrase:} Cải tiến phương pháp naive bằng cách sử dụng một LLM để viết lại câu hỏi và chia thành nhiều câu nhỏ hơn, giúp mô hình truy hồi tìm kiếm thông tin rõ ràng hơn.
+\end{itemize}
+
+Chi tiết các mô hình sử dụng:
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Thành phần} & \textbf{Mô hình/Công cụ} \\
+    \hline
+    LLM trả lời câu hỏi & Llama-3.3-70B \\
+    LLM đánh giá câu trả lời & OpenAI-o1-120B \\
+    Embedding & Vietnamese\_Embedding\_v2 \\
+    Reranker & BGE-Reranker-v2-m3 \\
+    Rephrase & Qwen-3-32B \\
+    \hline
+    \end{tabular}
+    \caption{Các mô hình sử dụng trong thử nghiệm}
+\end{table}
+
+%======================================================================
+% PHẦN 1: ĐÁNH GIÁ HỆ THỐNG TRUY HỒI (RETRIEVAL)
+%======================================================================
+
+\subsection{Đánh giá RAG}
+
+Phần này đánh giá chất lượng của giai đoạn truy hồi tài liệu - khả năng hệ thống tìm được các tài liệu liên quan từ cơ sở dữ liệu thuốc.
+
+\subsubsection{Các chỉ số đánh giá}
+
+Nhóm sử dụng hai nhóm chỉ số đánh giá: các metric truyền thống dựa trên truy hồi tài liệu và các metric dựa trên mô hình ngôn ngữ lớn (LLM).
+
+\paragraph{Các metric truyền thống}
+
+\textbf{Precision:} Precision đo lường mức độ chính xác của hệ thống truy hồi bằng cách tính tỷ lệ các tài liệu được truy hồi là đúng so với tổng số tài liệu mà hệ thống trả về. Công thức tính:
+
+\begin{equation}
+\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}
+\end{equation}
+
+trong đó TP (True Positives) là số tài liệu đúng được truy hồi và FP (False Positives) là số tài liệu sai được truy hồi. Chỉ số này đặc biệt quan trọng trong các kịch bản mà người dùng chỉ xem một số lượng nhỏ kết quả đầu tiên.
+
+\textbf{Recall:} Recall đo lường khả năng bao phủ của hệ thống đối với tập tài liệu đúng, bằng cách tính tỷ lệ các tài liệu đúng được truy hồi so với tổng số tài liệu đúng trong ground truth. Công thức tính:
+
+\begin{equation}
+\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}
+\end{equation}
+
+trong đó FN (False Negatives) là số tài liệu đúng không được truy hồi. Chỉ số này phản ánh mức độ đầy đủ của kết quả truy hồi. Tuy nhiên trong các bài toán truy hồi tri thức thực tế, recall có thể bị đánh giá thấp do ground truth thường không đầy đủ hoặc chỉ được gán nhãn một phần.
+
+\textbf{Mean Reciprocal Rank (MRR):} MRR đánh giá chất lượng xếp hạng của hệ thống bằng cách đo vị trí xuất hiện của tài liệu đúng đầu tiên trong danh sách kết quả. Với mỗi truy vấn $i$, reciprocal rank được tính bằng:
+
+\begin{equation}
+\text{RR}_i = \frac{1}{\text{rank}_i}
+\end{equation}
+
+nếu có tài liệu đúng được truy hồi, ngược lại $\text{RR}_i = 0$. MRR là trung bình của reciprocal rank trên toàn bộ tập truy vấn:
+
+\begin{equation}
+\text{MRR} = \frac{1}{N} \sum_{i=1}^{N} \text{RR}_i
+\end{equation}
+
+Chỉ số này đặc biệt phù hợp trong các kịch bản retrieval-augmented generation, nơi chất lượng của các kết quả đứng đầu quan trọng hơn độ bao phủ tổng thể.
+
+\paragraph{Các metric dựa trên LLM}
+
+Ngoài các metric truyền thống, nhóm sử dụng ba chỉ số dựa trên mô hình ngôn ngữ lớn để đánh giá chất lượng của ngữ cảnh truy hồi và câu trả lời sinh ra:
+
+\textbf{Context Relevance:} Đo mức độ liên quan của ngữ cảnh được truy hồi đối với câu hỏi ban đầu. Chỉ số này được tính bằng cách sử dụng một LLM để đánh giá xem ngữ cảnh đã truy hồi có chứa thông tin cần thiết để trả lời câu hỏi hay không, với điểm số từ 0 đến 1.
+
+\textbf{Faithfulness:} Đánh giá mức độ trung thực của câu trả lời so với ngữ cảnh được cung cấp. Chỉ số này đảm bảo rằng câu trả lời của hệ thống không thêm thông tin không có trong ngữ cảnh hoặc không mâu thuẫn với ngữ cảnh đó.
+
+\textbf{Correctness:} Phản ánh độ chính xác tổng thể của câu trả lời so với đáp án đúng trong ground truth. Chỉ số này được tính trung bình trên toàn bộ tập dữ liệu đánh giá để cung cấp một góc nhìn bổ sung bên cạnh các metric truy hồi truyền thống.
+
+\subsubsection{Kết quả đánh giá Retrieval}
+
+Bảng kết quả dưới đây trình bày kết quả đánh giá của ba phương pháp trên bộ đánh giá 200 câu hỏi:
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|c|c|c|}
+    \hline
+    \textbf{Chỉ số đánh giá} & \textbf{Naive} & \textbf{Rerank} & \textbf{Rephrase} \\
+    \hline
+    \multicolumn{4}{|c|}{\textbf{Metric truy hồi truyền thống}} \\
+    \hline
+    Recall@K & 0.7417 & 0.7917 & 0.7967 \\
+    Precision@K & 0.2460 & 0.2680 & 0.2680 \\
+    MRR & 0.6122 & 0.6802 & 0.6718 \\
+    \hline
+    \multicolumn{4}{|c|}{\textbf{Metric dựa trên LLM}} \\
+    \hline
+    Context Relevance & 0.9373 & 0.9405 & 0.9683 \\
+    Faithfulness & 0.9553 & 0.9548 & 0.9562 \\
+    Correctness & 4.68 & 4.75 & 4.77 \\
+    \hline
+    \end{tabular}
+    \caption{Kết quả đánh giá Retrieval của ba phương pháp trên bộ dữ liệu 200 câu hỏi}
+    \label{tab:retrieval_results}
+\end{table}
+
+\subsubsection{Phân tích kết quả Retrieval}
+
+\paragraph{Cải thiện từ Rerank}
+
+Phương pháp rerank đã đạt được cải thiện rõ rệt so với phương pháp naive trên các metric Precision, Recall và MRR. Điều này chứng tỏ rằng việc sử dụng một mô hình reranker để đánh giá lại chất lượng của ngữ cảnh là hiệu quả. Mô hình reranker (BGE-Reranker-v2-m3) có khả năng xác định và xếp hạng cao các tài liệu thực sự liên quan nhất với câu hỏi, loại bỏ những tài liệu giả dương.
+
+\paragraph{Cải thiện từ Rephrase}
+
+Phương pháp rephrase cũng cho kết quả tích cực so với naive. Bằng cách sử dụng Qwen-3-32B để viết lại câu hỏi ban đầu thành nhiều câu nhỏ hơn hoặc rõ ràng hơn, hệ thống truy hồi có thể tìm kiếm các thông tin cần thiết một cách tường minh hơn. Điều này đặc biệt hữu ích đối với các câu hỏi phức tạp hoặc có nhiều thành phần thông tin.
+
+\paragraph{Phân tích chi tiết theo loại câu hỏi}
+
+Kết quả cũng cho thấy hiệu suất của các phương pháp thay đổi tùy theo loại câu hỏi:
+
+\begin{itemize}
+    \item \textbf{Bộ 1 (Truy xuất đơn lẻ/kết hợp):} Cả ba phương pháp đều đạt hiệu suất tốt, phương pháp rerank có lợi thế nhỏ.
+    
+    \item \textbf{Bộ 2 (Tình huống phức tạp):} Phương pháp rephrase có xu hướng tốt hơn do khả năng chia nhỏ vấn đề phức tạp.
+    
+    \item \textbf{Bộ 3 (Đối chiếu so sánh):} Cần có ngữ cảnh từ nhiều tài liệu, phương pháp rerank giúp xác định các tài liệu liên quan chính xác hơn.
+    
+    \item \textbf{Bộ 4 (Liệt kê danh sách):} Recall là chỉ số quan trọng, phương pháp rephrase giúp bao phủ rộng hơn.
+    
+    \item \textbf{Bộ 5 (Tư vấn dựa trên triệu chứng):} Cả ba phương pháp đều có thể sử dụng, tùy thuộc vào độ rõ ràng của câu hỏi gốc.
+\end{itemize}
+
+%======================================================================
+% PHẦN 2: ĐÁNH GIÁ CHẤT LƯỢNG CÂU TRẢ LỜI
+%======================================================================
+
+\subsection{Đánh giá chất lượng câu trả lời (Answer Evaluation)}
+
+Phần này đánh giá chất lượng câu trả lời được sinh ra bởi LLM so với câu trả lời chuẩn (ground truth), sử dụng hai phương pháp đã được mô tả trong Mục 3.5.
+
+\subsubsection{Kết quả Cross-Encoder Semantic Similarity}
+
+Bảng \ref{tab:cross_encoder_results} trình bày kết quả đánh giá Cross-Encoder trên 5 tập dữ liệu thử nghiệm.
+
+\begin{table}[h]
+\centering
+\caption{Kết quả Cross-Encoder Semantic Similarity Score}
+\label{tab:cross_encoder_results}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Tập dữ liệu} & \textbf{Số câu hỏi} & \textbf{Điểm TB} & \textbf{Min} & \textbf{Max} \\
+\hline
+about\_1\_drug & 100 & 0.9666 & 0.0002 & 1.0000 \\
+about\_2\_drug & 20 & 0.9985 & 0.9954 & 0.9999 \\
+comprehensive\_1\_drug & 20 & 0.9753 & 0.5884 & 1.0000 \\
+listing & 19 & 0.8493 & 0.1719 & 1.0000 \\
+symptom & 20 & 0.8504 & 0.0170 & 0.9984 \\
+\hline
+\end{tabular}
+\end{table}
+
+\paragraph{Nhận xét} Các câu hỏi đơn giản về một hoặc hai loại thuốc (about\_1\_drug, about\_2\_drug) đạt điểm Cross-Encoder rất cao (trên 0.96), cho thấy LLM sinh ra câu trả lời có ngữ nghĩa gần với ground truth. Các câu hỏi liệt kê (listing) và câu hỏi về triệu chứng (symptom) có điểm thấp hơn do tính đa dạng trong cách diễn đạt.
+
+\subsubsection{Kết quả Medical Entity Match Score}
+
+Bảng \ref{tab:entity_match_overall} trình bày kết quả tổng thể của Medical Entity Match Score.
+
+\begin{table}[h]
+\centering
+\caption{Kết quả Medical Entity Match Score - Tổng thể}
+\label{tab:entity_match_overall}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Tập dữ liệu} & \textbf{Số câu hỏi} & \textbf{F1} & \textbf{Precision} & \textbf{Recall} \\
+\hline
+about\_1\_drug & 100 & 0.7058 & 0.6799 & 0.8134 \\
+about\_2\_drug & 20 & 0.7944 & 0.7938 & 0.8224 \\
+comprehensive\_1\_drug & 20 & 0.6703 & 0.8619 & 0.6103 \\
+listing & 19 & 0.5727 & 0.5586 & 0.6386 \\
+symptom & 20 & 0.3574 & 0.5206 & 0.2838 \\
+\hline
+\end{tabular}
+\end{table}
+
+Bảng \ref{tab:entity_match_detail} chi tiết điểm F1 theo từng loại thực thể y tế.
+
+\begin{table}[h]
+\centering
+\caption{Điểm F1 theo từng loại thực thể y tế}
+\label{tab:entity_match_detail}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Loại thực thể} & \textbf{about\_1} & \textbf{about\_2} & \textbf{comprehensive} & \textbf{listing} & \textbf{symptom} \\
+\hline
+Liều lượng (dosages) & 0.833 & 0.733 & 0.808 & 0.649 & 0.100 \\
+Tần suất (frequencies) & 0.963 & 0.893 & 0.625 & 1.000 & 1.000 \\
+Đường dùng (routes) & 0.757 & 0.933 & 0.833 & 0.781 & 0.690 \\
+Chỉ định (indications) & 0.780 & 0.708 & 0.697 & 0.298 & 0.455 \\
+Chống chỉ định & 0.854 & 0.866 & 0.601 & 0.947 & 0.900 \\
+Tên thuốc (drug\_names) & 0.577 & 0.836 & 0.607 & 0.552 & 0.307 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Phân tích kết quả đánh giá câu trả lời}
+
+\begin{itemize}
+    \item \textbf{Các loại thực thể có điểm cao}: Tần suất dùng thuốc và chống chỉ định được LLM trả lời khá chính xác (F1 > 0.85), cho thấy mô hình nắm bắt tốt các thông tin có cấu trúc rõ ràng.
+    
+    \item \textbf{Các loại thực thể cần cải thiện}: Tên thuốc và chỉ định có điểm thấp hơn, đặc biệt với các câu hỏi liệt kê và triệu chứng. Nguyên nhân là do LLM có thể liệt kê các thuốc khác với ground truth nhưng vẫn đúng về mặt y khoa.
+    
+    \item \textbf{So sánh giữa các tập dữ liệu}: Câu hỏi về 1-2 thuốc (about\_1\_drug, about\_2\_drug) có điểm F1 cao hơn (0.70-0.79) so với câu hỏi liệt kê (0.57) và câu hỏi triệu chứng (0.36). Điều này phù hợp với kỳ vọng vì các câu hỏi đơn giản có ít biến thể trong câu trả lời hơn.
+    
+    \item \textbf{So sánh hai phương pháp đánh giá}: Cross-Encoder cho điểm cao hơn Entity Match vì đánh giá ngữ nghĩa tổng thể, trong khi Entity Match nghiêm ngặt hơn khi yêu cầu khớp chính xác các thực thể y khoa cụ thể.
+\end{itemize}
+
+\subsection{Kết luận thử nghiệm}
+
+Thử nghiệm cho thấy:
+
+\begin{enumerate}
+    \item \textbf{Về hệ thống truy hồi}: Cả hai phương pháp cải tiến (rerank và rephrase) đều mang lại lợi ích so với phương pháp naive. Phương pháp rerank hiệu quả hơn trong việc cải thiện chất lượng xếp hạng ngữ cảnh, trong khi phương pháp rephrase giúp bao phủ thêm các khía cạnh của câu hỏi phức tạp.
+    
+    \item \textbf{Về chất lượng câu trả lời}: LLM sinh ra câu trả lời có ngữ nghĩa tương đồng cao với ground truth (điểm Cross-Encoder trung bình > 0.9). Tuy nhiên, khi đánh giá chi tiết các thực thể y khoa, vẫn còn không gian cải thiện, đặc biệt với tên thuốc và chỉ định.
+    
+    \item \textbf{Khuyến nghị}: Kết hợp cả hai phương pháp rerank và rephrase có thể mang lại kết quả tốt nhất, mặc dù đòi hỏi chi phí tính toán cao hơn.
+\end{enumerate}
+

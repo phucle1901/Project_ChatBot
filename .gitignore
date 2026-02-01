@@ -1,0 +1,74 @@
+# =========================
+# Python standard ignores
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+*.bak
+
+# =========================
+# Virtual environments
+# =========================
+.venv/
+venv/
+env/
+ENV/
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example  # (giữ file mẫu nếu bạn tạo)
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Jupyter & VSCode
+# =========================
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# =========================
+# Cache & build
+# =========================
+*.egg-info/
+dist/
+build/
+.cache/
+__pypackages__/
+
+# =========================
+# Model checkpoints / embeddings / vector stores
+# =========================
+*.pt
+*.bin
+*.ckpt
+*.pkl
+*.jsonl
+*.db
+chroma/
+faiss_index/
+
+# =========================
+# Local credentials / keys
+# =========================
+service-account.json
+credentials.json
+result/*
+*.key
+*.pem
+sqlite-db/data/*
+splite-db/database/*
+create_database.py
+*.csv

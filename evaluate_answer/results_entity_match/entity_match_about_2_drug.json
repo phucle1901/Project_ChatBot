@@ -1,0 +1,2298 @@
+{
+  "statistics": {
+    "total_questions": 20,
+    "average_f1": 0.7944061368851554,
+    "average_precision": 0.7937632625372564,
+    "average_recall": 0.8224425729069692,
+    "by_entity_type": {
+      "dosages": {
+        "avg_f1": 0.7333333333333333,
+        "avg_precision": 0.73,
+        "avg_recall": 0.7375
+      },
+      "frequencies": {
+        "avg_f1": 0.8928571428571429,
+        "avg_precision": 0.8800000000000001,
+        "avg_recall": 0.925
+      },
+      "routes": {
+        "avg_f1": 0.9333333333333333,
+        "avg_precision": 0.9333333333333333,
+        "avg_recall": 0.9583333333333334
+      },
+      "indications": {
+        "avg_f1": 0.7082467532467532,
+        "avg_precision": 0.7139285714285715,
+        "avg_recall": 0.8142857142857143
+      },
+      "contraindications": {
+        "avg_f1": 0.8658080808080808,
+        "avg_precision": 0.9025000000000001,
+        "avg_recall": 0.8983333333333332
+      },
+      "drug_names": {
+        "avg_f1": 0.8356746031746031,
+        "avg_precision": 0.8705952380952381,
+        "avg_recall": 0.8095238095238093
+      }
+    }
+  },
+  "results": [
+    {
+      "query": "Những lưu ý và chống chỉ định của Siro ho Tragutan Dược điều trị các chứng ho, sát trùng đường hô hấp khác với Thuốc nhỏ mắt Tearidone giảm triệu chứng kích thích do khô mắt như thế nào?",
+      "answer_ground_truth": "Siro ho Tragutan Dược điều trị các chứng ho, sát trùng đường hô hấp chống chỉ định với trẻ em dưới 30 tháng tuổi, phụ nữ có thai và ho do suyễn, trong khi đó Thuốc nhỏ mắt Tearidone chống chỉ định với những người dị ứng povidon hoặc bất kỳ thành phần nào của thuốc. Ngoài ra, Siro ho Tragutan cần thận trọng với người loét dạ dày, trong khi Tearidone cần thận trọng khi sử dụng với kính sát tròng và có hướng dẫn cụ thể về bảo quản.",
+      "answer_llm_predict": "Những lưu ý và chống chỉ định của Siro ho Tragutan Dược điều trị các chứng ho, sát trùng đường hô hấp khác với Thuốc nhỏ mắt Tearidone giảm triệu chứng kích thích do khô mắt:\n\n- Chống chỉ định: Siro ho Tragutan chống chỉ định với người mẫn cảm với thành phần thuốc, trẻ em dưới 30 tháng tuổi, ho do suyễn, suy hô hấp, ho do lao, phụ nữ có thai. Thuốc nhỏ mắt Tearidone chống chỉ định với người dị ứng povidon hoặc bất kỳ thành phần nào của thuốc.\n\n- Thận trọng: Siro ho Tragutan thận trọng với người loét dạ dày, phụ nữ cho con bú. Thuốc nhỏ mắt Tearidone thận trọng khi mang kính sát tròng mềm, sự kích thích do khô mắt kéo dài hoặc xấu đi.\n\n- Tương tác thuốc: Chưa có thông tin về tương tác thuốc của Siro ho Tragutan. Thuốc nhỏ mắt Tearidone có thể tương tác với các loại thuốc nhỏ mắt khác.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "suyễn",
+          "ho",
+          "loét",
+          "dị ứng"
+        ],
+        "contraindications": [
+          "có thai",
+          "trẻ em",
+          "thận trọng",
+          "chống chỉ định"
+        ],
+        "drug_names": [
+          "tearidone",
+          "tragutan",
+          "ngo",
+          "siro",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "suyễn",
+          "khô mắt",
+          "dị ứng",
+          "loét",
+          "cảm",
+          "ho"
+        ],
+        "contraindications": [
+          "có thai",
+          "trẻ em",
+          "thận trọng",
+          "cho con bú",
+          "chống chỉ định"
+        ],
+        "drug_names": [
+          "siro",
+          "thu",
+          "tragutan",
+          "tearidone"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "gt_count": 4,
+          "llm_count": 6,
+          "matched": 4
+        },
+        "contraindications": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889,
+          "gt_count": 4,
+          "llm_count": 5,
+          "matched": 4
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.888888888888889,
+          "gt_count": 5,
+          "llm_count": 4,
+          "matched": 4
+        },
+        "overall": {
+          "precision": 0.8125,
+          "recall": 0.9285714285714286,
+          "f1": 0.8666666666666666,
+          "total_gt": 14,
+          "total_llm": 16,
+          "total_matched": 13
+        }
+      },
+      "overall_f1": 0.8666666666666666,
+      "overall_precision": 0.8125,
+      "overall_recall": 0.9285714285714286
+    },
+    {
+      "query": "Liều dùng và cách sử dụng của Thuốc nhỏ tai Auricularum điều trị viêm tai có gì khác biệt so với Dung dịch nhỏ tai ILLixime 0.3% Hanlim điều trị viêm tai ngoài, viêm tai giữa mạn tính?",
+      "answer_ground_truth": "Thuốc nhỏ tai Auricularum điều trị viêm tai có liều dùng cụ thể là nhỏ từ 1 đến 2 lần mỗi ngày, mỗi lần từ 5 đến 10 giọt với dạng pha thành hỗn dịch, hoặc dùng từ 1 đến 2 lần mỗi ngày hoặc 1 đến 2 lần mỗi 2 đến 3 ngày với dạng bột. Trong khi đó, Dung dịch nhỏ tai ILLixime 0.3% Hanlim điều trị viêm tai ngoài, viêm tai giữa mạn tính không cung cấp liều dùng cụ thể mà chỉ khuyến cáo rằng liều dùng tùy thuộc vào thể trạng và mức độ diễn tiến của bệnh. Cách sử dụng của Auricularum yêu cầu người dùng giữ nghiêng đầu để thuốc thẩm thấu vào tai, trong khi ILLixime không có hướng dẫn cụ thể về tư thế khi sử dụng.",
+      "answer_llm_predict": "Thuốc nhỏ tai Auricularum và Dung dịch nhỏ tai ILLixime 0.3% Hanlim đều được sử dụng để điều trị viêm tai, nhưng chúng có thể khác biệt về liều dùng và cách sử dụng. Tuy nhiên, thông tin cụ thể về liều dùng và cách sử dụng của hai loại thuốc này không được cung cấp trong ngữ cảnh đã cho. Để biết thông tin chính xác, bạn nên tham khảo hướng dẫn sử dụng hoặc tư vấn từ chuyên gia y tế.",
+      "entities_gt": {
+        "dosages": [
+          "10 g",
+          "10 giọt"
+        ],
+        "frequencies": [
+          "2 lần"
+        ],
+        "routes": [],
+        "indications": [
+          "ho",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "hanlim",
+          "trong",
+          "auricularum",
+          "illixime",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [],
+        "indications": [
+          "ho",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "dung",
+          "hanlim",
+          "auricularum",
+          "illixime",
+          "thu",
+          "tuy"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 2,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 0,
+          "recall": 0.0,
+          "f1": 0,
+          "gt_count": 1,
+          "llm_count": 0,
+          "matched": 0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8333333333333334,
+          "f1": 0.8333333333333334,
+          "gt_count": 6,
+          "llm_count": 6,
+          "matched": 5
+        },
+        "overall": {
+          "precision": 0.875,
+          "recall": 0.6363636363636364,
+          "f1": 0.7368421052631579,
+          "total_gt": 11,
+          "total_llm": 8,
+          "total_matched": 7
+        }
+      },
+      "overall_f1": 0.7368421052631579,
+      "overall_precision": 0.875,
+      "overall_recall": 0.6363636363636364
+    },
+    {
+      "query": "Liều dùng và cách sử dụng của Thuốc nhỏ mắt Bronuck Senju Pharm điều trị viêm bờ mi, viêm kết mạc, viêm củng mạc khác với Thuốc nhỏ mắt V.Rohto Cool (12ml) điều trị mỏi mắt, đỏ mắt, ngứa mắt như thế nào?",
+      "answer_ground_truth": "Liều dùng của Thuốc nhỏ mắt Bronuck Senju Pharm là nhỏ mắt mỗi lần 1-2 giọt, ngày 2 lần, trong khi đó Thuốc nhỏ mắt V.Rohto Cool khuyến cáo nhỏ 2-3 giọt mỗi lần, ngày 5-6 lần. Cả hai thuốc đều lưu ý rằng liều dùng cụ thể cần tham khảo ý kiến bác sĩ hoặc chuyên viên y tế, nhưng cách xử trí khi quên liều và khi dùng quá liều có sự khác biệt, với Bronuck có thể gây tổn thương gan nặng trong trường hợp uống quá liều, trong khi V.Rohto Cool có thể gây ngứa mắt và sung huyết.",
+      "answer_llm_predict": "Liều dùng và cách sử dụng của Thuốc nhỏ mắt Bronuck Senju Pharm và Thuốc nhỏ mắt V.Rohto Cool khác nhau. Thuốc nhỏ mắt Bronuck Senju Pharm được sử dụng để điều trị viêm bờ mi, viêm kết mạc, viêm củng mạc với liều dùng nhỏ mắt mỗi lần 1-2 giọt, ngày 2 lần. Trong khi đó, Thuốc nhỏ mắt V.Rohto Cool được sử dụng để điều trị mỏi mắt, đỏ mắt, ngứa mắt với liều dùng mỗi ngày nhỏ 5-6 lần, mỗi lần 2-3 giọt.",
+      "entities_gt": {
+        "dosages": [
+          "2 giọt",
+          "3 giọt",
+          "1-2 giọt",
+          "2 g",
+          "2-3 giọt",
+          "3 g"
+        ],
+        "frequencies": [
+          "6 lần",
+          "ngày 2 lần",
+          "2 lần"
+        ],
+        "routes": [
+          "nhỏ mắt",
+          "uống"
+        ],
+        "indications": [
+          "ho",
+          "ngứa"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "bronuck",
+          "rohto cool",
+          "bronuck senju pharm",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "2 giọt",
+          "3 giọt",
+          "1-2 giọt",
+          "2 g",
+          "2-3 giọt",
+          "3 g"
+        ],
+        "frequencies": [
+          "6 lần",
+          "ngày 2 lần",
+          "2 lần"
+        ],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "viêm",
+          "ngứa",
+          "đỏ mắt",
+          "mỏi mắt",
+          "viêm kết mạc"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "trong",
+          "rohto cool",
+          "bronuck senju pharm",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 6,
+          "llm_count": 6,
+          "matched": 6
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 3,
+          "llm_count": 3,
+          "matched": 3
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.2,
+          "recall": 0.5,
+          "f1": 0.28571428571428575,
+          "gt_count": 2,
+          "llm_count": 5,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "gt_count": 4,
+          "llm_count": 4,
+          "matched": 3
+        },
+        "overall": {
+          "precision": 0.7368421052631579,
+          "recall": 0.8235294117647058,
+          "f1": 0.7777777777777778,
+          "total_gt": 17,
+          "total_llm": 19,
+          "total_matched": 14
+        }
+      },
+      "overall_f1": 0.7777777777777778,
+      "overall_precision": 0.7368421052631579,
+      "overall_recall": 0.8235294117647058
+    },
+    {
+      "query": "Liều dùng và cách sử dụng của Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% Hanlim giảm khô mắt có điểm gì khác biệt so với Thuốc nhỏ mắt Tetracain 0.5% Dược 3-2 dùng gây tê bề mặt trong nhãn khoa?",
+      "answer_ground_truth": "Liều dùng của Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% Hanlim giảm khô mắt là 1 giọt, 5 – 6 lần/ngày, trong khi đó, liều dùng của Thuốc nhỏ mắt Tetracain 0.5% Dược 3-2 dùng gây tê bề mặt trong nhãn khoa có thể từ 1 – 2 giọt tùy vào mục đích sử dụng, như gây tê ngắn hạn hay trong phẫu thuật, với tần suất 5 – 10 phút một lần. Ngoài ra, cách sử dụng của Hyaluron Eye Drops yêu cầu không dùng lại lượng thuốc còn sót lại, trong khi Tetracain có hướng dẫn cụ thể về việc bổ sung liều khi quên.",
+      "answer_llm_predict": "Liều dùng và cách sử dụng của Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% Hanlim và Thuốc nhỏ mắt Tetracain 0.5% Dược 3-2 có điểm khác biệt:\n\n- Liều dùng: Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% là mỗi lần 1 giọt, 5 – 6 lần/ngày. Thuốc nhỏ mắt Tetracain 0.5% dùng gây tê bề mặt trong nhãn khoa với liều dùng nhỏ 1 – 2 giọt dung dịch nhỏ mắt 0,5% tùy vào mục đích sử dụng (thời gian ngắn, phẫu thuật, cắt chỉ, lấy vật lạ, đo nhãn áp).\n\n- Cách dùng: Cả hai đều dùng bằng cách nhỏ mắt, nhưng Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% nên dùng ngay sau khi mở nắp và không dùng lượng thuốc còn sót lại trong ống cho lần sử dụng tiếp theo.",
+      "entities_gt": {
+        "dosages": [
+          "2 g",
+          "2 giọt",
+          "1 g",
+          "1 giọt"
+        ],
+        "frequencies": [
+          "6 lần"
+        ],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "khô mắt"
+        ],
+        "contraindications": [
+          "không dùng"
+        ],
+        "drug_names": [
+          "hyaluron eye drops",
+          "hanlim",
+          "ngo",
+          "thu",
+          "tetracain"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "2 g",
+          "2 giọt",
+          "1 g",
+          "1 giọt"
+        ],
+        "frequencies": [
+          "6 lần"
+        ],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho"
+        ],
+        "contraindications": [
+          "không dùng"
+        ],
+        "drug_names": [
+          "hyaluron eye drops",
+          "thu",
+          "hanlim",
+          "tetracain"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 4,
+          "llm_count": 4,
+          "matched": 4
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.888888888888889,
+          "gt_count": 5,
+          "llm_count": 4,
+          "matched": 4
+        },
+        "overall": {
+          "precision": 1.0,
+          "recall": 0.8571428571428571,
+          "f1": 0.923076923076923,
+          "total_gt": 14,
+          "total_llm": 12,
+          "total_matched": 12
+        }
+      },
+      "overall_f1": 0.923076923076923,
+      "overall_precision": 1.0,
+      "overall_recall": 0.8571428571428571
+    },
+    {
+      "query": "Công dụng và chỉ định của Thuốc Zensalbu 5mg CPC1HN kiểm soát co thắt phế quản mạn, điều trị hen nặng cấp tính khác với Siro New Ameflu Night Time OPV giảm các triệu chứng cảm lạnh như thế nào?",
+      "answer_ground_truth": "Thuốc Zensalbu 5mg CPC1HN được chỉ định để kiểm soát co thắt phế quản mạn và điều trị hen nặng cấp tính, trong khi Siro New Ameflu Night Time OPV được chỉ định để giảm các triệu chứng cảm lạnh như nhức đầu và cảm cúm. Zensalbu tác động chủ yếu lên các thụ thể beta2 adrenergic để giãn cơ trơn phế quản, trong khi Siro New Ameflu Night Time sử dụng các thành phần như acetaminophen và phenylephrine để giảm đau và co mạch, làm giảm triệu chứng cảm lạnh.",
+      "answer_llm_predict": "Công dụng và chỉ định của Thuốc Zensalbu 5mg CPC1HN là kiểm soát co thắt phế quản mạn, điều trị hen nặng cấp tính. Trong khi đó, Thuốc Siro New Ameflu Night Time OPV được chỉ định để giảm các triệu chứng cảm lạnh như nhức đầu, sốt, và các triệu chứng khác liên quan đến cảm lạnh.",
+      "entities_gt": {
+        "dosages": [
+          "5mg"
+        ],
+        "frequencies": [],
+        "routes": [],
+        "indications": [
+          "giảm đau",
+          "hen",
+          "cảm",
+          "đau"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "siro new ameflu night time",
+          "siro new ameflu night time opv",
+          "zensalbu",
+          "cpc1hn",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "5mg"
+        ],
+        "frequencies": [],
+        "routes": [],
+        "indications": [
+          "sốt",
+          "hen",
+          "cảm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "trong",
+          "siro new ameflu night time opv",
+          "zensalbu",
+          "cpc1hn",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "indications": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1": 0.5714285714285715,
+          "gt_count": 4,
+          "llm_count": 3,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1": 0.8000000000000002,
+          "gt_count": 5,
+          "llm_count": 5,
+          "matched": 4
+        },
+        "overall": {
+          "precision": 0.7777777777777778,
+          "recall": 0.7,
+          "f1": 0.7368421052631577,
+          "total_gt": 10,
+          "total_llm": 9,
+          "total_matched": 7
+        }
+      },
+      "overall_f1": 0.7368421052631577,
+      "overall_precision": 0.7777777777777778,
+      "overall_recall": 0.7
+    },
+    {
+      "query": "Liều dùng và cách sử dụng của Cốm pha dung dịch uống Stacytine 200 GRA Stella tiêu nhầy, long đờm khác với Thuốc Rhinocort Aqua 64mcg McNeil điều trị trong các trường hợp viêm mũi dị ứng quanh năm và viêm mũi dị ứng theo mùa như thế nào?",
+      "answer_ground_truth": "Cốm pha dung dịch uống Stacytine 200 GRA Stella tiêu nhầy, long đờm được sử dụng bằng đường uống với liều dùng 200 mg 3 lần/ngày cho người lớn và 200 mg 2 lần/ngày cho trẻ em từ 2 đến 6 tuổi. Trong khi đó, Thuốc Rhinocort Aqua 64mcg McNeil được sử dụng qua đường xịt mũi, với liều khởi đầu 256 mcg mỗi ngày cho người lớn và trẻ em trên 6 tuổi, có thể dùng một lần duy nhất hoặc chia thành 2 lần trong ngày. Ngoài ra, Stacytine có liều điều chỉnh cho trường hợp giải độc quá liều paracetamol, trong khi Rhinocort Aqua không có vấn đề lâm sàng nghiêm trọng khi dùng quá liều cấp tính. Cả hai thuốc đều yêu cầu tham khảo ý kiến bác sĩ để có liều dùng phù hợp.",
+      "answer_llm_predict": "Liều dùng và cách sử dụng của Cốm pha dung dịch uống Stacytine 200 GRA Stella tiêu nhầy, long đờm khác với Thuốc Rhinocort Aqua 64mcg McNeil ở các điểm sau:\n\n- Liều dùng: Cốm pha dung dịch uống Stacytine 200 GRA được dùng với liều 200 mg (1 gói) x 3 lần/ngày cho người lớn và 200 mg (1 gói) x 2 lần/ngày cho trẻ em từ 2 đến 6 tuổi. Trong khi đó, Thuốc Rhinocort Aqua 64mcg McNeil được dùng với liều khởi đầu 256 microgram mỗi ngày, có thể sử dụng 1 lần duy nhất mỗi buổi sáng hoặc chia làm 2 lần sáng và tối.\n\n- Cách sử dụng: Cốm pha dung dịch uống Stacytine 200 GRA được dùng bằng đường uống, trong khi Thuốc Rhinocort Aqua 64mcg McNeil được sử dụng bằng cách xịt vào mũi.\n\n- Chỉ định: Cốm pha dung dịch uống Stacytine 200 GRA được chỉ định dùng trong các trường hợp viêm phế quản, tiêu chất nhầy, long đờm, và giải độc quá liều paracetamol. Trong khi đó, Thuốc Rhinocort Aqua 64mcg McNeil được chỉ định dùng trong các trường hợp viêm mũi dị ứng quanh năm và viêm mũi dị ứng theo mùa.",
+      "entities_gt": {
+        "dosages": [
+          "200 mg",
+          "256 mcg",
+          "64mcg",
+          "200 g"
+        ],
+        "frequencies": [
+          "3 lần",
+          "2 lần"
+        ],
+        "routes": [
+          "đường uống",
+          "xịt mũi",
+          "uống"
+        ],
+        "indications": [
+          "ho",
+          "phù"
+        ],
+        "contraindications": [
+          "trẻ em"
+        ],
+        "drug_names": [
+          "mcneil",
+          "trong",
+          "gra stella",
+          "ngo",
+          "thu",
+          "stacytine",
+          "rhinocort aqua"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "200 mg",
+          "64mcg",
+          "1 g",
+          "1 gói",
+          "200 g"
+        ],
+        "frequencies": [
+          "sáng và tối",
+          "3 lần",
+          "1 lần",
+          "sáng",
+          "2 lần"
+        ],
+        "routes": [
+          "đường uống",
+          "uống",
+          "dùng trong"
+        ],
+        "indications": [
+          "viêm phế quản",
+          "ho",
+          "dị ứng",
+          "viêm"
+        ],
+        "contraindications": [
+          "trẻ em"
+        ],
+        "drug_names": [
+          "mcneil",
+          "trong",
+          "gra stella",
+          "gra",
+          "thu",
+          "stacytine",
+          "rhinocort aqua"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.6,
+          "recall": 0.75,
+          "f1": 0.6666666666666665,
+          "gt_count": 4,
+          "llm_count": 5,
+          "matched": 3
+        },
+        "frequencies": {
+          "precision": 0.6,
+          "recall": 1.5,
+          "f1": 0.857142857142857,
+          "gt_count": 2,
+          "llm_count": 5,
+          "matched": 3
+        },
+        "routes": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.6666666666666666,
+          "gt_count": 3,
+          "llm_count": 3,
+          "matched": 2
+        },
+        "indications": {
+          "precision": 0.25,
+          "recall": 0.5,
+          "f1": 0.3333333333333333,
+          "gt_count": 2,
+          "llm_count": 4,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "drug_names": {
+          "precision": 0.8571428571428571,
+          "recall": 0.8571428571428571,
+          "f1": 0.8571428571428571,
+          "gt_count": 7,
+          "llm_count": 7,
+          "matched": 6
+        },
+        "overall": {
+          "precision": 0.64,
+          "recall": 0.8421052631578947,
+          "f1": 0.7272727272727272,
+          "total_gt": 19,
+          "total_llm": 25,
+          "total_matched": 16
+        }
+      },
+      "overall_f1": 0.7272727272727272,
+      "overall_precision": 0.64,
+      "overall_recall": 0.8421052631578947
+    },
+    {
+      "query": "Tác dụng phụ không mong muốn của Thuốc nhỏ mắt Mydrin-P Santen làm giãn đồng tử có điểm gì khác biệt so với Thuốc Anoro Ellipta 62.5/25mcg GSK điều trị duy trì giãn phế quản?",
+      "answer_ground_truth": "Tác dụng phụ không mong muốn của Thuốc nhỏ mắt Mydrin-P Santen chủ yếu liên quan đến các vấn đề về mắt như viêm kết mạc, trong khi đó, Thuốc Anoro Ellipta có nhiều tác dụng phụ liên quan đến hệ hô hấp và tiêu hóa như nhiễm trùng đường hô hấp, ho, táo bón. Ngoài ra, Thuốc Anoro Ellipta cũng có các phản ứng quá mẫn như phát ban và phản vệ, trong khi Thuốc Mydrin-P chủ yếu có tác dụng phụ liên quan đến hệ thần kinh và huyết áp.",
+      "answer_llm_predict": "Tác dụng phụ không mong muốn của Thuốc nhỏ mắt Mydrin-P Santen làm giãn đồng tử và Thuốc Anoro Ellipta 62.5/25mcg GSK điều trị duy trì giãn phế quản có sự khác biệt về các triệu chứng và mức độ nghiêm trọng. Thuốc nhỏ mắt Mydrin-P Santen có thể gây ra các tác dụng phụ như sốc, phản ứng phản vệ, viêm bờ mi, quá mẫn cảm, viêm kết mạc, rối loạn biểu mô giác mạc, tăng áp lực nội nhãn, khát, buồn nôn, nôn, đau đầu, đỏ bừng mặt, nhịp tim nhanh, tăng huyết áp. Trong khi đó, Thuốc Anoro Ellipta 62.5/25mcg GSK có thể gây ra các tác dụng phụ như nhiễm trùng đường tiết niệu, viêm xoang, viêm mũi - họng, viêm họng, ho, đau miệng - họng, táo bón, khô miệng, đau đầu, rung nhĩ, nhịp nhanh trên thất, nhịp tim nhanh, phản ứng quá mẫn, lo âu, run, loạn vị giác, nhịp nhanh thất, ngoại tâm thu trên thất, đánh trống ngực, khó phát âm, co thắt cơ, phát ban, phù mạch, mày đay, nhìn mờ, tăng nhãn áp, tăng áp lực nội nhãn, co thắt phế quản nghịch lý, bí tiểu, khó tiểu, bàng quang tắc nghẽn đầu ra.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "nhiễm trùng",
+          "viêm",
+          "viêm kết mạc",
+          "táo bón",
+          "huyết áp",
+          "ho"
+        ],
+        "contraindications": [
+          "quá mẫn"
+        ],
+        "drug_names": [
+          "mydrin-p santen",
+          "mydrin-p",
+          "ngo",
+          "anoro ellipta",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "25mcg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "nhiễm trùng",
+          "huyết áp",
+          "viêm",
+          "đau đầu",
+          "viêm kết mạc",
+          "tăng nhãn áp",
+          "phù",
+          "đau",
+          "táo bón",
+          "viêm họng",
+          "cảm",
+          "buồn nôn",
+          "ho",
+          "viêm xoang"
+        ],
+        "contraindications": [
+          "quá mẫn"
+        ],
+        "drug_names": [
+          "mydrin-p santen",
+          "trong",
+          "anoro ellipta",
+          "gsk",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.42857142857142855,
+          "recall": 1.0,
+          "f1": 0.6,
+          "gt_count": 6,
+          "llm_count": 14,
+          "matched": 6
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "drug_names": {
+          "precision": 0.6,
+          "recall": 0.6,
+          "f1": 0.6,
+          "gt_count": 5,
+          "llm_count": 5,
+          "matched": 3
+        },
+        "overall": {
+          "precision": 0.5,
+          "recall": 0.8461538461538461,
+          "f1": 0.6285714285714286,
+          "total_gt": 13,
+          "total_llm": 22,
+          "total_matched": 11
+        }
+      },
+      "overall_f1": 0.6285714285714286,
+      "overall_precision": 0.5,
+      "overall_recall": 0.8461538461538461
+    },
+    {
+      "query": "Những lưu ý và chống chỉ định của Thuốc nhỏ mũi Otrivin 0.1% GSK điều trị nghẹt mũi, sung huyết mũi họng có gì khác biệt so với Siro Eugica DHG hỗ trợ điều trị ho, long đờm?",
+      "answer_ground_truth": "Thuốc nhỏ mũi Otrivin 0.1% GSK có nhiều chống chỉ định hơn, bao gồm quá mẫn cảm với xylometazoline, bệnh tăng nhãn áp, viêm mũi khô, và không dùng cho trẻ dưới 12 tuổi. Trong khi đó, Siro Eugica DHG chỉ chống chỉ định cho trẻ em dưới 30 tháng tuổi và trẻ có tiền sử động kinh hoặc co giật do sốt cao. Cả hai thuốc đều cần thận trọng khi sử dụng, nhưng Otrivin có nhiều cảnh báo hơn về tình trạng sức khỏe như bệnh tim mạch, huyết áp, và không nên dùng lâu dài. Cả hai thuốc đều không ảnh hưởng đến khả năng lái xe và vận hành máy móc, nhưng Otrivin cần thận trọng hơn trong thời kỳ mang thai và cho con bú.",
+      "answer_llm_predict": "Những lưu ý và chống chỉ định của Thuốc nhỏ mũi Otrivin 0.1% GSK và Siro Eugica DHG là khác nhau do thành phần và công dụng của thuốc khác nhau. Thuốc nhỏ mũi Otrivin 0.1% GSK có chống chỉ định với bệnh nhân phẫu thuật cắt bỏ tuyến yên, bệnh tăng nhãn áp góc hẹp, viêm mũi khô hoặc teo, quá mẫn với xylometazoline, và trẻ dưới 12 tuổi. Trong khi đó, Siro Eugica DHG chống chỉ định với trẻ em dưới 30 tháng tuổi và những người có tiền sử động kinh hoặc co giật do sốt cao.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi"
+        ],
+        "indications": [
+          "viêm",
+          "tăng nhãn áp",
+          "tim mạch",
+          "cảm",
+          "huyết áp",
+          "sốt",
+          "ho"
+        ],
+        "contraindications": [
+          "trẻ em",
+          "thận trọng",
+          "mang thai",
+          "trẻ dưới",
+          "không dùng",
+          "cho con bú",
+          "chống chỉ định",
+          "quá mẫn"
+        ],
+        "drug_names": [
+          "trong",
+          "otrivin",
+          "gsk",
+          "thu",
+          "siro eugica dhg"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mũi"
+        ],
+        "indications": [
+          "sốt",
+          "ho",
+          "tăng nhãn áp",
+          "viêm"
+        ],
+        "contraindications": [
+          "trẻ em",
+          "chống chỉ định",
+          "trẻ dưới",
+          "quá mẫn"
+        ],
+        "drug_names": [
+          "trong",
+          "otrivin",
+          "gsk",
+          "thu",
+          "siro eugica dhg"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 0.5714285714285714,
+          "f1": 0.7272727272727273,
+          "gt_count": 7,
+          "llm_count": 4,
+          "matched": 4
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 8,
+          "llm_count": 4,
+          "matched": 4
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 5,
+          "llm_count": 5,
+          "matched": 5
+        },
+        "overall": {
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "total_gt": 21,
+          "total_llm": 14,
+          "total_matched": 14
+        }
+      },
+      "overall_f1": 0.8,
+      "overall_precision": 1.0,
+      "overall_recall": 0.6666666666666666
+    },
+    {
+      "query": "Công dụng và chỉ định của Thuốc Tỷ Viêm Nang Khang Minh điều trị viêm xoang, viêm mũi dị ứng có gì khác biệt so với Thuốc ho Methorphan Traphaco cắt cơn ho, điều trị long đờm, chống dị ứng?",
+      "answer_ground_truth": "Thuốc Tỷ Viêm Nang Khang Minh điều trị viêm xoang, viêm mũi dị ứng chủ yếu được chỉ định trong điều trị viêm xoang và nhức đầu, trong khi đó, Thuốc ho Methorphan Traphaco cắt cơn ho, điều trị long đờm, chống dị ứng được chỉ định để điều trị ho khan, ho có đờm, cũng như các triệu chứng của cúm, viêm họng và dị ứng. Điều này cho thấy sự khác biệt rõ rệt trong phạm vi chỉ định và công dụng của hai loại thuốc.",
+      "answer_llm_predict": "Công dụng và chỉ định của Thuốc Tỷ Viêm Nang Khang Minh và Thuốc ho Methorphan Traphaco khác biệt ở chỗ:\n\n- Thuốc Tỷ Viêm Nang Khang Minh điều trị viêm xoang, viêm mũi dị ứng, nhức đầu.\n- Thuốc ho Methorphan Traphaco cắt cơn ho, điều trị long đờm, chống dị ứng, điều trị ho khan, ho do dị ứng, ho do cảm lạnh, viêm họng, viêm phổi.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [],
+        "indications": [
+          "viêm",
+          "dị ứng",
+          "viêm họng",
+          "ho",
+          "viêm xoang"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "nang khang minh",
+          "methorphan traphaco",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [],
+        "indications": [
+          "viêm",
+          "dị ứng",
+          "viêm họng",
+          "cảm",
+          "ho",
+          "viêm xoang"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "nang khang minh",
+          "methorphan traphaco",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "indications": {
+          "precision": 0.8333333333333334,
+          "recall": 1.0,
+          "f1": 0.9090909090909091,
+          "gt_count": 5,
+          "llm_count": 6,
+          "matched": 5
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 3,
+          "llm_count": 3,
+          "matched": 3
+        },
+        "overall": {
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "f1": 0.9411764705882353,
+          "total_gt": 8,
+          "total_llm": 9,
+          "total_matched": 8
+        }
+      },
+      "overall_f1": 0.9411764705882353,
+      "overall_precision": 0.8888888888888888,
+      "overall_recall": 1.0
+    },
+    {
+      "query": "Liều dùng và cách sử dụng của Thuốc nhỏ mũi trẻ em Elossy 0.05% điều trị ngạt mũi, viêm mũi, viêm xoang khác với Cao lỏng thuốc hen P/H điều trị các thể hen phế quản như thế nào?",
+      "answer_ground_truth": "Thuốc nhỏ mũi trẻ em Elossy 0.05% được dùng nhỏ mũi cho trẻ em từ 6 đến 12 tuổi với liều 1-2 giọt mỗi lần, không quá 2 lần/ngày và không sử dụng quá 5 ngày. Trong khi đó, Cao lỏng thuốc hen P/H được uống 2 lần/ngày sau bữa ăn với liều 15 ml cho trẻ dưới 6 tuổi, 20 ml cho trẻ từ 6-14 tuổi và 30 ml cho người lớn, với thời gian điều trị kéo dài 8-10 tuần. Cả hai thuốc đều yêu cầu tham khảo ý kiến bác sĩ để điều chỉnh liều dùng phù hợp và có hướng dẫn xử trí khi quên liều.",
+      "answer_llm_predict": "Liều dùng và cách sử dụng của Thuốc nhỏ mũi trẻ em Elossy 0.05% và Cao lỏng thuốc hen P/H khác nhau:\n\n- Thuốc nhỏ mũi trẻ em Elossy 0.05%: Dùng nhỏ mũi cho trẻ từ 6 đến 12 tuổi, ngày nhỏ 1-2 lần, mỗi lần nhỏ 1-2 giọt, không quá 2 lần một ngày, thời gian sử dụng không quá 5 ngày nếu không có chỉ định của bác sĩ.\n\n- Cao lỏng thuốc hen P/H: Uống 2 lần/ngày sau bữa ăn, liều dùng tùy theo tuổi: Trẻ em dưới 6 tuổi 15ml/lần, trẻ từ 6-14 tuổi 20ml/lần, từ 14 tuổi trở lên và người lớn 30ml/lần. Trường hợp bệnh nặng có thể dùng gấp rưỡi liều trên, mỗi đợt điều trị thường kéo dài 8-10 tuần.",
+      "entities_gt": {
+        "dosages": [
+          "20 ml",
+          "15 ml",
+          "30 ml",
+          "2 giọt",
+          "1-2 giọt",
+          "2 g"
+        ],
+        "frequencies": [
+          "2 lần"
+        ],
+        "routes": [
+          "nhỏ mũi",
+          "uống"
+        ],
+        "indications": [
+          "ho",
+          "hen",
+          "phù"
+        ],
+        "contraindications": [
+          "trẻ em",
+          "trẻ dưới"
+        ],
+        "drug_names": [
+          "trong",
+          "elossy",
+          "thu",
+          "cao"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "15ml",
+          "2 giọt",
+          "20ml",
+          "30ml",
+          "1-2 giọt",
+          "2 g"
+        ],
+        "frequencies": [
+          "2 lần"
+        ],
+        "routes": [
+          "nhỏ mũi",
+          "uống"
+        ],
+        "indications": [
+          "ho",
+          "hen"
+        ],
+        "contraindications": [
+          "trẻ em"
+        ],
+        "drug_names": [
+          "elossy",
+          "thu",
+          "cao"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 6,
+          "llm_count": 6,
+          "matched": 6
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "gt_count": 3,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "gt_count": 4,
+          "llm_count": 3,
+          "matched": 3
+        },
+        "overall": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091,
+          "total_gt": 18,
+          "total_llm": 15,
+          "total_matched": 15
+        }
+      },
+      "overall_f1": 0.9090909090909091,
+      "overall_precision": 1.0,
+      "overall_recall": 0.8333333333333334
+    },
+    {
+      "query": "Tác dụng phụ không mong muốn của Thuốc nhỏ mắt Coodrop Pharmedic làm ẩm, bôi trơn mắt, giảm triệu chứng khô mắt khác với Thuốc nhỏ mắt Lumigan 0.01% Allergan giảm tăng áp suất nội nhãn như thế nào?",
+      "answer_ground_truth": "Tác dụng phụ của Thuốc nhỏ mắt Coodrop Pharmedic chủ yếu là cảm giác dính hoặc cay mắt nhẹ thoáng qua, trong khi đó, Thuốc nhỏ mắt Lumigan 0.01% Allergan có nhiều tác dụng phụ hơn như xung huyết kết mạc, viêm giác mạc, ban đỏ mí mắt, kích ứng mắt, và rậm lông, với tỷ lệ phản ứng bất lợi cao hơn trong các nghiên cứu lâm sàng.",
+      "answer_llm_predict": "Tác dụng phụ của Thuốc nhỏ mắt Coodrop Pharmedic là cảm giác dính hoặc cay mắt nhẹ thoáng qua, trong khi tác dụng phụ của Thuốc nhỏ mắt Lumigan 0.01% Allergan bao gồm ngứa mắt, viêm giác mạc, xung huyết kết mạc, ban đỏ mí mắt, kích ứng mắt, ngứa mắt, mi mắt ngứa, tăng sinh lông mi, rậm lông, kích ứng chỗ nhỏ thuốc, tăng sắc tố da, đau mắt.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "viêm giác mạc",
+          "cảm",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "allergan",
+          "thu",
+          "lumigan",
+          "coodrop pharmedic"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "viêm",
+          "ngứa",
+          "viêm giác mạc",
+          "đau",
+          "cảm",
+          "ho"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "allergan",
+          "thu",
+          "lumigan",
+          "coodrop pharmedic"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "gt_count": 4,
+          "llm_count": 6,
+          "matched": 4
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 4,
+          "llm_count": 4,
+          "matched": 4
+        },
+        "overall": {
+          "precision": 0.8181818181818182,
+          "recall": 1.0,
+          "f1": 0.9,
+          "total_gt": 9,
+          "total_llm": 11,
+          "total_matched": 9
+        }
+      },
+      "overall_f1": 0.9,
+      "overall_precision": 0.8181818181818182,
+      "overall_recall": 1.0
+    },
+    {
+      "query": "Những lưu ý và chống chỉ định của Dung dịch Berodual Boehringer hỗ trợ giãn phế quản khác với Thuốc nhỏ mắt Scofi Merap điều trị ngắn hạn tình trạng viêm mắt đáp ứng với corticoid như thế nào?",
+      "answer_ground_truth": "Dung dịch Berodual Boehringer hỗ trợ giãn phế quản có chống chỉ định đối với bệnh nhân có quá mẫn với fenoterol và các chất chủ vận beta, trong khi Thuốc nhỏ mắt Scofi Merap điều trị ngắn hạn tình trạng viêm mắt đáp ứng với corticoid chống chỉ định với các bệnh lý do virus hoặc nấm. Ngoài ra, Berodual cần thận trọng khi sử dụng cho bệnh nhân có bệnh tim mạch, trong khi Scofi cần thận trọng với bệnh nhân có nguy cơ nhiễm khuẩn do sử dụng corticoid. Cả hai thuốc đều có các tác dụng phụ có thể ảnh hưởng đến khả năng lái xe và vận hành máy móc.",
+      "answer_llm_predict": "Dung dịch Berodual Boehringer hỗ trợ giãn phế quản và Thuốc nhỏ mắt Scofi Merap điều trị ngắn hạn tình trạng viêm mắt đáp ứng với corticoid là hai loại thuốc khác nhau, có chỉ định và chống chỉ định riêng.\n\nDung dịch Berodual Boehringer thường được sử dụng để hỗ trợ giãn phế quản trong các trường hợp như hen suyễn, bệnh phổi tắc nghẽn mãn tính (COPD). Chống chỉ định của thuốc này thường bao gồm các tình trạng như quá mẫn với thành phần của thuốc, bệnh tim mạch nặng, và một số tình trạng khác.\n\nThuốc nhỏ mắt Scofi Merap được sử dụng để điều trị ngắn hạn tình trạng viêm mắt đáp ứng với corticoid. Chống chỉ định của thuốc này bao gồm quá mẫn với dược chất hoặc bất kỳ thành phần nào của thuốc, viêm biểu mô giác mạc do Herpes simplex, bệnh đậu mùa, thủy đậu và các bệnh khác ở kết mạc và giác mạc do virus, bệnh ở các bộ phận của mắt do nấm, nhiễm khuẩn mắt do Mycobacterium.\n\nTóm lại, hai loại thuốc này có chỉ định và chống chỉ định khác nhau do mục đích sử dụng và cơ chế tác động khác nhau.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "nhiễm khuẩn",
+          "tim mạch",
+          "viêm"
+        ],
+        "contraindications": [
+          "thận trọng",
+          "chống chỉ định",
+          "quá mẫn"
+        ],
+        "drug_names": [
+          "dung",
+          "berodual",
+          "ngo",
+          "scofi merap",
+          "scofi",
+          "berodual boehringer",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "suyễn",
+          "viêm",
+          "nhiễm khuẩn",
+          "hen",
+          "tim mạch",
+          "ho"
+        ],
+        "contraindications": [
+          "chống chỉ định",
+          "quá mẫn"
+        ],
+        "drug_names": [
+          "dung",
+          "herpes",
+          "scofi merap",
+          "berodual boehringer",
+          "copd",
+          "mycobacterium",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "gt_count": 4,
+          "llm_count": 6,
+          "matched": 4
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "gt_count": 3,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "drug_names": {
+          "precision": 0.5714285714285714,
+          "recall": 0.5714285714285714,
+          "f1": 0.5714285714285714,
+          "gt_count": 7,
+          "llm_count": 7,
+          "matched": 4
+        },
+        "overall": {
+          "precision": 0.6875,
+          "recall": 0.7333333333333333,
+          "f1": 0.7096774193548386,
+          "total_gt": 15,
+          "total_llm": 16,
+          "total_matched": 11
+        }
+      },
+      "overall_f1": 0.7096774193548386,
+      "overall_precision": 0.6875,
+      "overall_recall": 0.7333333333333333
+    },
+    {
+      "query": "Liều dùng và cách sử dụng của Thuốc bột uống Rocamux Roussel điều trị viêm phế quản, viêm mũi họng khác với Viên nén Neo-Codion Bouchara điều trị triệu chứng ho khan như thế nào?",
+      "answer_ground_truth": "Liều dùng và cách sử dụng của Thuốc bột uống Rocamux Roussel bao gồm việc khuấy bột trong nước và uống ngay sau khi pha với liều lượng cụ thể cho từng độ tuổi, trong khi Viên nén Neo-Codion được dùng với một ít nước và có liều lượng tối đa hàng ngày cho người lớn, không khuyến cáo cho trẻ em dưới 12 tuổi. Rocamux Roussel có liều dùng cho trẻ em từ 2 đến 12 tuổi, trong khi Neo-Codion chỉ dành cho bệnh nhân trên 12 tuổi.",
+      "answer_llm_predict": "Liều dùng và cách sử dụng của Thuốc bột uống Rocamux Roussel điều trị viêm phế quản, viêm mũi họng khác với Viên nén Neo-Codion Bouchara điều trị triệu chứng ho khan ở các điểm sau:\n\n- Rocamux Roussel là thuốc bột uống, trong khi Neo-Codion Bouchara là viên nén.\n- Liều dùng và cách sử dụng của Rocamux Roussel không được cung cấp trong ngữ cảnh, trong khi Neo-Codion Bouchara được sử dụng với liều dùng tối đa hàng ngày của codein là 120 mg ở người lớn, và có những lưu ý đặc biệt về liều dùng cho người lớn tuổi, bệnh nhân suy gan, và trẻ em từ 12-18 tuổi.\n- Rocamux Roussel không có thông tin về chống chỉ định, thận trọng khi sử dụng, và tương tác thuốc, trong khi Neo-Codion Bouchara có nhiều thông tin về những điểm này.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [
+          "tối"
+        ],
+        "routes": [
+          "uống"
+        ],
+        "indications": [
+          "ho"
+        ],
+        "contraindications": [
+          "trẻ em"
+        ],
+        "drug_names": [
+          "neo-codion",
+          "rocamux roussel",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "120 mg"
+        ],
+        "frequencies": [
+          "tối"
+        ],
+        "routes": [
+          "uống"
+        ],
+        "indications": [
+          "viêm phế quản",
+          "ho",
+          "viêm"
+        ],
+        "contraindications": [
+          "suy gan",
+          "trẻ em",
+          "thận trọng",
+          "chống chỉ định"
+        ],
+        "drug_names": [
+          "neo-codion bouchara",
+          "rocamux roussel",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "gt_count": 1,
+          "llm_count": 3,
+          "matched": 1
+        },
+        "contraindications": {
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4,
+          "gt_count": 1,
+          "llm_count": 4,
+          "matched": 1
+        },
+        "drug_names": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1": 0.6666666666666666,
+          "gt_count": 3,
+          "llm_count": 3,
+          "matched": 2
+        },
+        "overall": {
+          "precision": 0.46153846153846156,
+          "recall": 0.8571428571428571,
+          "f1": 0.6,
+          "total_gt": 7,
+          "total_llm": 13,
+          "total_matched": 6
+        }
+      },
+      "overall_f1": 0.6,
+      "overall_precision": 0.46153846153846156,
+      "overall_recall": 0.8571428571428571
+    },
+    {
+      "query": "Tác dụng phụ không mong muốn của Thuốc trị ho Methorfar 15 Pharmedic dùng cho cảm lạnh, ho không đờm có gì khác biệt so với Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% Hanlim giảm khô mắt?",
+      "answer_ground_truth": "Tác dụng phụ không mong muốn của Thuốc trị ho Methorfar 15 Pharmedic thường gặp bao gồm mệt mỏi, chóng mặt, nhịp tim nhanh và buồn nôn, trong khi đó, tác dụng phụ của Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% Hanlim chủ yếu là đỏ mắt, ngứa, khó chịu và sung huyết ở mắt. Điều này cho thấy tác dụng phụ của hai loại thuốc này là khác nhau về loại hình và vị trí ảnh hưởng.",
+      "answer_llm_predict": "Tác dụng phụ của Thuốc trị ho Methorfar 15 Pharmedic và Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% Hanlim là khác nhau. Thuốc Methorfar 15 có thể gây mệt mỏi, đỏ bừng, chóng mặt, nhịp tim nhanh, buồn nôn, mề đay, nổi mẩn, trong khi Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% Hanlim có thể gây đỏ mắt, ngứa, khó chịu và sung huyết ở mắt.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ngứa",
+          "đỏ mắt",
+          "buồn nôn",
+          "ho",
+          "chóng mặt"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "hyaluron eye drops",
+          "hanlim",
+          "thu",
+          "methorfar",
+          "pharmedic"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ngứa",
+          "đỏ mắt",
+          "buồn nôn",
+          "ho",
+          "chóng mặt"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "hyaluron eye drops",
+          "hanlim",
+          "thu",
+          "methorfar",
+          "pharmedic"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 5,
+          "llm_count": 5,
+          "matched": 5
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 5,
+          "llm_count": 5,
+          "matched": 5
+        },
+        "overall": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "total_gt": 11,
+          "total_llm": 11,
+          "total_matched": 11
+        }
+      },
+      "overall_f1": 1.0,
+      "overall_precision": 1.0,
+      "overall_recall": 1.0
+    },
+    {
+      "query": "Công dụng và chỉ định của Thuốc nhỏ mắt, mũi Polydoxancol Hataphar điều trị viêm nhiễm mắt và mũi khác với Siro ho Haspan 80ml giảm ho, long đờm, điều trị viêm đường hô hấp cấp có kèm ho như thế nào?",
+      "answer_ground_truth": "Thuốc nhỏ mắt, mũi Polydoxancol Hataphar được chỉ định điều trị các bệnh viêm nhiễm ở mắt và mũi, bao gồm đau mắt, mắt đỏ, sưng ngứa, viêm mũi, viêm xoang, trong khi Siro ho Haspan được chỉ định cho viêm đường hô hấp cấp có kèm ho và triệu chứng trong viêm phế quản mạn tính. Do đó, hai thuốc này có công dụng và chỉ định khác nhau rõ rệt, một bên tập trung vào điều trị viêm nhiễm vùng mắt và mũi, còn bên kia tập trung vào triệu chứng ho và long đờm trong đường hô hấp.",
+      "answer_llm_predict": "Công dụng và chỉ định của Thuốc nhỏ mắt, mũi Polydoxancol Hataphar và Siro ho Haspan 80ml khác nhau. Thuốc nhỏ mắt, mũi Polydoxancol Hataphar điều trị viêm nhiễm mắt và mũi, trong khi Siro ho Haspan 80ml giảm ho, long đờm, điều trị viêm đường hô hấp cấp có kèm ho.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "viêm",
+          "ngứa",
+          "đau",
+          "viêm phế quản",
+          "ho",
+          "viêm xoang"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "haspan",
+          "polydoxancol hataphar",
+          "siro",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "80ml"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "viêm"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "haspan",
+          "polydoxancol hataphar",
+          "siro",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "gt_count": 6,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 4,
+          "llm_count": 4,
+          "matched": 4
+        },
+        "overall": {
+          "precision": 0.875,
+          "recall": 0.6363636363636364,
+          "f1": 0.7368421052631579,
+          "total_gt": 11,
+          "total_llm": 8,
+          "total_matched": 7
+        }
+      },
+      "overall_f1": 0.7368421052631579,
+      "overall_precision": 0.875,
+      "overall_recall": 0.6363636363636364
+    },
+    {
+      "query": "Công dụng và chỉ định của Thuốc nhỏ mắt Daiticol Dược 3-2 điều trị đỏ mắt, ngứa mắt, xốn mắt và Dung dịch Berodual Boehringer hỗ trợ giãn phế quản có điểm gì giống và khác nhau?",
+      "answer_ground_truth": "Công dụng và chỉ định của Thuốc nhỏ mắt Daiticol Dược 3-2 chủ yếu tập trung vào việc điều trị các triệu chứng như đỏ mắt, ngứa mắt và xốn mắt do môi trường ô nhiễm hoặc mỏi mắt, trong khi Dung dịch Berodual Boehringer chủ yếu được chỉ định để hỗ trợ giãn phế quản trong các tình trạng như viêm phế quản, hen phế quản và bệnh phổi tắc nghẽn mạn tính. Sự khác biệt rõ rệt là một thuốc dành cho các triệu chứng về mắt, còn thuốc kia dành cho các vấn đề về hô hấp.",
+      "answer_llm_predict": "Công dụng và chỉ định của Thuốc nhỏ mắt Daiticol Dược 3-2 và Dung dịch Berodual Boehringer khác nhau. Thuốc nhỏ mắt Daiticol Dược 3-2 điều trị đỏ mắt, ngứa mắt, xốn mắt, trong khi Dung dịch Berodual Boehringer hỗ trợ giãn phế quản, điều trị các bệnh về đường hô hấp như hen phế quản, viêm phế quản, bệnh phổi tắc nghẽn mạn tính.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "viêm",
+          "ngứa",
+          "đỏ mắt",
+          "mỏi mắt",
+          "viêm phế quản",
+          "hen",
+          "ho"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "daiticol",
+          "berodual boehringer",
+          "thu",
+          "dung"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "viêm",
+          "ngứa",
+          "đỏ mắt",
+          "viêm phế quản",
+          "hen"
+        ],
+        "contraindications": [],
+        "drug_names": [
+          "daiticol",
+          "berodual boehringer",
+          "thu",
+          "dung"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 0.7142857142857143,
+          "f1": 0.8333333333333333,
+          "gt_count": 7,
+          "llm_count": 5,
+          "matched": 5
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 4,
+          "llm_count": 4,
+          "matched": 4
+        },
+        "overall": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091,
+          "total_gt": 12,
+          "total_llm": 10,
+          "total_matched": 10
+        }
+      },
+      "overall_f1": 0.9090909090909091,
+      "overall_precision": 1.0,
+      "overall_recall": 0.8333333333333334
+    },
+    {
+      "query": "Những lưu ý và chống chỉ định của Viên nén Mucosolvan 30mg Sanofi làm loãng đờm trong viêm phế quản khác với Thuốc xịt mũi Nasolspray Mekophar làm sạch và thông mũi, họng như thế nào?",
+      "answer_ground_truth": "Viên nén Mucosolvan 30mg Sanofi có nhiều chống chỉ định rõ ràng như mẫn cảm với ambroxol hydrochlorid, bệnh di truyền hiếm gặp không dung nạp galactose, và cần thận trọng khi sử dụng cho phụ nữ mang thai và cho con bú. Trong khi đó, Thuốc xịt mũi Nasolspray Mekophar chỉ có chống chỉ định mẫn cảm với các thành phần mà không nêu rõ thêm các điều kiện thận trọng khác. Ngoài ra, Mucosolvan có cảnh báo về tổn thương da nghiêm trọng và tác động đến khả năng lái xe, trong khi Nasolspray chỉ nhấn mạnh việc giữ vệ sinh vòi phun và không đề cập đến khả năng lái xe.",
+      "answer_llm_predict": "Những lưu ý và chống chỉ định của Viên nén Mucosolvan 30mg Sanofi làm loãng đờm trong viêm phế quản khác với Thuốc xịt mũi Nasolspray Mekophar làm sạch và thông mũi, họng ở các điểm sau:\n\n- Chống chỉ định: Mucosolvan chống chỉ định với bệnh nhân mẫn cảm với ambroxol hydrochlorid, bệnh di truyền hiếm gặp, trong khi Nasolspray chống chỉ định với bệnh nhân mẫn cảm với các thành phần của thuốc.\n\n- Thận trọng khi sử dụng: Mucosolvan cần thận trọng khi sử dụng với bệnh nhân có tổn thương da nặng, suy giảm chức năng thận, bệnh di truyền hiếm gặp không dung nạp galactose, trong khi Nasolspray cần thận trọng khi sử dụng bằng cách lau sạch, khô vòi phun và đậy nắp sau khi dùng.\n\n- Tương tác thuốc: Mucosolvan chưa thấy báo cáo tương tác không thuận lợi với các thuốc khác, trong khi Nasolspray cần thông báo cho bác sĩ hoặc dược sĩ về những thuốc đang sử dụng để tránh tương tác giữa các thuốc.",
+      "entities_gt": {
+        "dosages": [
+          "30mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "xịt mũi"
+        ],
+        "indications": [
+          "ho",
+          "cảm"
+        ],
+        "contraindications": [
+          "cho con bú",
+          "thận trọng",
+          "mang thai",
+          "chống chỉ định"
+        ],
+        "drug_names": [
+          "mucosolvan",
+          "nasolspray mekophar",
+          "trong",
+          "ngo",
+          "nasolspray",
+          "sanofi",
+          "thu"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "30mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "xịt mũi"
+        ],
+        "indications": [
+          "viêm phế quản",
+          "ho",
+          "cảm",
+          "viêm"
+        ],
+        "contraindications": [
+          "thận trọng",
+          "chống chỉ định"
+        ],
+        "drug_names": [
+          "mucosolvan",
+          "nasolspray mekophar",
+          "nasolspray",
+          "sanofi",
+          "thu"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "gt_count": 2,
+          "llm_count": 4,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666,
+          "gt_count": 4,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 0.7142857142857143,
+          "f1": 0.8333333333333333,
+          "gt_count": 7,
+          "llm_count": 5,
+          "matched": 5
+        },
+        "overall": {
+          "precision": 0.8461538461538461,
+          "recall": 0.7333333333333333,
+          "f1": 0.7857142857142856,
+          "total_gt": 15,
+          "total_llm": 13,
+          "total_matched": 11
+        }
+      },
+      "overall_f1": 0.7857142857142856,
+      "overall_precision": 0.8461538461538461,
+      "overall_recall": 0.7333333333333333
+    },
+    {
+      "query": "Những lưu ý và chống chỉ định của Thuốc Paracetamol 500mg Quapharco giảm đau nửa đầu, cảm lạnh, cảm cúm, đau họng khác với Thuốc xịt mũi Thông Xoang Nam Dược điều trị nghẹt mũi, chảy nước mũi như thế nào?",
+      "answer_ground_truth": "Thuốc Paracetamol 500mg Quapharco có nhiều chống chỉ định hơn, bao gồm người bệnh có bệnh lý về tim, phổi, thận, hoặc gan, và người bệnh thiếu hụt G6PD. Trong khi đó, Thuốc xịt mũi Thông Xoang Nam Dược chỉ chống chỉ định cho bệnh nhân mẫn cảm với thành phần thuốc và trẻ em dưới 2 tuổi. Ngoài ra, Thuốc Paracetamol cũng có nhiều lưu ý về việc sử dụng rượu và các thuốc khác có thể gây độc cho gan, trong khi Thuốc xịt mũi không có báo cáo về tương tác thuốc hoặc tác dụng phụ nghiêm trọng.",
+      "answer_llm_predict": "Những lưu ý và chống chỉ định của Thuốc Paracetamol 500mg Quapharco và Thuốc xịt mũi Thông Xoang Nam Dược khác nhau như sau:\n\n- Thuốc Paracetamol 500mg Quapharco chống chỉ định với người bệnh nhiều lần thiếu máu, bệnh tim, phổi, thận hoặc gan, người quá mẫn với paracetamol, người bệnh thiếu hụt G6PD. Thận trọng khi sử dụng với người bị suy thận nặng, người bị bệnh thiếu máu, tránh hoặc hạn chế uống rượu.\n\n- Thuốc xịt mũi Thông Xoang Nam Dược chống chỉ định với bệnh nhân mẫn cảm với bất kỳ thành phần nào của thuốc, không dùng cho trẻ em dưới 2 tuổi. Thận trọng khi sử dụng, khi mới xịt thuốc có thể thấy xót nhẹ.",
+      "entities_gt": {
+        "dosages": [
+          "500mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "xịt mũi"
+        ],
+        "indications": [
+          "ho",
+          "cảm"
+        ],
+        "contraindications": [
+          "trẻ em",
+          "chống chỉ định"
+        ],
+        "drug_names": [
+          "trong",
+          "ngo",
+          "quapharco",
+          "g6pd",
+          "xoang nam",
+          "thu",
+          "paracetamol"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "500mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "xịt mũi",
+          "uống"
+        ],
+        "indications": [
+          "ho",
+          "cảm"
+        ],
+        "contraindications": [
+          "suy thận",
+          "trẻ em",
+          "thận trọng",
+          "không dùng",
+          "chống chỉ định",
+          "quá mẫn"
+        ],
+        "drug_names": [
+          "quapharco",
+          "g6pd",
+          "xoang nam",
+          "thu",
+          "paracetamol"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "gt_count": 1,
+          "llm_count": 2,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 2,
+          "llm_count": 2,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "gt_count": 2,
+          "llm_count": 6,
+          "matched": 2
+        },
+        "drug_names": {
+          "precision": 1.0,
+          "recall": 0.7142857142857143,
+          "f1": 0.8333333333333333,
+          "gt_count": 7,
+          "llm_count": 5,
+          "matched": 5
+        },
+        "overall": {
+          "precision": 0.6875,
+          "recall": 0.8461538461538461,
+          "f1": 0.7586206896551724,
+          "total_gt": 13,
+          "total_llm": 16,
+          "total_matched": 11
+        }
+      },
+      "overall_f1": 0.7586206896551724,
+      "overall_precision": 0.6875,
+      "overall_recall": 0.8461538461538461
+    },
+    {
+      "query": "Những lưu ý và chống chỉ định của Thuốc nhỏ mắt Hameron hỗ trợ làm giảm khô mắt và làm chất bôi trơn khi sử dụng kính áp tròng có gì khác biệt so với Thuốc nhỏ mắt Ketofen Drop 0,5mg/ml CPC1HN điều trị viêm kết mạc cấp, mãn tính?",
+      "answer_ground_truth": "Cả hai thuốc đều chống chỉ định cho bệnh nhân mẫn cảm với bất kỳ thành phần nào của thuốc. Tuy nhiên, Thuốc nhỏ mắt Hameron có thêm lưu ý không sử dụng khi mang kính sát tròng, trong khi Thuốc nhỏ mắt Ketofen không rõ ảnh hưởng đến khả năng lái xe và vận hành máy móc. Cả hai thuốc đều cần thận trọng khi sử dụng trong thời kỳ mang thai và cho con bú, nhưng Ketofen yêu cầu tuân theo chỉ định từ bác sĩ rõ ràng hơn.",
+      "answer_llm_predict": "Những lưu ý và chống chỉ định của Thuốc nhỏ mắt Hameron hỗ trợ làm giảm khô mắt và làm chất bôi trơn khi sử dụng kính áp tròng có một số điểm khác biệt so với Thuốc nhỏ mắt Ketofen Drop 0,5mg/ml CPC1HN điều trị viêm kết mạc cấp, mãn tính:\n\n- Thuốc nhỏ mắt Hameron không được sử dụng khi mang kính sát tròng, trong khi không có thông tin cụ thể về việc này trong hướng dẫn của Thuốc nhỏ mắt Ketofen Drop 0,5mg/ml CPC1HN.\n\n- Thuốc nhỏ mắt Hameron có thông tin về việc không tác động đến khả năng lái xe và vận hành máy móc, trong khi Thuốc nhỏ mắt Ketofen Drop 0,5mg/ml CPC1HN chưa rõ ảnh hưởng của thuốc lên khả năng lái xe và vận hành máy móc.\n\n- Cả hai thuốc đều có chống chỉ định với bệnh nhân mẫn cảm với bất kỳ thành phần nào của thuốc và cần thận trọng khi sử dụng, đặc biệt là trong thời kỳ mang thai và cho con bú.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt"
+        ],
+        "indications": [
+          "ho",
+          "cảm"
+        ],
+        "contraindications": [
+          "cho con bú",
+          "thận trọng",
+          "mang thai",
+          "chống chỉ định"
+        ],
+        "drug_names": [
+          "ketofen",
+          "hameron",
+          "thu",
+          "tuy"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [
+          "0,5mg"
+        ],
+        "frequencies": [],
+        "routes": [
+          "nhỏ mắt",
+          "bôi"
+        ],
+        "indications": [
+          "khô mắt",
+          "viêm",
+          "viêm kết mạc",
+          "cảm",
+          "ho"
+        ],
+        "contraindications": [
+          "cho con bú",
+          "thận trọng",
+          "mang thai",
+          "chống chỉ định"
+        ],
+        "drug_names": [
+          "ketofen drop",
+          "thu",
+          "cpc1hn",
+          "hameron"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "frequencies": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "routes": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1": 0.6666666666666666,
+          "gt_count": 1,
+          "llm_count": 2,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f1": 0.5714285714285715,
+          "gt_count": 2,
+          "llm_count": 5,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 4,
+          "llm_count": 4,
+          "matched": 4
+        },
+        "drug_names": {
+          "precision": 0.5,
+          "recall": 0.5,
+          "f1": 0.5,
+          "gt_count": 4,
+          "llm_count": 4,
+          "matched": 2
+        },
+        "overall": {
+          "precision": 0.5625,
+          "recall": 0.8181818181818182,
+          "f1": 0.6666666666666666,
+          "total_gt": 11,
+          "total_llm": 16,
+          "total_matched": 9
+        }
+      },
+      "overall_f1": 0.6666666666666666,
+      "overall_precision": 0.5625,
+      "overall_recall": 0.8181818181818182
+    },
+    {
+      "query": "Những lưu ý và chống chỉ định của Thuốc mỡ tra mắt Tetracyclin 1% Medipharco điều trị đau mắt hột có điểm gì khác biệt so với Thuốc Macetux 200 Hasan điều trị rối loạn tiết dịch phế quản?",
+      "answer_ground_truth": "Cả hai loại thuốc đều chống chỉ định trong trường hợp mẫn cảm với bất kỳ thành phần nào, nhưng Thuốc mỡ tra mắt Tetracyclin 1% Medipharco còn chống chỉ định với phụ nữ mang thai và trẻ em dưới 8 tuổi do ảnh hưởng đến sự phát triển của răng và xương, trong khi Thuốc Macetux 200 Hasan chỉ yêu cầu thận trọng và tuân theo chỉ định bác sĩ trong thời kỳ mang thai và cho con bú. Ngoài ra, Thuốc mỡ tra mắt Tetracyclin có lưu ý về khả năng gây nhòe mắt sau khi sử dụng, trong khi Thuốc Macetux 200 Hasan chưa rõ ảnh hưởng lên khả năng lái xe và vận hành máy móc.",
+      "answer_llm_predict": "Những lưu ý và chống chỉ định của Thuốc mỡ tra mắt Tetracyclin 1% Medipharco và Thuốc Macetux 200 Hasan có một số điểm khác biệt như sau:\n\n- Thuốc Tetracyclin 1% chống chỉ định trong các trường hợp mẫn cảm với bất cứ thành phần nào của thuốc, phụ nữ mang thai và trẻ em dưới 8 tuổi. Trong khi đó, Thuốc Macetux 200 chống chỉ định trong các trường hợp quá mẫn với bất cứ thành phần nào của thuốc.\n\n- Thuốc Tetracyclin 1% cần thận trọng khi sử dụng đối với những người bị dị ứng với tetracyclin, có phản ứng nhạy cảm với ánh sáng, và những người đang sử dụng kính áp tròng. Thuốc Macetux 200 cũng cần thận trọng khi sử dụng nhưng thông tin cụ thể không được cung cấp.\n\n- Tương tác thuốc của Tetracyclin 1% ít xảy ra do thuốc được sử dụng dưới dạng tra mắt, trong khi đó, Thuốc Macetux 200 có thể có tương tác thuốc ảnh hưởng đến hoạt động của thuốc hoặc gây ra các tác dụng phụ.\n\nTóm lại, mặc dù cả hai thuốc đều có những lưu ý và chống chỉ định khi sử dụng, nhưng chúng có những điểm khác biệt cụ thể tùy thuộc vào thành phần và cách sử dụng của từng thuốc.",
+      "entities_gt": {
+        "dosages": [],
+        "frequencies": [],
+        "routes": [
+          "tra mắt"
+        ],
+        "indications": [
+          "ho",
+          "cảm"
+        ],
+        "contraindications": [
+          "trẻ em",
+          "thận trọng",
+          "mang thai",
+          "cho con bú",
+          "chống chỉ định"
+        ],
+        "drug_names": [
+          "macetux",
+          "ngo",
+          "hasan",
+          "thu",
+          "medipharco",
+          "tetracyclin"
+        ]
+      },
+      "entities_llm": {
+        "dosages": [],
+        "frequencies": [
+          "sáng"
+        ],
+        "routes": [
+          "tra mắt"
+        ],
+        "indications": [
+          "ho",
+          "dị ứng",
+          "cảm"
+        ],
+        "contraindications": [
+          "trẻ em",
+          "thận trọng",
+          "mang thai",
+          "dị ứng với",
+          "chống chỉ định",
+          "quá mẫn"
+        ],
+        "drug_names": [
+          "trong",
+          "macetux",
+          "hasan",
+          "thu",
+          "medipharco",
+          "tetracyclin"
+        ]
+      },
+      "entity_scores": {
+        "dosages": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "frequencies": {
+          "precision": 0.0,
+          "recall": 0,
+          "f1": 0,
+          "gt_count": 0,
+          "llm_count": 1,
+          "matched": 0
+        },
+        "routes": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "gt_count": 1,
+          "llm_count": 1,
+          "matched": 1
+        },
+        "indications": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8,
+          "gt_count": 2,
+          "llm_count": 3,
+          "matched": 2
+        },
+        "contraindications": {
+          "precision": 0.6666666666666666,
+          "recall": 0.8,
+          "f1": 0.7272727272727272,
+          "gt_count": 5,
+          "llm_count": 6,
+          "matched": 4
+        },
+        "drug_names": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8333333333333334,
+          "f1": 0.8333333333333334,
+          "gt_count": 6,
+          "llm_count": 6,
+          "matched": 5
+        },
+        "overall": {
+          "precision": 0.7058823529411765,
+          "recall": 0.8571428571428571,
+          "f1": 0.7741935483870968,
+          "total_gt": 14,
+          "total_llm": 17,
+          "total_matched": 12
+        }
+      },
+      "overall_f1": 0.7741935483870968,
+      "overall_precision": 0.7058823529411765,
+      "overall_recall": 0.8571428571428571
+    }
+  ]
+}

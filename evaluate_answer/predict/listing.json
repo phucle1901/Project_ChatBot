@@ -1,0 +1,420 @@
+[
+  {
+    "query": "Bạn có thể liệt kê các thuốc nhỏ mắt được sử dụng để điều trị nhiễm khuẩn mắt không?",
+    "retrieval": {
+      "recall@k": 0.26666666666666666,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Một số thuốc nhỏ mắt được sử dụng để điều trị nhiễm khuẩn mắt bao gồm:\n\n1. Thuốc nhỏ mắt Naphacollyre Nam Hà\n2. Thuốc nhỏ mắt Clesspra DX\n3. Thuốc nhỏ mắt Eyedin DX Makcur\n4. Thuốc nhỏ mắt Pandex DK Pharma\n5. Thuốc nhỏ mắt Tobrex Alcon",
+    "retrieved_ids": [
+      1038,
+      912,
+      750,
+      163,
+      581
+    ],
+    "reason_context_relevance": "The context is entirely about eye‑drop medications for treating bacterial eye infections, and the answer directly addresses this by enumerating those medications.",
+    "reason_faithfulness": "The answer lists exactly the eye‑drop products that are described in the provided context as being used for bacterial eye infections, without adding information not present in the context.",
+    "reason_correctness": "All listed products (Naphacollyre, Clesspra DX, Eyedin DX, Pandex DK, Tobrex) contain antibacterial agents (e.g., sulfacetamide, tobramycin) and are indicated for bacterial eye infections, matching standard medical knowledge. The answer therefore is medically accurate."
+  },
+  {
+    "query": "Bạn có thể liệt kê các loại thuốc chữa bệnh viêm kết mạc mà bạn đã đề cập không?",
+    "retrieval": {
+      "recall@k": 0.3333333333333333,
+      "precision@k": 0.6,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Các loại thuốc chữa bệnh viêm kết mạc đã được đề cập bao gồm:\n\n1. Thuốc nhỏ mắt Motarute Daewoo Pharm\n2. Thuốc mỡ tra mắt Ocumox Remington\n3. Thuốc nhỏ mắt Vigamox Alcon\n4. Thuốc nhỏ mắt Tobcol Dược 3-2",
+    "retrieved_ids": [
+      1054,
+      1391,
+      533,
+      448,
+      1396
+    ],
+    "reason_context_relevance": "The question asks to enumerate the conjunctivitis treatments referenced in the context, and the answer directly addresses this by providing the requested list, making the context fully relevant.",
+    "reason_faithfulness": "The answer lists exactly the four medication types mentioned in the provided context (Motarute, Ocumox, Vigamox, Tobcol) and does not introduce any information not present in the context.",
+    "reason_correctness": "All listed drugs (Motarute eye drops, Ocumox ointment, Vigamox eye drops, and Tobcol eye drops) are indeed indicated for the treatment of conjunctivitis, matching standard medical usage."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc điều trị mỏi mắt không?",
+    "retrieval": {
+      "recall@k": 0.375,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Một số thuốc điều trị mỏi mắt bao gồm:\n\n- Thuốc nhỏ mắt Eskar DK Pharma\n- Thuốc nhỏ mắt V.Rohto Cool (12ml)\n- Thuốc nhỏ mắt Daigaku Santen\n- Thuốc nhỏ mắt New V.Rohto",
+    "retrieved_ids": [
+      982,
+      59,
+      127,
+      663,
+      58
+    ],
+    "reason_context_relevance": "The context is entirely about eye‑drop medications for eye fatigue, and the answer directly addresses the question by enumerating those medications, making the context fully relevant.",
+    "reason_faithfulness": "The answer lists exactly the eye‑drop products that are mentioned in the provided context as treatments for eye fatigue, without adding any information not present in the context.",
+    "reason_correctness": "According to the supplied context, all four listed eye‑drop products (Eskar DK Pharma, V.Rohto Cool, Daigaku Santen, and New V.Rohto) are indicated for treating eye fatigue. The answer therefore provides a medically accurate list based on the given information."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc chữa bệnh viêm xoang trong danh sách trên không?",
+    "retrieval": {
+      "recall@k": 0.3,
+      "precision@k": 0.6,
+      "mrr": 0.5
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Danh sách thuốc : Thuốc Rhinassin-OPC, Thuốc nhỏ mũi Rhinex 0.05% Uphace, Thuốc Tỷ Viêm Nang Khang Minh, Thuốc viêm xoang Abipha Cap.",
+    "retrieved_ids": [
+      466,
+      479,
+      640,
+      461,
+      26658
+    ],
+    "reason_context_relevance": "The context contains a list of medications and their indications, directly addressing the request to enumerate drugs for viêm xoang, making it fully relevant.",
+    "reason_faithfulness": "The answer lists exactly the four drugs that are mentioned in the provided context as being used to treat viêm xoang, without adding any information not present in the context.",
+    "reason_correctness": "All listed medications (Thuốc Xoang Nhất Nhất, Thuốc Xoang Vạn Xuân, Thuốc Thông Xoang Tán Nam Dược, Thuốc Celevox 500 Celogen Pharma) are indicated in the context for treating viêm xoang, so the answer is medically accurate."
+  },
+  {
+    "query": "Bạn có thể liệt kê các loại thuốc điều trị viêm mũi dị ứng không?",
+    "retrieval": {
+      "recall@k": 0.2222222222222222,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 0.8,
+    "correctness": 3,
+    "answer": "Một số loại thuốc điều trị viêm mũi dị ứng bao gồm:\n\n1. Thuốc Betalestin Mekophar\n2. Thuốc Decolgen ND United\n3. Thuốc Esha\n4. Hỗn dịch xịt mũi Wizosone DK Pharma",
+    "retrieved_ids": [
+      31802,
+      28634,
+      28927,
+      868,
+      53
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp thông tin về các loại thuốc điều trị viêm mũi dị ứng, và câu trả lời cũng tập trung vào việc liệt kê các loại thuốc này, nên mức độ liên quan là tối đa.",
+    "reason_faithfulness": "Câu trả lời dựa trên ngữ cảnh và liệt kê một số thuốc được đề cập (Betalestin, Decolgen, Esha, Wizosone), nhưng bỏ sót thuốc Kacerin 10mg, do đó không hoàn toàn phản ánh đầy đủ nội dung ngữ cảnh.",
+    "reason_correctness": "Các thuốc được liệt kê (Betalestin, Decolgen, Esha, Wizosone) đều là thuốc dùng để điều trị viêm mũi dị ứng, nhưng câu trả lời không bao gồm toàn bộ các loại thuốc có trong ngữ cảnh (ví dụ Kacerin) và do đó không hoàn toàn đầy đủ. Vì vậy, mức độ đúng y khoa là trung bình‑cao nhưng chưa hoàn thiện."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc chữa bệnh khô mắt mà bạn biết không?",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 3,
+    "answer": "Một số thuốc chữa bệnh khô mắt bao gồm:\n\n1. Thuốc nhỏ mắt Syseye Merap\n2. Thuốc nhỏ mắt, nhỏ mũi Natri Clorid 0,9% Haipharco\n3. Thuốc nhỏ mắt OSLA Merap\n4. Thuốc nhỏ mắt Vismed TRB Chemedica",
+    "retrieved_ids": [
+      1048,
+      1570,
+      1565,
+      1569,
+      1294
+    ],
+    "reason_context_relevance": "The context is entirely about medications for dry eye, and the answer directly addresses the request by enumerating those medications, making it fully relevant.",
+    "reason_faithfulness": "The answer lists exactly the eye‑drop products mentioned in the provided context and does not introduce any information that is not present in the context.",
+    "reason_correctness": "All four items are indeed cited in the context as treatments for dry eye, but medically some of them (e.g., 0.9% sodium chloride solution) are primarily nasal saline and are not standard or well‑established dry‑eye therapies. Therefore the list is partially correct but includes questionable choices, warranting a moderate correctness rating."
+  },
+  {
+    "query": "Xin hãy liệt kê các thuốc điều trị bệnh đục thủy tinh thể.",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 0.9,
+    "faithfulness": 0.6,
+    "correctness": 2,
+    "answer": "Thuốc tra mắt Posod Hanlim và Thuốc nhỏ mắt Eyaren Samil",
+    "retrieved_ids": [
+      1048,
+      1570,
+      1565,
+      1569,
+      1294
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp thông tin về các thuốc nhỏ mắt liên quan đến đục thủy tinh thể và hậu phẫu, nên rất liên quan đến câu hỏi yêu cầu liệt kê thuốc điều trị đục thủy tinh thể.",
+    "reason_faithfulness": "Câu trả lời liệt kê ba loại thuốc nhỏ mắt có trong ngữ cảnh, nhưng khẳng định chúng \"điều trị bệnh đục thủy tinh thể\" không hoàn toàn được hỗ trợ bởi ngữ cảnh. Chỉ có thuốc Kary Uni được mô tả như điều trị đục thủy tinh thể, trong khi Acuvail và Nevanac chỉ được nêu là dùng để giảm đau và viêm sau phẫu thuật đục thủy tinh thể, do đó phần lớn nội dung không trung thực với ngữ cảnh.",
+    "reason_correctness": "Y khoa: Đục thủy tinh thể thường được điều trị bằng phẫu thuật thay thế thấu kính, không phải bằng thuốc nhỏ mắt. Các thuốc được liệt kê chỉ dùng để giảm đau và viêm sau phẫu thuật, không phải để điều trị nguyên bệnh, vì vậy câu trả lời không đúng về mặt y khoa."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc chữa bệnh viêm mắt mà bạn đã đề cập không?",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Dưới đây là danh sách các thuốc chữa bệnh viêm mắt đã được đề cập:\n\n1. Thuốc nhỏ mắt Scofi Merap\n2. Thuốc nhỏ mắt Ofloxacin 0,3% Traphaco\n3. Thuốc nhỏ mắt Tobcol Dược 3-2\n4. Thuốc mỡ tra mắt MediClophencid-H Medipharco\n5. Thuốc nhỏ mắt Metodex Merap",
+    "retrieved_ids": [
+      1007,
+      1012,
+      448,
+      1114,
+      185
+    ],
+    "reason_context_relevance": "The context contains a detailed enumeration of eye‑inflammation drugs, which directly addresses the user’s request to list those medications.",
+    "reason_faithfulness": "The answer lists exactly the five eye‑inflammation medications that are described in the provided context, without adding or omitting any information.",
+    "reason_correctness": "All five listed drugs (Scofi Merap, Ofloxacin 0.3% Traphaco, Tobcol Dược 3‑2, MediClophencid‑H Medipharco, Metodex Merap) are correctly identified as treatments for various forms of eye inflammation according to the context, and no incorrect medical information is presented."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc điều trị viêm mí mắt không?",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Dưới đây là danh sách các thuốc điều trị viêm mí mắt:\n\n1. Thuốc nhỏ mắt FML Allergan\n2. Thuốc nhỏ mắt Tobcol Dược 3-2\n3. Thuốc nhỏ mắt Lotemax 0.5% Bausch & Lomb\n4. Thuốc nhỏ mắt Phileo SamChunDang",
+    "retrieved_ids": [
+      1007,
+      1012,
+      448,
+      1114,
+      185
+    ],
+    "reason_context_relevance": "The context describes eye drops used for treating blepharitis (viêm mí mắt). The answer directly addresses the question by enumerating those medications, making the context fully relevant.",
+    "reason_faithfulness": "The answer lists exactly the four eye drop medications that are mentioned in the provided context, without adding information not present in the context.",
+    "reason_correctness": "All four listed drugs (FML Allergan, Tobcol Dược 3-2, Lotemax 0.5% Bausch & Lomb, Phileo SamChunDang) are indeed indicated for inflammation of the eyelid or conjunctiva, so the answer is medically accurate and complete with respect to the given information."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc điều trị bệnh đỏ mắt không?",
+    "retrieval": {
+      "recall@k": 0.5714285714285714,
+      "precision@k": 0.8,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Một số thuốc điều trị bệnh đỏ mắt bao gồm:\n\n1. Thuốc nhỏ mắt Daiticol Dược 3-2\n2. Thuốc nhỏ mắt Topramycin 0,3% Traphaco\n3. Thuốc nhỏ mắt Eyecool\n4. Thuốc nhỏ mắt V.Rohto Lycée 13ml",
+    "retrieved_ids": [
+      844,
+      694,
+      286,
+      285,
+      729
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp thông tin chi tiết về các loại thuốc nhỏ mắt dùng để điều trị đỏ mắt, vì vậy nó hoàn toàn liên quan và cung cấp đủ dữ liệu để trả lời câu hỏi.",
+    "reason_faithfulness": "Câu trả lời chỉ liệt kê các thuốc nhỏ mắt mà trong ngữ cảnh đã nêu (Daiticol, Topramycin, Eyecool, V.Rohto Lycée) và không thêm thông tin không có trong ngữ cảnh, do đó hoàn toàn trung thực với nội dung cung cấp.",
+    "reason_correctness": "Các thuốc được liệt kê (Daiticol, Topramycin 0,3%, Eyecool, V.Rohto Lycée) đều được mô tả trong ngữ cảnh là có công dụng điều trị đỏ mắt, do đó câu trả lời đúng về mặt y khoa và đáp ứng yêu cầu của câu hỏi."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc chữa bệnh giảm áp lực nội nhãn không?",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Thuốc nhỏ mắt Philhyal-San Daewoo chữa trị rối loạn biểu mô giác, kết mạc; Thuốc xịt mũi Thái Dương điều trị hắt hơi, sổ mũi, tắc mũi.",
+    "retrieved_ids": [
+      328,
+      323,
+      1481,
+      797,
+      591
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp danh sách thuốc giảm áp lực nội nhãn; câu trả lời liệt kê đúng các thuốc này, nên mức độ liên quan và đầy đủ là tối đa.",
+    "reason_faithfulness": "Câu trả lời chỉ liệt kê các thuốc được nêu trong ngữ cảnh (Simbrinza, Azarga, Duotrav, Travatan) và không thêm thông tin không có trong ngữ cảnh, do đó hoàn toàn dựa trên nội dung đã cho.",
+    "reason_correctness": "Các thuốc được liệt kê (Simbrinza, Azarga, Duotrav, Travatan) đều là thuốc nhỏ mắt được chỉ định để giảm áp lực nội nhãn trong điều trị tăng nhãn áp hoặc glaucoma, vì vậy câu trả lời đúng về mặt y khoa."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc chữa bệnh viêm mi mắt không?",
+    "retrieval": {
+      "recall@k": 0.5,
+      "precision@k": 0.4,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Dưới đây là danh sách các thuốc chữa bệnh viêm mi mắt:\n\n1. Thuốc nhỏ mắt Tobcol Dược 3-2\n2. Thuốc nhỏ mắt Tobcol-Dex Dược 3-2\n3. Thuốc nhỏ mắt Phileo SamChunDang\n4. Thuốc nhỏ mắt Cravit 1.5% Santen\n5. Thuốc nhỏ mắt Oflovid Santen",
+    "retrieved_ids": [
+      448,
+      376,
+      185,
+      742,
+      1409
+    ],
+    "reason_context_relevance": "The context consists of a list of eye‑drop drugs indicated for treating blepharitis (viêm mi mắt) and related conditions, which directly addresses the question asking for such drugs.",
+    "reason_faithfulness": "The answer lists exactly the five eye‑drop medications that are mentioned in the provided context and does not introduce any information not present in the context.",
+    "reason_correctness": "All five listed medications (Tobcol Dược 3‑2, Tobcol‑Dex Dược 3‑2, Phileo SamChunDang, Cravit 1.5% Santen, Oflovid Santen) are indeed used in clinical practice for blepharitis or associated ocular surface infections, so the answer is medically accurate."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc chữa bệnh tăng nhãn áp và nhiễm khuẩn ở mắt không?",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Dưới đây là danh sách các thuốc chữa bệnh tăng nhãn áp và nhiễm khuẩn ở mắt:\n\n- Thuốc chữa tăng nhãn áp: Alphagan P\n- Thuốc chữa nhiễm khuẩn ở mắt: \n + Tobramycin 0,3% \n + Tobrex \n + Metodex \n + Clesspra DX",
+    "retrieved_ids": [
+      1113,
+      1038,
+      700,
+      510,
+      750
+    ],
+    "reason_context_relevance": "The provided context is entirely about the listed medications and their indications, making it fully relevant to the question.",
+    "reason_faithfulness": "The answer lists exactly the drugs mentioned in the context for treating glaucoma (Alphagan P) and eye infections (Tobramycin 0.3%, Tobrex, Metodex, Clesspra DX), without adding unsupported information.",
+    "reason_correctness": "All listed medications are appropriate and correctly matched to their therapeutic uses: Alphagan P for increased intra‑ocular pressure (glaucoma) and the other four agents are antibiotic eye drops (or combination antibiotic‑steroid drops) indicated for bacterial eye infections."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc điều trị viêm giác mạc không?",
+    "retrieval": {
+      "recall@k": 0.42857142857142855,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Thuốc Fumeron Hanlim điều trị dị ứng, viêm mắt, viêm kết mạc, viêm giác mạc.",
+    "retrieved_ids": [
+      1108,
+      22496,
+      879,
+      1054,
+      207
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp danh sách các thuốc mắt, trong đó có các thuốc điều trị viêm giác mạc; do đó ngữ cảnh hoàn toàn liên quan đến câu hỏi về liệt kê thuốc điều trị viêm giác mạc.",
+    "reason_faithfulness": "Câu trả lời chỉ liệt kê hai thuốc (Mediclovir 3% và MediClophencid-H) mà trong ngữ cảnh được mô tả rõ ràng là dùng để điều trị viêm giác mạc, không thêm thông tin nào không có trong ngữ cảnh.",
+    "reason_correctness": "Theo thông tin trong ngữ cảnh, Mediclovir 3% và MediClophencid-H là các thuốc được chỉ định để điều trị viêm giác mạc, vì vậy câu trả lời đúng và đầy đủ dựa trên dữ liệu đã cho."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc chữa viêm bờ mi không?",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Dưới đây là danh sách các thuốc chữa viêm bờ mi:\n\n1. Thuốc nhỏ mắt Cravit 1.5% Santen\n2. Thuốc nhỏ mắt Oflovid Santen\n3. Thuốc nhỏ mắt Cravit 0.5% Santen\n4. Thuốc nhỏ mắt Bronuck Senju Pharm",
+    "retrieved_ids": [
+      742,
+      1409,
+      724,
+      1516,
+      1414
+    ],
+    "reason_context_relevance": "The context consists of descriptions of eye drop drugs and their indications, specifically including treatment of viêm bờ mi. Therefore the context is directly relevant to the question asking for a list of drugs for this condition.",
+    "reason_faithfulness": "The answer lists exactly the four eye drop medications that are mentioned in the provided context as being used to treat viêm bờ mi. No information is added that is not present in the context, and no relevant detail is omitted.",
+    "reason_correctness": "All four listed medications (Cravit 1.5%, Oflovid, Cravit 0.5%, and Bronuck) are indicated in the context for treating viêm bờ mi, making the answer medically correct with respect to the provided information."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc chữa ngạt mũi và liên quan đến bệnh lý này không?",
+    "retrieval": {
+      "recall@k": 0.42857142857142855,
+      "precision@k": 0.6,
+      "mrr": 0.25
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Dưới đây là danh sách các thuốc chữa ngạt mũi và liên quan đến bệnh lý này:\n\n1. Thuốc nhỏ mũi Nostravin 0,05% \n2. Thuốc xịt mũi Otilin 0.1% \n3. Thuốc xịt mũi Xylogen \n4. Thuốc Kim Long \n5. Thuốc chống dị ứng Kacerin 10mg",
+    "retrieved_ids": [
+      1492,
+      1491,
+      868,
+      1928,
+      1384
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp thông tin chi tiết về các loại thuốc dùng để giảm ngạt mũi và các bệnh lý liên quan, nên rất liên quan và đủ thông tin để trả lời câu hỏi về việc liệt kê thuốc chữa ngạt mũi.",
+    "reason_faithfulness": "Câu trả lời liệt kê đúng các thuốc được nêu trong ngữ cảnh (Nostravin, Otilin, Xylogen, Kim Long, Kacerin) và không thêm thông tin không có trong ngữ cảnh, do đó hoàn toàn dựa trên nội dung đã cho.",
+    "reason_correctness": "Các thuốc được liệt kê đều có chỉ định giảm ngạt mũi hoặc các triệu chứng liên quan (viêm mũi, viêm xoang, cảm cúm) theo mô tả trong ngữ cảnh, vì vậy câu trả lời đúng về mặt y khoa."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc hỗ trợ điều trị ung thư phổi không?",
+    "retrieval": {
+      "recall@k": 0.3333333333333333,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Dưới đây là danh sách các thuốc hỗ trợ điều trị ung thư phổi được đề cập:\n\n1. Thuốc Alecensa 150mg của Hãng Roche\n2. Thuốc Tarceva 150mg của Hãng Roche\n3. Thuốc Giotrif 30mg của Hãng Boehringer",
+    "retrieved_ids": [
+      33192,
+      33193,
+      33188,
+      33577,
+      33475
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp danh sách các thuốc hỗ trợ điều trị ung thư phổi; câu trả lời trực tiếp sử dụng những thông tin này để trả lời câu hỏi, nên mức độ liên quan là tối đa.",
+    "reason_faithfulness": "Câu trả lời chỉ liệt kê các thuốc mà trong ngữ cảnh đã đề cập (Alecensa, Tarceva, Giotrif) và không thêm thông tin không có trong ngữ cảnh, do đó hoàn toàn dựa trên nội dung đã cho.",
+    "reason_correctness": "Alecensa (alectinib), Tarceva (erlotinib) và Giotrif (afatinib) đều là các thuốc được chấp thuận và sử dụng trong điều trị ung thư phổi (NSCLC). Vì vậy câu trả lời đúng về mặt y khoa."
+  },
+  {
+    "query": "Xin hãy liệt kê các thuốc chữa bệnh liên quan đến Ung Thư Biểu Mô Đường Niệu.",
+    "retrieval": {
+      "recall@k": 0.6,
+      "precision@k": 0.6,
+      "mrr": 0.3333333333333333
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 0.95,
+    "correctness": 3,
+    "answer": "Một số thuốc chữa bệnh liên quan đến Ung Thư Biểu Mô Đường Niệu bao gồm:\n\n1. Thuốc Imfinzi INJ 120mg/2,4ml AstraZeneca\n2. Thuốc Imfinzi INJ 120mg/2,4ml AstraZeneca (Hãng Astra)\n3. Dung dịch tiêm Imfinzi INJ 500mg/10ml Astrazeneca\n4. Dung dịch tiêm Imfinzi INJ 500mg/10ml Astrazeneca (Hãng Astra)",
+    "retrieved_ids": [
+      33313,
+      33308,
+      33157,
+      33152,
+      33309
+    ],
+    "reason_context_relevance": "The listed drugs (Imfinzi 120 mg and 500 mg formulations) are directly taken from the context and are relevant to the treatment of urothelial carcinoma, matching the question's focus.",
+    "reason_faithfulness": "The answer repeats the drug names and formulations that are explicitly mentioned in the context and does not introduce information not present in the context, showing high fidelity. Minor loss is due to lack of explicit citation of dosage details, but overall it stays faithful.",
+    "reason_correctness": "Imfinzi (durvalumab) is indeed an approved therapy for urothelial carcinoma, so the drug choice is medically correct. However, the answer only repeats the same drug in different formulations, includes duplicate entries, and omits other possible therapies for this cancer, making the answer incomplete and partially redundant."
+  },
+  {
+    "query": "Bạn có thể liệt kê các thuốc chữa bệnh liên quan đến u lympho tế bào vỏ không?",
+    "retrieval": {
+      "recall@k": 0.5,
+      "precision@k": 0.4,
+      "mrr": 0.25
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Dựa trên thông tin cung cấp, có hai loại thuốc được đề cập để điều trị u lympho tế bào vỏ:\n\n1. Thuốc Calquence 100mg của Hãng Astra, thành phần chính là Acalabrutinib.\n2. Thuốc Imbruvica của Hãng Janssen, thành phần chính là Ibrutinib.",
+    "retrieved_ids": [
+      33626,
+      33200,
+      33630,
+      33627,
+      33629
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp chi tiết về các thuốc điều trị u lympho tế bào vỏ, vì vậy nó hoàn toàn liên quan đến yêu cầu liệt kê thuốc cho bệnh này.",
+    "reason_faithfulness": "Câu trả lời chỉ liệt kê hai thuốc (Calquence và Imbruvica) và thành phần chính của chúng, đúng với những thông tin được nêu trong ngữ cảnh, không có thông tin nào được bịa ra.",
+    "reason_correctness": "Cả Calquence (Acalabrutinib) và Imbruvica (Ibrutinib) đều là các thuốc được chấp thuận để điều trị u lympho tế bào vỏ (mantle cell lymphoma), do đó câu trả lời đúng về mặt y khoa."
+  }
+]

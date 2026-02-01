@@ -1,0 +1,442 @@
+[
+  {
+    "query": "Những lưu ý và chống chỉ định của Siro ho Tragutan Dược điều trị các chứng ho, sát trùng đường hô hấp khác với Thuốc nhỏ mắt Tearidone giảm triệu chứng kích thích do khô mắt như thế nào?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Những lưu ý và chống chỉ định của Siro ho Tragutan Dược điều trị các chứng ho, sát trùng đường hô hấp khác với Thuốc nhỏ mắt Tearidone giảm triệu chứng kích thích do khô mắt:\n\n- Chống chỉ định: Siro ho Tragutan chống chỉ định với người mẫn cảm với thành phần thuốc, trẻ em dưới 30 tháng tuổi, ho do suyễn, suy hô hấp, ho do lao, phụ nữ có thai. Thuốc nhỏ mắt Tearidone chống chỉ định với người dị ứng povidon hoặc bất kỳ thành phần nào của thuốc.\n\n- Thận trọng: Siro ho Tragutan thận trọng với người loét dạ dày, phụ nữ cho con bú. Thuốc nhỏ mắt Tearidone thận trọng khi mang kính sát tròng mềm, sự kích thích do khô mắt kéo dài hoặc xấu đi.\n\n- Tương tác thuốc: Chưa có thông tin về tương tác thuốc của Siro ho Tragutan. Thuốc nhỏ mắt Tearidone có thể tương tác với các loại thuốc nhỏ mắt khác.",
+    "retrieved_ids": [
+      2922,
+      99,
+      2920,
+      2921,
+      98
+    ],
+    "reason_context_relevance": "The response directly addresses the question by comparing the cautions and contraindications of the two medications, using the supplied context as its source.",
+    "reason_faithfulness": "The answer accurately reflects the information provided in the context for both Tragutan syrup and Tearidone eye drops, including contraindications, precautions, and drug interaction notes, without adding unsupported details.",
+    "reason_correctness": "All medical statements about contraindications, precautions, and interactions are consistent with the context and medically sound; no incorrect or misleading information is presented."
+  },
+  {
+    "query": "Liều dùng và cách sử dụng của Thuốc nhỏ tai Auricularum điều trị viêm tai có gì khác biệt so với Dung dịch nhỏ tai ILLixime 0.3% Hanlim điều trị viêm tai ngoài, viêm tai giữa mạn tính?",
+    "retrieval": {
+      "recall@k": 0.0,
+      "precision@k": 0.0,
+      "mrr": 0.0
+    },
+    "context_relevance": 0.2,
+    "faithfulness": 0.9,
+    "correctness": 4,
+    "answer": "Thuốc nhỏ tai Auricularum và Dung dịch nhỏ tai ILLixime 0.3% Hanlim đều được sử dụng để điều trị viêm tai, nhưng chúng có thể khác biệt về liều dùng và cách sử dụng. Tuy nhiên, thông tin cụ thể về liều dùng và cách sử dụng của hai loại thuốc này không được cung cấp trong ngữ cảnh đã cho. Để biết thông tin chính xác, bạn nên tham khảo hướng dẫn sử dụng hoặc tư vấn từ chuyên gia y tế.",
+    "retrieved_ids": [
+      26559,
+      25719,
+      27386,
+      24745,
+      26558
+    ],
+    "reason_context_relevance": "The supplied context discusses other antibiotics (Curam, Hafixim, Xilavic, etc.) and contains no information about Auricularum or ILLixime. Therefore, the context is largely irrelevant to the specific question about dosage differences between these two ear medications.",
+    "reason_faithfulness": "The answer accurately reflects that the provided context does not contain specific dosage information for Auricularum or ILLixime, and it does not fabricate such details. The only additional statement is that both drugs are used for ear inflammation, which is general medical knowledge but not directly sourced from the context.",
+    "reason_correctness": "The answer correctly states that the specific dosage and usage details are not present in the given context and advises consulting professional guidance. While it does not provide the requested comparison, it does not contain factual errors regarding the lack of information."
+  },
+  {
+    "query": "Liều dùng và cách sử dụng của Thuốc nhỏ mắt Bronuck Senju Pharm điều trị viêm bờ mi, viêm kết mạc, viêm củng mạc khác với Thuốc nhỏ mắt V.Rohto Cool (12ml) điều trị mỏi mắt, đỏ mắt, ngứa mắt như thế nào?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Liều dùng và cách sử dụng của Thuốc nhỏ mắt Bronuck Senju Pharm và Thuốc nhỏ mắt V.Rohto Cool khác nhau. Thuốc nhỏ mắt Bronuck Senju Pharm được sử dụng để điều trị viêm bờ mi, viêm kết mạc, viêm củng mạc với liều dùng nhỏ mắt mỗi lần 1-2 giọt, ngày 2 lần. Trong khi đó, Thuốc nhỏ mắt V.Rohto Cool được sử dụng để điều trị mỏi mắt, đỏ mắt, ngứa mắt với liều dùng mỗi ngày nhỏ 5-6 lần, mỗi lần 2-3 giọt.",
+    "retrieved_ids": [
+      56,
+      1513,
+      57,
+      55,
+      1512
+    ],
+    "reason_context_relevance": "The response directly addresses the question by comparing the dosage and administration instructions of the two eye drops, which are the core pieces of information present in the given context.",
+    "reason_faithfulness": "The answer accurately reflects the dosage and usage information provided in the context for both Bronuck Senju Pharm and V.Rohto Cool without adding any unsupported details.",
+    "reason_correctness": "The comparison of dosing regimens (Bronuck: 1‑2 drops twice daily; V.Rohto Cool: 5‑6 times daily, 2‑3 drops each) is medically accurate according to the provided context, and no incorrect or harmful statements are made."
+  },
+  {
+    "query": "Liều dùng và cách sử dụng của Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% Hanlim giảm khô mắt có điểm gì khác biệt so với Thuốc nhỏ mắt Tetracain 0.5% Dược 3-2 dùng gây tê bề mặt trong nhãn khoa?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Liều dùng và cách sử dụng của Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% Hanlim và Thuốc nhỏ mắt Tetracain 0.5% Dược 3-2 có điểm khác biệt:\n\n- Liều dùng: Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% là mỗi lần 1 giọt, 5 – 6 lần/ngày. Thuốc nhỏ mắt Tetracain 0.5% dùng gây tê bề mặt trong nhãn khoa với liều dùng nhỏ 1 – 2 giọt dung dịch nhỏ mắt 0,5% tùy vào mục đích sử dụng (thời gian ngắn, phẫu thuật, cắt chỉ, lấy vật lạ, đo nhãn áp).\n\n- Cách dùng: Cả hai đều dùng bằng cách nhỏ mắt, nhưng Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% nên dùng ngay sau khi mở nắp và không dùng lượng thuốc còn sót lại trong ống cho lần sử dụng tiếp theo.",
+    "retrieved_ids": [
+      499,
+      1177,
+      502,
+      1176,
+      498
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp chi tiết về liều dùng và cách sử dụng của cả hai loại thuốc, nên rất liên quan tới câu hỏi yêu cầu so sánh chúng.",
+    "reason_faithfulness": "Câu trả lời phản ánh đúng các thông tin về liều dùng và cách dùng của Hyaluron Eye Drops 0,1% và Tetracain 0,5% được nêu trong ngữ cảnh, không thêm thông tin không có trong tài liệu.",
+    "reason_correctness": "So sánh liều dùng (1 giọt 5‑6 lần/ngày cho Hyaluron vs 1‑2 giọt tùy mục đích cho Tetracain) và cách dùng (không dùng lượng còn lại cho Hyaluron, dùng ngay sau mở nắp) là chính xác theo nội dung ngữ cảnh; không có thông tin y khoa sai hoặc gây nguy hiểm."
+  },
+  {
+    "query": "Công dụng và chỉ định của Thuốc Zensalbu 5mg CPC1HN kiểm soát co thắt phế quản mạn, điều trị hen nặng cấp tính khác với Siro New Ameflu Night Time OPV giảm các triệu chứng cảm lạnh như thế nào?",
+    "retrieval": {
+      "recall@k": 0.5,
+      "precision@k": 0.2,
+      "mrr": 0.25
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Công dụng và chỉ định của Thuốc Zensalbu 5mg CPC1HN là kiểm soát co thắt phế quản mạn, điều trị hen nặng cấp tính. Trong khi đó, Thuốc Siro New Ameflu Night Time OPV được chỉ định để giảm các triệu chứng cảm lạnh như nhức đầu, sốt, và các triệu chứng khác liên quan đến cảm lạnh.",
+    "retrieved_ids": [
+      2145,
+      2816,
+      2144,
+      2141,
+      2811
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp chi tiết về công dụng và chỉ định của Zensalbu và Siro New Ameflu Night Time; câu trả lời sử dụng đúng những thông tin này, nên ngữ cảnh hoàn toàn liên quan.",
+    "reason_faithfulness": "Câu trả lời phản ánh đúng các thông tin trong ngữ cảnh về công dụng và chỉ định của cả hai thuốc, không có thông tin sai lệch hay tự tạo.",
+    "reason_correctness": "Công dụng và chỉ định được nêu ra cho Zensalbu (kiểm soát co thắt phế quản, điều trị hen nặng cấp tính) và cho Siro New Ameflu Night Time (giảm các triệu chứng cảm lạnh) là chính xác theo kiến thức y khoa và thông tin trong ngữ cảnh."
+  },
+  {
+    "query": "Liều dùng và cách sử dụng của Cốm pha dung dịch uống Stacytine 200 GRA Stella tiêu nhầy, long đờm khác với Thuốc Rhinocort Aqua 64mcg McNeil điều trị trong các trường hợp viêm mũi dị ứng quanh năm và viêm mũi dị ứng theo mùa như thế nào?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Liều dùng và cách sử dụng của Cốm pha dung dịch uống Stacytine 200 GRA Stella tiêu nhầy, long đờm khác với Thuốc Rhinocort Aqua 64mcg McNeil ở các điểm sau:\n\n- Liều dùng: Cốm pha dung dịch uống Stacytine 200 GRA được dùng với liều 200 mg (1 gói) x 3 lần/ngày cho người lớn và 200 mg (1 gói) x 2 lần/ngày cho trẻ em từ 2 đến 6 tuổi. Trong khi đó, Thuốc Rhinocort Aqua 64mcg McNeil được dùng với liều khởi đầu 256 microgram mỗi ngày, có thể sử dụng 1 lần duy nhất mỗi buổi sáng hoặc chia làm 2 lần sáng và tối.\n\n- Cách sử dụng: Cốm pha dung dịch uống Stacytine 200 GRA được dùng bằng đường uống, trong khi Thuốc Rhinocort Aqua 64mcg McNeil được sử dụng bằng cách xịt vào mũi.\n\n- Chỉ định: Cốm pha dung dịch uống Stacytine 200 GRA được chỉ định dùng trong các trường hợp viêm phế quản, tiêu chất nhầy, long đờm, và giải độc quá liều paracetamol. Trong khi đó, Thuốc Rhinocort Aqua 64mcg McNeil được chỉ định dùng trong các trường hợp viêm mũi dị ứng quanh năm và viêm mũi dị ứng theo mùa.",
+    "retrieved_ids": [
+      619,
+      618,
+      2292,
+      2291,
+      2159
+    ],
+    "reason_context_relevance": "The response directly addresses the comparison asked in the question and uses the relevant details from the context about both medications.",
+    "reason_faithfulness": "The answer accurately reflects the dosage, administration route, and indications for both Stacytine and Rhinocort Aqua as described in the provided context, without adding unsupported information.",
+    "reason_correctness": "All medical statements regarding dosing regimens, routes of administration, and therapeutic indications are consistent with the information in the context and are medically accurate."
+  },
+  {
+    "query": "Tác dụng phụ không mong muốn của Thuốc nhỏ mắt Mydrin-P Santen làm giãn đồng tử có điểm gì khác biệt so với Thuốc Anoro Ellipta 62.5/25mcg GSK điều trị duy trì giãn phế quản?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Tác dụng phụ không mong muốn của Thuốc nhỏ mắt Mydrin-P Santen làm giãn đồng tử và Thuốc Anoro Ellipta 62.5/25mcg GSK điều trị duy trì giãn phế quản có sự khác biệt về các triệu chứng và mức độ nghiêm trọng. Thuốc nhỏ mắt Mydrin-P Santen có thể gây ra các tác dụng phụ như sốc, phản ứng phản vệ, viêm bờ mi, quá mẫn cảm, viêm kết mạc, rối loạn biểu mô giác mạc, tăng áp lực nội nhãn, khát, buồn nôn, nôn, đau đầu, đỏ bừng mặt, nhịp tim nhanh, tăng huyết áp. Trong khi đó, Thuốc Anoro Ellipta 62.5/25mcg GSK có thể gây ra các tác dụng phụ như nhiễm trùng đường tiết niệu, viêm xoang, viêm mũi - họng, viêm họng, ho, đau miệng - họng, táo bón, khô miệng, đau đầu, rung nhĩ, nhịp nhanh trên thất, nhịp tim nhanh, phản ứng quá mẫn, lo âu, run, loạn vị giác, nhịp nhanh thất, ngoại tâm thu trên thất, đánh trống ngực, khó phát âm, co thắt cơ, phát ban, phù mạch, mày đay, nhìn mờ, tăng nhãn áp, tăng áp lực nội nhãn, co thắt phế quản nghịch lý, bí tiểu, khó tiểu, bàng quang tắc nghẽn đầu ra.",
+    "retrieved_ids": [
+      885,
+      116,
+      117,
+      118,
+      883
+    ],
+    "reason_context_relevance": "The response directly uses the supplied context to compare the unwanted side‑effects of the two drugs, fully addressing the asked comparison.",
+    "reason_faithfulness": "The answer reproduces the adverse‑effect information for Mydrin‑P and Anoro Ellipta exactly as presented in the context, without introducing unsupported details.",
+    "reason_correctness": "All listed side‑effects for each medication correspond to the data in the context and are medically accurate; the comparison correctly reflects the differences between the two drug profiles."
+  },
+  {
+    "query": "Những lưu ý và chống chỉ định của Thuốc nhỏ mũi Otrivin 0.1% GSK điều trị nghẹt mũi, sung huyết mũi họng có gì khác biệt so với Siro Eugica DHG hỗ trợ điều trị ho, long đờm?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Những lưu ý và chống chỉ định của Thuốc nhỏ mũi Otrivin 0.1% GSK và Siro Eugica DHG là khác nhau do thành phần và công dụng của thuốc khác nhau. Thuốc nhỏ mũi Otrivin 0.1% GSK có chống chỉ định với bệnh nhân phẫu thuật cắt bỏ tuyến yên, bệnh tăng nhãn áp góc hẹp, viêm mũi khô hoặc teo, quá mẫn với xylometazoline, và trẻ dưới 12 tuổi. Trong khi đó, Siro Eugica DHG chống chỉ định với trẻ em dưới 30 tháng tuổi và những người có tiền sử động kinh hoặc co giật do sốt cao.",
+    "retrieved_ids": [
+      212,
+      69,
+      1286,
+      1634,
+      211
+    ],
+    "reason_context_relevance": "The response directly addresses the question using the supplied context about both medications, making the context fully relevant.",
+    "reason_faithfulness": "The answer only uses information present in the provided context, accurately summarizing the contraindications and precautions for Otrivin 0.1% and Siro Eugica DHG without adding extraneous or contradictory statements.",
+    "reason_correctness": "The medical details about contraindications for Otrivin (e.g., hypersensitivity, pituitary surgery, narrow‑angle glaucoma, dry/atrophic rhinitis, age <12) and for Eugica (age <30 months, seizure history) are accurately reflected from the context, and the comparison is correct."
+  },
+  {
+    "query": "Công dụng và chỉ định của Thuốc Tỷ Viêm Nang Khang Minh điều trị viêm xoang, viêm mũi dị ứng có gì khác biệt so với Thuốc ho Methorphan Traphaco cắt cơn ho, điều trị long đờm, chống dị ứng?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Công dụng và chỉ định của Thuốc Tỷ Viêm Nang Khang Minh và Thuốc ho Methorphan Traphaco khác biệt ở chỗ:\n\n- Thuốc Tỷ Viêm Nang Khang Minh điều trị viêm xoang, viêm mũi dị ứng, nhức đầu.\n- Thuốc ho Methorphan Traphaco cắt cơn ho, điều trị long đờm, chống dị ứng, điều trị ho khan, ho do dị ứng, ho do cảm lạnh, viêm họng, viêm phổi.",
+    "retrieved_ids": [
+      2944,
+      408,
+      2351,
+      2028,
+      2945
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp chi tiết về công dụng và chỉ định của cả Thuốc Tỷ Viêm Nang Khang Minh và Thuốc ho Methorphan Traphaco, và câu trả lời sử dụng đúng những thông tin này để so sánh, nên ngữ cảnh hoàn toàn liên quan.",
+    "reason_faithfulness": "Câu trả lời chỉ liệt kê các công dụng và chỉ định của hai thuốc dựa trên thông tin đã cho trong ngữ cảnh, không thêm thông tin không có trong nguồn và không sai lệch nội dung.",
+    "reason_correctness": "Các công dụng và chỉ định được nêu trong câu trả lời khớp với mô tả trong ngữ cảnh và không có lỗi y khoa; sự khác biệt giữa hai thuốc được trình bày một cách chính xác."
+  },
+  {
+    "query": "Liều dùng và cách sử dụng của Thuốc nhỏ mũi trẻ em Elossy 0.05% điều trị ngạt mũi, viêm mũi, viêm xoang khác với Cao lỏng thuốc hen P/H điều trị các thể hen phế quản như thế nào?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 0.95,
+    "correctness": 5,
+    "answer": "Liều dùng và cách sử dụng của Thuốc nhỏ mũi trẻ em Elossy 0.05% và Cao lỏng thuốc hen P/H khác nhau:\n\n- Thuốc nhỏ mũi trẻ em Elossy 0.05%: Dùng nhỏ mũi cho trẻ từ 6 đến 12 tuổi, ngày nhỏ 1-2 lần, mỗi lần nhỏ 1-2 giọt, không quá 2 lần một ngày, thời gian sử dụng không quá 5 ngày nếu không có chỉ định của bác sĩ.\n\n- Cao lỏng thuốc hen P/H: Uống 2 lần/ngày sau bữa ăn, liều dùng tùy theo tuổi: Trẻ em dưới 6 tuổi 15ml/lần, trẻ từ 6-14 tuổi 20ml/lần, từ 14 tuổi trở lên và người lớn 30ml/lần. Trường hợp bệnh nặng có thể dùng gấp rưỡi liều trên, mỗi đợt điều trị thường kéo dài 8-10 tuần.",
+    "retrieved_ids": [
+      2508,
+      871,
+      870,
+      872,
+      2509
+    ],
+    "reason_context_relevance": "The response directly addresses the question by comparing the dosing regimens of the two medications, using the specific data supplied in the context.",
+    "reason_faithfulness": "The answer accurately reflects the dosage and usage information provided in the context for both Elossy nasal spray and the P/H syrup, without adding extraneous or contradictory details.",
+    "reason_correctness": "The medical information about dosing frequency, amount per dose, age groups, and treatment duration for both drugs aligns with the context and standard clinical guidance, making the answer fully correct."
+  },
+  {
+    "query": "Tác dụng phụ không mong muốn của Thuốc nhỏ mắt Coodrop Pharmedic làm ẩm, bôi trơn mắt, giảm triệu chứng khô mắt khác với Thuốc nhỏ mắt Lumigan 0.01% Allergan giảm tăng áp suất nội nhãn như thế nào?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 0.5
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Tác dụng phụ của Thuốc nhỏ mắt Coodrop Pharmedic là cảm giác dính hoặc cay mắt nhẹ thoáng qua, trong khi tác dụng phụ của Thuốc nhỏ mắt Lumigan 0.01% Allergan bao gồm ngứa mắt, viêm giác mạc, xung huyết kết mạc, ban đỏ mí mắt, kích ứng mắt, ngứa mắt, mi mắt ngứa, tăng sinh lông mi, rậm lông, kích ứng chỗ nhỏ thuốc, tăng sắc tố da, đau mắt.",
+    "retrieved_ids": [
+      40,
+      1173,
+      38,
+      969,
+      1174
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp chi tiết về tác dụng phụ của cả hai loại thuốc, và câu trả lời sử dụng đúng những thông tin này để so sánh, vì vậy ngữ cảnh hoàn toàn liên quan.",
+    "reason_faithfulness": "Câu trả lời chỉ liệt kê các tác dụng phụ của Coodrop và Lumigan đúng như những thông tin đã nêu trong ngữ cảnh, không có thông tin sai lệch hay bổ sung không có trong nguồn.",
+    "reason_correctness": "Các tác dụng phụ được nêu trong câu trả lời (cảm giác dính hoặc cay mắt nhẹ cho Coodrop; các phản ứng như ngứa mắt, viêm giác mạc, xung huyết kết mạc, ban đỏ mí mắt, kích ứng mắt, tăng sinh lông mi, rậm lông, tăng sắc tố da, đau mắt cho Lumigan) đều khớp với dữ liệu y khoa trong ngữ cảnh và không có lỗi y học."
+  },
+  {
+    "query": "Những lưu ý và chống chỉ định của Dung dịch Berodual Boehringer hỗ trợ giãn phế quản khác với Thuốc nhỏ mắt Scofi Merap điều trị ngắn hạn tình trạng viêm mắt đáp ứng với corticoid như thế nào?",
+    "retrieval": {
+      "recall@k": 0.5,
+      "precision@k": 0.2,
+      "mrr": 1.0
+    },
+    "context_relevance": 0.6,
+    "faithfulness": 0.3,
+    "correctness": 4,
+    "answer": "Dung dịch Berodual Boehringer hỗ trợ giãn phế quản và Thuốc nhỏ mắt Scofi Merap điều trị ngắn hạn tình trạng viêm mắt đáp ứng với corticoid là hai loại thuốc khác nhau, có chỉ định và chống chỉ định riêng.\n\nDung dịch Berodual Boehringer thường được sử dụng để hỗ trợ giãn phế quản trong các trường hợp như hen suyễn, bệnh phổi tắc nghẽn mãn tính (COPD). Chống chỉ định của thuốc này thường bao gồm các tình trạng như quá mẫn với thành phần của thuốc, bệnh tim mạch nặng, và một số tình trạng khác.\n\nThuốc nhỏ mắt Scofi Merap được sử dụng để điều trị ngắn hạn tình trạng viêm mắt đáp ứng với corticoid. Chống chỉ định của thuốc này bao gồm quá mẫn với dược chất hoặc bất kỳ thành phần nào của thuốc, viêm biểu mô giác mạc do Herpes simplex, bệnh đậu mùa, thủy đậu và các bệnh khác ở kết mạc và giác mạc do virus, bệnh ở các bộ phận của mắt do nấm, nhiễm khuẩn mắt do Mycobacterium.\n\nTóm lại, hai loại thuốc này có chỉ định và chống chỉ định khác nhau do mục đích sử dụng và cơ chế tác động khác nhau.",
+    "retrieved_ids": [
+      656,
+      657,
+      655,
+      658,
+      653
+    ],
+    "reason_context_relevance": "The response addresses the comparative question and uses the Scofi Merap information from the context, but adds unrelated Berodual information that was not supplied. Hence the relevance to the given context is moderate, not fully aligned.",
+    "reason_faithfulness": "The answer includes information about Berodual Boehringer that is not present in the provided context. While the Scofi Merap details are faithful to the context, the Berodual details appear to be generated without source support, indicating partial hallucination.",
+    "reason_correctness": "The description of Scofi Merap’s precautions and contraindications matches the context accurately. The generic statements about Berodual’s indications and contraindications (hypersensitivity, severe cardiovascular disease) are generally correct for a bronchodilator, though they are not verified by the provided context. Overall the medical content is largely correct with minor uncertainty regarding the Berodual details."
+  },
+  {
+    "query": "Liều dùng và cách sử dụng của Thuốc bột uống Rocamux Roussel điều trị viêm phế quản, viêm mũi họng khác với Viên nén Neo-Codion Bouchara điều trị triệu chứng ho khan như thế nào?",
+    "retrieval": {
+      "recall@k": 0.5,
+      "precision@k": 0.2,
+      "mrr": 1.0
+    },
+    "context_relevance": 0.5,
+    "faithfulness": 0.2,
+    "correctness": 2,
+    "answer": "Liều dùng và cách sử dụng của Thuốc bột uống Rocamux Roussel điều trị viêm phế quản, viêm mũi họng khác với Viên nén Neo-Codion Bouchara điều trị triệu chứng ho khan ở các điểm sau:\n\n- Rocamux Roussel là thuốc bột uống, trong khi Neo-Codion Bouchara là viên nén.\n- Liều dùng và cách sử dụng của Rocamux Roussel không được cung cấp trong ngữ cảnh, trong khi Neo-Codion Bouchara được sử dụng với liều dùng tối đa hàng ngày của codein là 120 mg ở người lớn, và có những lưu ý đặc biệt về liều dùng cho người lớn tuổi, bệnh nhân suy gan, và trẻ em từ 12-18 tuổi.\n- Rocamux Roussel không có thông tin về chống chỉ định, thận trọng khi sử dụng, và tương tác thuốc, trong khi Neo-Codion Bouchara có nhiều thông tin về những điểm này.",
+    "retrieved_ids": [
+      2190,
+      2189,
+      2191,
+      2188,
+      2192
+    ],
+    "reason_context_relevance": "Ngữ cảnh liên quan đến Neo-Codion và câu trả lời sử dụng một số thông tin đó, nhưng câu trả lời không cung cấp thông tin về Rocamux như yêu cầu và phần lớn không dựa trên ngữ cảnh, nên mức độ liên quan chỉ ở mức trung bình.",
+    "reason_faithfulness": "Câu trả lời đưa ra thông tin về Rocamux (ví dụ: dạng bột uống) mà không có trong ngữ cảnh, do đó không trung thực với nội dung cung cấp. Một phần nội dung về Neo-Codion dựa trên ngữ cảnh, nhưng phần lớn là suy đoán ngoài dữ liệu.",
+    "reason_correctness": "Thông tin về liều dùng và cách dùng Neo-Codion đúng với ngữ cảnh, nhưng câu trả lời không cung cấp liều dùng của Rocamux và đưa ra nhận định không có trong ngữ cảnh, khiến câu trả lời không đầy đủ và không chính xác hoàn toàn đối với câu hỏi."
+  },
+  {
+    "query": "Tác dụng phụ không mong muốn của Thuốc trị ho Methorfar 15 Pharmedic dùng cho cảm lạnh, ho không đờm có gì khác biệt so với Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% Hanlim giảm khô mắt?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Tác dụng phụ của Thuốc trị ho Methorfar 15 Pharmedic và Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% Hanlim là khác nhau. Thuốc Methorfar 15 có thể gây mệt mỏi, đỏ bừng, chóng mặt, nhịp tim nhanh, buồn nôn, mề đay, nổi mẩn, trong khi Thuốc nhỏ mắt Hyaluron Eye Drops 0,1% Hanlim có thể gây đỏ mắt, ngứa, khó chịu và sung huyết ở mắt.",
+    "retrieved_ids": [
+      1179,
+      1868,
+      1178,
+      1176,
+      1177
+    ],
+    "reason_context_relevance": "The provided context directly discusses the adverse drug reactions of the two medicines, and the answer addresses exactly that comparison, making the context fully relevant.",
+    "reason_faithfulness": "The answer accurately reflects the side‑effect information presented in the context for both Methorfar 15 and Hyaluron Eye Drops, without adding unsupported details.",
+    "reason_correctness": "The answer correctly lists the distinct adverse effects for each drug as described in the source material and does not contain any medical inaccuracies."
+  },
+  {
+    "query": "Công dụng và chỉ định của Thuốc nhỏ mắt, mũi Polydoxancol Hataphar điều trị viêm nhiễm mắt và mũi khác với Siro ho Haspan 80ml giảm ho, long đờm, điều trị viêm đường hô hấp cấp có kèm ho như thế nào?",
+    "retrieval": {
+      "recall@k": 0.5,
+      "precision@k": 0.2,
+      "mrr": 0.5
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Công dụng và chỉ định của Thuốc nhỏ mắt, mũi Polydoxancol Hataphar và Siro ho Haspan 80ml khác nhau. Thuốc nhỏ mắt, mũi Polydoxancol Hataphar điều trị viêm nhiễm mắt và mũi, trong khi Siro ho Haspan 80ml giảm ho, long đờm, điều trị viêm đường hô hấp cấp có kèm ho.",
+    "retrieved_ids": [
+      2415,
+      2411,
+      2412,
+      2413,
+      155
+    ],
+    "reason_context_relevance": "Ngữ cảnh cung cấp chi tiết về công dụng và chỉ định của cả hai thuốc, và câu trả lời trực tiếp so sánh chúng, vì vậy ngữ cảnh hoàn toàn liên quan đến câu hỏi.",
+    "reason_faithfulness": "Câu trả lời chỉ tái hiện các thông tin có trong ngữ cảnh: Polydoxancol Hataphar dùng để điều trị viêm nhiễm mắt và mũi; Siro ho Haspan 80ml dùng để giảm ho, long đờm và điều trị viêm đường hô hấp cấp có kèm ho. Không có thông tin nào được thêm vào hoặc sai lệch.",
+    "reason_correctness": "Câu trả lời đúng về mặt y khoa: mô tả chính xác công dụng và chỉ định của Polydoxancol Hataphar (điều trị viêm nhiễm mắt và mũi) và của Siro ho Haspan 80ml (giảm ho, long đờm, điều trị viêm đường hô hấp cấp có kèm ho). Không có thông tin sai hoặc nguy hiểm."
+  },
+  {
+    "query": "Công dụng và chỉ định của Thuốc nhỏ mắt Daiticol Dược 3-2 điều trị đỏ mắt, ngứa mắt, xốn mắt và Dung dịch Berodual Boehringer hỗ trợ giãn phế quản có điểm gì giống và khác nhau?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Công dụng và chỉ định của Thuốc nhỏ mắt Daiticol Dược 3-2 và Dung dịch Berodual Boehringer khác nhau. Thuốc nhỏ mắt Daiticol Dược 3-2 điều trị đỏ mắt, ngứa mắt, xốn mắt, trong khi Dung dịch Berodual Boehringer hỗ trợ giãn phế quản, điều trị các bệnh về đường hô hấp như hen phế quản, viêm phế quản, bệnh phổi tắc nghẽn mạn tính.",
+    "retrieved_ids": [
+      840,
+      841,
+      843,
+      842,
+      2489
+    ],
+    "reason_context_relevance": "The provided context contains detailed descriptions of both Daiticol and Berodual, and the answer directly addresses the comparison of their indications and uses, making the context fully relevant.",
+    "reason_faithfulness": "The answer accurately reflects the information given in the context: Daiticol is described as an eye drop for redness, itching, and tearing, while Berodual is described as a bronchodilator for asthma, bronchitis, and COPD. No information is fabricated or omitted.",
+    "reason_correctness": "The medical statements are accurate: Daiticol's indicated uses match the eye conditions listed, and Berodual's indicated uses match the bronchodilator indications for asthma, bronchitis, and chronic obstructive pulmonary disease. No incorrect or misleading medical information is present."
+  },
+  {
+    "query": "Những lưu ý và chống chỉ định của Viên nén Mucosolvan 30mg Sanofi làm loãng đờm trong viêm phế quản khác với Thuốc xịt mũi Nasolspray Mekophar làm sạch và thông mũi, họng như thế nào?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Những lưu ý và chống chỉ định của Viên nén Mucosolvan 30mg Sanofi làm loãng đờm trong viêm phế quản khác với Thuốc xịt mũi Nasolspray Mekophar làm sạch và thông mũi, họng ở các điểm sau:\n\n- Chống chỉ định: Mucosolvan chống chỉ định với bệnh nhân mẫn cảm với ambroxol hydrochlorid, bệnh di truyền hiếm gặp, trong khi Nasolspray chống chỉ định với bệnh nhân mẫn cảm với các thành phần của thuốc.\n\n- Thận trọng khi sử dụng: Mucosolvan cần thận trọng khi sử dụng với bệnh nhân có tổn thương da nặng, suy giảm chức năng thận, bệnh di truyền hiếm gặp không dung nạp galactose, trong khi Nasolspray cần thận trọng khi sử dụng bằng cách lau sạch, khô vòi phun và đậy nắp sau khi dùng.\n\n- Tương tác thuốc: Mucosolvan chưa thấy báo cáo tương tác không thuận lợi với các thuốc khác, trong khi Nasolspray cần thông báo cho bác sĩ hoặc dược sĩ về những thuốc đang sử dụng để tránh tương tác giữa các thuốc.",
+    "retrieved_ids": [
+      1148,
+      1147,
+      1149,
+      1146,
+      1855
+    ],
+    "reason_context_relevance": "The response directly uses the provided context about each medication to compare their precautions and contraindications, fully addressing the asked comparison.",
+    "reason_faithfulness": "The answer accurately reflects the contraindications, cautions, and interaction information for both Mucosolvan and Nasolspray as presented in the context, without adding unsupported details.",
+    "reason_correctness": "All medical statements about the differences in contraindications, safety precautions, and drug‑interaction advice are consistent with the context and are medically accurate."
+  },
+  {
+    "query": "Những lưu ý và chống chỉ định của Thuốc Paracetamol 500mg Quapharco giảm đau nửa đầu, cảm lạnh, cảm cúm, đau họng khác với Thuốc xịt mũi Thông Xoang Nam Dược điều trị nghẹt mũi, chảy nước mũi như thế nào?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Những lưu ý và chống chỉ định của Thuốc Paracetamol 500mg Quapharco và Thuốc xịt mũi Thông Xoang Nam Dược khác nhau như sau:\n\n- Thuốc Paracetamol 500mg Quapharco chống chỉ định với người bệnh nhiều lần thiếu máu, bệnh tim, phổi, thận hoặc gan, người quá mẫn với paracetamol, người bệnh thiếu hụt G6PD. Thận trọng khi sử dụng với người bị suy thận nặng, người bị bệnh thiếu máu, tránh hoặc hạn chế uống rượu.\n\n- Thuốc xịt mũi Thông Xoang Nam Dược chống chỉ định với bệnh nhân mẫn cảm với bất kỳ thành phần nào của thuốc, không dùng cho trẻ em dưới 2 tuổi. Thận trọng khi sử dụng, khi mới xịt thuốc có thể thấy xót nhẹ.",
+    "retrieved_ids": [
+      596,
+      2197,
+      595,
+      2198,
+      597
+    ],
+    "reason_context_relevance": "The response directly addresses the question by comparing the cautions and contraindications of the two drugs, which are the main topics of the given context.",
+    "reason_faithfulness": "The answer accurately reflects the contraindications and cautions for both Paracetamol 500mg Quapharco and the nasal spray as described in the provided context, without adding extraneous information.",
+    "reason_correctness": "All listed contraindications and cautions for both medications match the details in the context and are medically accurate according to the provided information."
+  },
+  {
+    "query": "Những lưu ý và chống chỉ định của Thuốc nhỏ mắt Hameron hỗ trợ làm giảm khô mắt và làm chất bôi trơn khi sử dụng kính áp tròng có gì khác biệt so với Thuốc nhỏ mắt Ketofen Drop 0,5mg/ml CPC1HN điều trị viêm kết mạc cấp, mãn tính?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 1.0,
+    "correctness": 5,
+    "answer": "Những lưu ý và chống chỉ định của Thuốc nhỏ mắt Hameron hỗ trợ làm giảm khô mắt và làm chất bôi trơn khi sử dụng kính áp tròng có một số điểm khác biệt so với Thuốc nhỏ mắt Ketofen Drop 0,5mg/ml CPC1HN điều trị viêm kết mạc cấp, mãn tính:\n\n- Thuốc nhỏ mắt Hameron không được sử dụng khi mang kính sát tròng, trong khi không có thông tin cụ thể về việc này trong hướng dẫn của Thuốc nhỏ mắt Ketofen Drop 0,5mg/ml CPC1HN.\n\n- Thuốc nhỏ mắt Hameron có thông tin về việc không tác động đến khả năng lái xe và vận hành máy móc, trong khi Thuốc nhỏ mắt Ketofen Drop 0,5mg/ml CPC1HN chưa rõ ảnh hưởng của thuốc lên khả năng lái xe và vận hành máy móc.\n\n- Cả hai thuốc đều có chống chỉ định với bệnh nhân mẫn cảm với bất kỳ thành phần nào của thuốc và cần thận trọng khi sử dụng, đặc biệt là trong thời kỳ mang thai và cho con bú.",
+    "retrieved_ids": [
+      644,
+      302,
+      643,
+      642,
+      646
+    ],
+    "reason_context_relevance": "The response is fully relevant to the given context, as it discusses the specific cautions, contraindications, and usage considerations of both eye drops that were described in the source material.",
+    "reason_faithfulness": "The answer directly reflects the information provided in the context, accurately summarizing the differences in precautions and contraindications between Hameron and Ketofen without adding unsupported details.",
+    "reason_correctness": "All statements in the answer are consistent with the medical information in the context: Hameron should not be used with contact lenses, does not affect driving, and shares hypersensitivity and pregnancy/breastfeeding cautions with Ketofen; Ketofen lacks specific information on those points, which the answer correctly notes."
+  },
+  {
+    "query": "Những lưu ý và chống chỉ định của Thuốc mỡ tra mắt Tetracyclin 1% Medipharco điều trị đau mắt hột có điểm gì khác biệt so với Thuốc Macetux 200 Hasan điều trị rối loạn tiết dịch phế quản?",
+    "retrieval": {
+      "recall@k": 1.0,
+      "precision@k": 0.4,
+      "mrr": 1.0
+    },
+    "context_relevance": 1.0,
+    "faithfulness": 0.95,
+    "correctness": 5,
+    "answer": "Những lưu ý và chống chỉ định của Thuốc mỡ tra mắt Tetracyclin 1% Medipharco và Thuốc Macetux 200 Hasan có một số điểm khác biệt như sau:\n\n- Thuốc Tetracyclin 1% chống chỉ định trong các trường hợp mẫn cảm với bất cứ thành phần nào của thuốc, phụ nữ mang thai và trẻ em dưới 8 tuổi. Trong khi đó, Thuốc Macetux 200 chống chỉ định trong các trường hợp quá mẫn với bất cứ thành phần nào của thuốc.\n\n- Thuốc Tetracyclin 1% cần thận trọng khi sử dụng đối với những người bị dị ứng với tetracyclin, có phản ứng nhạy cảm với ánh sáng, và những người đang sử dụng kính áp tròng. Thuốc Macetux 200 cũng cần thận trọng khi sử dụng nhưng thông tin cụ thể không được cung cấp.\n\n- Tương tác thuốc của Tetracyclin 1% ít xảy ra do thuốc được sử dụng dưới dạng tra mắt, trong khi đó, Thuốc Macetux 200 có thể có tương tác thuốc ảnh hưởng đến hoạt động của thuốc hoặc gây ra các tác dụng phụ.\n\nTóm lại, mặc dù cả hai thuốc đều có những lưu ý và chống chỉ định khi sử dụng, nhưng chúng có những điểm khác biệt cụ thể tùy thuộc vào thành phần và cách sử dụng của từng thuốc.",
+    "retrieved_ids": [
+      314,
+      2545,
+      28010,
+      313,
+      312
+    ],
+    "reason_context_relevance": "The response directly addresses the asked comparison of precautions and contraindications between the two drugs, using the supplied context as its source.",
+    "reason_faithfulness": "The answer accurately reflects the information provided in the context about the contraindications, cautions, and drug interaction notes for both Tetracyclin 1% Medipharco and Macetux 200 Hasan, without introducing unsupported statements.",
+    "reason_correctness": "The medical details presented are consistent with the context: Tetracyclin is contraindicated for hypersensitivity, pregnancy, and children under 8, with specific cautions; Macetux is contraindicated for hypersensitivity and has potential drug interactions. No factual errors are evident."
+  }
+]
